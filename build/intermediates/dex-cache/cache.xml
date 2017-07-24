@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\eduin\.android\build-cache\e37ec0775ac2ba1adf2941beec8fa980e8eefd1c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="da7ad43ce7be1d12ca7a76eff6355459f4db77d6">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e73e48ef6ed31e5cbe9c39d092e6c90f741dfb26\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -16,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="b07cdd4b03f0ed7ed6e257728a716d5e5e375d67">
+        sha1="aeb9b5681c7319e727b9ca858387d5cf38deb8af">
         <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_83516056ecb98c2131943f185581ccc0006cde5b\classes.dex" />
     </item>
     <item
@@ -54,6 +63,15 @@
         revision="26.0.0"
         sha1="90095b555b72205db6f9b93aca3cb9978d1e3344">
         <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a951c58f0e553eafe0fe61ccc9b0a5d876264786\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\.android\build-cache\24baac04eee3cf2559cbe5d1aaf72160e646ba30\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b132c56e382e8b63e43a0ab0110ddb064fc624d8">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dbd75945dd3996d5bc7229ba6cb007539d51a954\classes.dex" />
     </item>
     <item
         is-multidex="true"
