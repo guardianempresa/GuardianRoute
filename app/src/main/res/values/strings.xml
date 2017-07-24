@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Guardian Ruta</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="toolbar_tittle_Maps">Guardian</string>
+    <string name="title_activity_maps_rutas">Map</string>
+    <string name="title_activity_maps_ruta">MapsActivityRuta</string>
+    <string name="title_bar_maps_rutas">Guardian</string>
+    <string name="vacio"></string>
+    <string name="perfildeusuario">Perfil  de usuario</string>
+
+
+</resources>

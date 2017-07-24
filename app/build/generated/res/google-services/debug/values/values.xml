@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">967662100825-nr0qs2ld6bhlr4utal7rsqah3ra84t2c.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://guardian-731af.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">967662100825</string>
+    <string name="google_api_key" translatable="false">AIzaSyCUnlAUkJEoWrI0r1K4QMYunmijELdG-tw</string>
+    <string name="google_app_id" translatable="false">1:967662100825:android:cb7bd7991f2350b8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCUnlAUkJEoWrI0r1K4QMYunmijELdG-tw</string>
+    <string name="google_storage_bucket" translatable="false">guardian-731af.appspot.com</string>
+    <string name="project_id" translatable="false">guardian-731af</string>
+</resources>

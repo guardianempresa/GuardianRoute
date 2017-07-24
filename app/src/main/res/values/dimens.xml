@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">1dp</dimen>
+    <dimen name="marginBottom">16dp</dimen>
+    <dimen name="marginBig">20dp</dimen>
+    <dimen name="marginPhone">110dp</dimen>
+    <dimen name="circleimageprofile">160dp</dimen>
+</resources>

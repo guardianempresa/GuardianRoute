@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.controlderuta.guardianroute.AccounActivity">
+
+
+    <RadioGroup
+        android:id="@+id/rdiGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rdiNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:checked="true"
+
+            />
+
+      <!--  <RadioButton
+            android:id="@+id/rdiToasn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toasn"
+            android:checked="true"
+            />-->
+    </RadioGroup>
+
+
+    <Button
+
+        android:layout_below="@+id/rdiGroup"
+        android:id="@+id/btnOneTime"
+        android:text="One-Time-Alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+    <Button
+
+        android:layout_below="@+id/btnOneTime"
+        android:id="@+id/btnRepeting"
+        android:text="Repeting-Alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+
+
+
+
+
+
+
+
+    <!-- <Button Este botton es para desloguear
+         android:id="@+id/logOutBtn"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Log Out"
+         />-->
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_72434315b70c9f70bf4fa47c5472820eeeb4cd29\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b07cdd4b03f0ed7ed6e257728a716d5e5e375d67">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_83516056ecb98c2131943f185581ccc0006cde5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\.android\build-cache\0544d75f3dedc4c10b66034d8c7511e283f63b4b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="5bd38c72db0a3b4140d38b7fb527e78e46126d79">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_83e533584301d9c0984f837d902fbef06ec158ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\.android\build-cache\df9c699677f1260eff8cbf47b263248b1f3b0ba9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d4ba7399a1a4f5c998b5ce4f6bf33a2e8347820c">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b1d046b63ac3ee5bca6a4d12373dda0879b82287\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\.android\build-cache\98aad2347c94f2a1a5bb3488f08c6082532d3fe7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ec1f195979cc7f1ec94779fa16f1b10aac8aceca">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_62e0c530323300cad6d49992e00f905dd0bc5cdb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\.android\build-cache\068543e8558ca053556c24eba7884ae4a491b3dd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="90095b555b72205db6f9b93aca3cb9978d1e3344">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a951c58f0e553eafe0fe61ccc9b0a5d876264786\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\eduin\.android\build-cache\8e71c6104b472f1c32ff2b11e0cbde62d7f73ca9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2876edc2a40da44f15d9002dbe3e56b798d6ed6c\classes.dex" />
+    </item>
+
+</items>

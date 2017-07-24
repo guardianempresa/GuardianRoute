@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.controlderuta.guardianroute.PhotoActivity">
+
+    <include layout="@layout/actionbar_toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="0dp"
+        android:paddingTop="230dp"
+        android:paddingBottom="20dp"
+        android:layout_gravity="center|top"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/linearLayout">
+
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/facePicture"
+        android:layout_width="@dimen/circleimageprofile"
+        android:layout_height="@dimen/circleimageprofile"
+        android:src="@drawable/app"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="120dp"
+        android:elevation="10dp"
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@+id/appBarProfile"
+        app:dependType="y"
+        app:dependTargetY="-160dp"
+        app:targetX="16dp"
+        app:targetY="3dp"
+        app:targetWidth="50dp"
+        app:targetHeight="50dp"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/marginBig"
+        android:paddingRight="@dimen/marginBig"
+
+        >
+
+        <TextView
+            android:id="@+id/NombreMenor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="60dp"
+            android:text="Sube la foto del usuario desde el almacenamiento de tu celular"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnsigphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sig"
+            android:theme="@style/RaisedButtonDark"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_marginLeft="@dimen/marginBottom"
+            android:layout_marginRight="@dimen/marginBottom"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="@dimen/marginBottom"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        >
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabphotoTomar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_weight="1"
+            android:src="@drawable/photo" />
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
