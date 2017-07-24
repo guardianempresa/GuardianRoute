@@ -8,13 +8,24 @@
     tools:context="com.controlderuta.guardianroute.SplashScreenActivity">
 
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorWhite"
-            android:layout_weight="0.6">
+            android:orientation="vertical"
+            android:gravity="center"
+            >
 
+            <ImageView
+                android:id="@+id/logotipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/banerguardian"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
 
-        </RelativeLayout>
+        </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
