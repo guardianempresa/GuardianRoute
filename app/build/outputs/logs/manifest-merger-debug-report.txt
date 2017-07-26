@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:2:1-72:12
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:2:1-73:12
 	package
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml
@@ -57,7 +57,7 @@ ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\Andro
 	android:name
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:16:9-48
 application
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:19:5-70:19
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:19:5-71:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\eduin\.android\build-cache\7d71033b683fe1a841084034d6833e92d130aab3\output\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-core:11.0.1] C:\Users\eduin\.android\build-cache\08caba8b41cded2c8bfdbb95ba6afdedede0061d\output\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-messaging:11.0.1] C:\Users\eduin\.android\build-cache\0544d75f3dedc4c10b66034d8c7511e283f63b4b\output\AndroidManifest.xml:19:5-29:19
@@ -187,9 +187,13 @@ ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\Andro
 	android:name
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:68:19-51
 activity#com.controlderuta.guardianroute.FirtsRutaActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:69:9-64
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:69:9-55
 	android:name
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:69:19-52
+activity#com.controlderuta.guardianroute.CreateAccountActivity
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:70:9-68
+	android:name
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:70:19-56
 uses-sdk
 INJECTED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\eduin\.android\build-cache\dc56cb5d9889b9e42e97c6563776399847f17963\output\AndroidManifest.xml:18:5-42

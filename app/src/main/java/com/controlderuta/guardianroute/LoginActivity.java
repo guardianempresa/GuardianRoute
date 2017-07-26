@@ -1,5 +1,6 @@
 package com.controlderuta.guardianroute;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -57,6 +58,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 createAccount(edtEmail.getText().toString(),edtPassword.getText().toString());
+                Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });
@@ -92,6 +96,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (task.isSuccessful()){
                     Toast.makeText(LoginActivity.this, "Autenticado con exito",Toast.LENGTH_SHORT).show();//mnesaje
+                    Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
+                    startActivity(intent);
+                    finish();
+
                 }else{
                     Toast.makeText(LoginActivity.this, "La cuenta no existe, crea una nueva",Toast.LENGTH_SHORT).show(); //Mensaje
                 }
