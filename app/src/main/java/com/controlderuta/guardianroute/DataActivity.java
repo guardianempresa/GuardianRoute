@@ -91,7 +91,7 @@ public class DataActivity extends AppCompatActivity {
         codigoruta.setText(codeRuta);
 
 
-        btncontactos=(FloatingActionButton)findViewById(R.id.fabcontactos);
+
 
         btncontactos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +105,6 @@ public class DataActivity extends AppCompatActivity {
 
 
         textNombreRuta=(TextInputEditText) findViewById(R.id.routename);
-        textNombreConductor=(TextInputEditText) findViewById(R.id.driver);
         textMaticula = (TextInputEditText) findViewById(R.id.idcar);
         textContacto= (TextInputEditText) findViewById(R.id.userphone);
 

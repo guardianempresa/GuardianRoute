@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
@@ -26,6 +27,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
 
     private TextView btnCreate;
+    private Button btnLoginCreate;
 
     private EditText edtEmailCreate;
     private EditText edtPasswordCreate;
@@ -39,8 +41,8 @@ public class CreateAccountActivity extends AppCompatActivity {
 
         btnCreate   = (TextView)findViewById(R.id.btnregistrar);
 
-        edtEmailCreate    = (EditText)findViewById(R.id.username);
-        edtPasswordCreate = (EditText)findViewById(R.id.password);
+        edtEmailCreate    = (EditText)findViewById(R.id.crearUsername);
+        edtPasswordCreate = (EditText)findViewById(R.id.crearPassword);
 
         initialice();
 
@@ -51,7 +53,7 @@ public class CreateAccountActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 createAccount(edtEmailCreate.getText().toString(),edtPasswordCreate.getText().toString());
-                Intent intent = new Intent(CreateAccountActivity.this, DataActivity.class);
+                Intent intent = new Intent(CreateAccountActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
 
