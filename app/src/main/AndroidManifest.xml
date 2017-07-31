@@ -67,7 +67,8 @@
         <activity android:name=".AlertasActivity" />
         <activity android:name=".AbordajeActivity" />
         <activity android:name=".FirtsRutaActivity" />
-        <activity android:name=".CreateAccountActivity"></activity>
+        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".PreDataActivity"></activity>
     </application>
 
 </manifest>

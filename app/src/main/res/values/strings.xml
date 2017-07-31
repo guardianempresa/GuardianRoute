@@ -8,6 +8,8 @@
     <string name="title_bar_maps_rutas">Guardian</string>
     <string name="vacio"></string>
     <string name="perfildeusuario">Perfil  de usuario</string>
+    <string name="layoutpredata">Monitor o conductor</string>
+
 
 
 </resources>

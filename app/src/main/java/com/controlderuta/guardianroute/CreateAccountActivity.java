@@ -32,6 +32,11 @@ public class CreateAccountActivity extends AppCompatActivity {
     private EditText edtEmailCreate;
     private EditText edtPasswordCreate;
 
+    private String textemail;
+    private String textpassword;
+    int a=0, b=0, valida;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +57,43 @@ public class CreateAccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                createAccount(edtEmailCreate.getText().toString(),edtPasswordCreate.getText().toString());
-                Intent intent = new Intent(CreateAccountActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
+                textemail = edtEmailCreate.getText().toString();
+                textpassword = edtPasswordCreate.getText().toString();
+
+
+                if (textemail.equals("")) {//valida campos email no vacios
+
+                    Toast.makeText(CreateAccountActivity.this, "El campo email no puede estar vacio",
+                            Toast.LENGTH_SHORT).show();
+                    a=1;
+                }else   {
+                    a=0;
+                }
+
+                if (textpassword.equals("")) {//valida campos password no vacios
+
+                    Toast.makeText(CreateAccountActivity.this, "Falta campo password debe ser mayo a 6 caracteres",
+                            Toast.LENGTH_SHORT).show();
+                    b=1;
+                }else   {
+                    b=0;
+                }
+
+                valida=a+b;
+
+
+                if (valida==0){ //Valida que email y password no tenga campos vacios
+
+                    createAccount(edtEmailCreate.getText().toString(),edtPasswordCreate.getText().toString());
+                    Intent intent = new Intent(CreateAccountActivity.this, PreDataActivity.class);
+                    startActivity(intent);
+                    finish();
+
+
+                }else {
+                    Toast.makeText(CreateAccountActivity.this, "Debe registrar la totalidad de los campos para continuar registro",
+                            Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

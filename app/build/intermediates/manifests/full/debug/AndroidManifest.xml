@@ -92,6 +92,7 @@
         <activity android:name="com.controlderuta.guardianroute.AbordajeActivity" />
         <activity android:name="com.controlderuta.guardianroute.FirtsRutaActivity" />
         <activity android:name="com.controlderuta.guardianroute.CreateAccountActivity" />
+        <activity android:name="com.controlderuta.guardianroute.PreDataActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
