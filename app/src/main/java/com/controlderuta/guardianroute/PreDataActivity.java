@@ -1,9 +1,6 @@
 package com.controlderuta.guardianroute;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.PreData;
-import com.controlderuta.guardianroute.Model.UpLocation;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -50,7 +46,7 @@ public class PreDataActivity extends AppCompatActivity {
     private String lastnameMonitor;
     private String mobileMonitor;
     private String codEmpresa;
-    private String PruUid;
+    private String PruUidDos;
     private int a=0, b=0, c=0, d=0, prevalidador;
 
 
@@ -60,7 +56,7 @@ public class PreDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pre_data);
 
-        showToolbar(getResources().getString(R.string.layoutpredata), false);//llamamos la toolbar
+        showToolbar(getResources().getString(R.string.layoutpredata), true);//llamamos la toolbar
 
         random1=(int)(Math.random()*100);
         cadenacod1 = String.valueOf(random1);
@@ -76,7 +72,7 @@ public class PreDataActivity extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();//obtiene el enlace de la db "ejemplos-android:"
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
-        PruUid=user.getUid(); //Guardamos Uid en variable
+        PruUidDos=user.getUid(); //Guardamos Uid en variable
 
         btnSiguientePredata = (Button)findViewById(R.id.btnsiguientePredata);
 
@@ -132,12 +128,12 @@ public class PreDataActivity extends AppCompatActivity {
 
                 if (prevalidador==0){
 
-                    PreData uppredata = new PreData(PruUid, nameMonitor, lastnameMonitor, mobileMonitor, codEmpresa, codeRuta);
+                    PreData uppredata = new PreData(PruUidDos, nameMonitor, lastnameMonitor, mobileMonitor, codEmpresa, codeRuta);
                     //sube la longitud y tatitud a la raiz de la id
                     databaseReference.child("datosmonitorconductor").child(uppredata.getId()).setValue(uppredata);
 
 
-                    Intent intent = new Intent(PreDataActivity.this, MapsActivity.class);
+                    Intent intent = new Intent(PreDataActivity.this, AutoActivity.class);
                     startActivity(intent);
                     finish();
 

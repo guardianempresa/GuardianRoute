@@ -122,36 +122,48 @@
                     android:text=" creala aquí"
                     android:layout_toRightOf="@id/textCuenta"
                     android:textColor="@color/colorPrimaryDark"
-
-
                     />
 
             </RelativeLayout>
 
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/textContraseña"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Si no recuerdas la contraseña,"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/textVeaAqui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" solicitala aquí"
+                        android:layout_toRightOf="@id/textContraseña"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+
+                </RelativeLayout>
+
+
+
             </LinearLayout>
-
-
 
         </ScrollView>
 
-<!--            <TextView
-
-                android:id="@+id/usuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/marginBottom"
-                android:text="Ingresa presionando el botón"
-
-                />
-
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/loginbtn"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"></com.google.android.gms.common.SignInButton>
-
--->
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

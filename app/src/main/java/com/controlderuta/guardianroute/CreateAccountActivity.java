@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.controlderuta.guardianroute.Model.PreData;
 import com.google.android.gms.common.data.DataBuffer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -42,6 +44,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        showToolbar(getResources().getString(R.string.layoutCreateAccount), true);//llamamos la toolbar
+
 
 
         btnCreate   = (TextView)findViewById(R.id.btnregistrar);
@@ -72,7 +76,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
                 if (textpassword.equals("")) {//valida campos password no vacios
 
-                    Toast.makeText(CreateAccountActivity.this, "Falta campo password debe ser mayo a 6 caracteres",
+                    Toast.makeText(CreateAccountActivity.this, "Falta campo password debe ser mayor a 6 caracteres",
                             Toast.LENGTH_SHORT).show();
                     b=1;
                 }else   {
@@ -85,9 +89,8 @@ public class CreateAccountActivity extends AppCompatActivity {
                 if (valida==0){ //Valida que email y password no tenga campos vacios
 
                     createAccount(edtEmailCreate.getText().toString(),edtPasswordCreate.getText().toString());
-                    Intent intent = new Intent(CreateAccountActivity.this, PreDataActivity.class);
-                    startActivity(intent);
-                    finish();
+                    signIn(edtEmailCreate.getText().toString(),edtPasswordCreate.getText().toString());
+
 
 
                 }else {
@@ -129,7 +132,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
                 if (task.isSuccessful()){
                     Toast.makeText(CreateAccountActivity.this, "Autenticado con exito",Toast.LENGTH_SHORT).show();//mnesaje
-                    Intent intent = new Intent(CreateAccountActivity.this, MapsActivity.class);
+                    Intent intent = new Intent(CreateAccountActivity.this, PreDataActivity.class);
                     startActivity(intent);
                     finish();
 
@@ -168,6 +171,16 @@ public class CreateAccountActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         firebaseAuth.removeAuthStateListener(authStateListener);
+
+    }
+
+    public void showToolbar (String tittle, boolean upButton){//Metoodo de la toolbar
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(tittle);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);//habilitamos la visibilidad de botton de up
+
 
     }
 }

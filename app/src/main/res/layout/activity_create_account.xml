@@ -8,50 +8,42 @@
     tools:context="com.controlderuta.guardianroute.CreateAccountActivity">
 
 
-    <LinearLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorWhite"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/marginBottom"
-        android:paddingLeft="@dimen/marginBottom"
-        android:paddingRight="@dimen/marginBottom"
-        android:paddingTop="@dimen/marginBottom"
-        android:weightSum="5"
-        >
+    <include layout="@layout/actionbar_toolbar"/>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            >
 
-            <ImageView
-                android:id="@+id/logotipo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@drawable/banerguardian"
 
-                />
-
-        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
 
             <LinearLayout
+
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
                 android:orientation="vertical"
-                android:gravity="center|top"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
+                android:paddingBottom="@dimen/marginBottom"
+                android:paddingLeft="@dimen/marginBottom"
+                android:paddingRight="@dimen/marginBottom"
+                android:paddingTop="@dimen/marginBottom"
+                android:weightSum="5"
                 >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Es importante registrar un correo electronico que uses, en caso de olvidar la contraseña se enviara correo para reestablecerla"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+
+                    />
 
 
                 <android.support.design.widget.TextInputLayout
@@ -104,7 +96,6 @@
         </ScrollView>
 
 
-    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
 

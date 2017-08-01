@@ -27,17 +27,21 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button btnLogin;
     private TextView btnCreate;
+    private TextView btnSolicitarPassword;
 
     private EditText edtEmail;
     private EditText edtPassword;
+    private int a=0, b=0, validalog;
+    private String email,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btnLogin    = (Button)findViewById(R.id.btnIngresar);
-        btnCreate   = (TextView)findViewById(R.id.textPulseAqui);
+        btnLogin             = (Button)findViewById(R.id.btnIngresar);
+        btnCreate            = (TextView)findViewById(R.id.textPulseAqui);
+        btnSolicitarPassword = (TextView)findViewById(R.id.textVeaAqui);
 
         edtEmail    = (EditText)findViewById(R.id.username);
         edtPassword = (EditText)findViewById(R.id.password);
@@ -48,7 +52,39 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                signIn(edtEmail.getText().toString(),edtPassword.getText().toString());
+                email = edtEmail.getText().toString();
+                password = edtPassword.getText().toString();
+
+
+                if (email.equals("")) {//valida campos email no vacios
+
+                    Toast.makeText(LoginActivity.this, "El campo email no puede ser vacio",
+                            Toast.LENGTH_SHORT).show();
+                    a=1;
+                }else   {
+                    a=0;
+                }
+
+                if (password.equals("")) {//valida campos password no vacios
+
+                    Toast.makeText(LoginActivity.this, "Falta campo password, el cual debe ser mayor a 6 caracteres",
+                            Toast.LENGTH_SHORT).show();
+                    b=1;
+                }else   {
+                    b=0;
+                }
+
+                validalog=a+b;
+
+
+                if (validalog==0){ //Valida que email y password no tenga campos vacios
+
+                    signIn(edtEmail.getText().toString(),edtPassword.getText().toString());
+
+                }else {
+                    Toast.makeText(LoginActivity.this, "Debe registrar la totalidad de los campos para continuar registro",
+                            Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
@@ -59,6 +95,18 @@ public class LoginActivity extends AppCompatActivity {
 
 
                 Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+
+        btnSolicitarPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(LoginActivity.this, ReestablecerActivity.class);
                 startActivity(intent);
                 finish();
 
@@ -101,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
                     finish();
 
                 }else{
-                    Toast.makeText(LoginActivity.this, "La cuenta no existe, crea una nueva",Toast.LENGTH_SHORT).show(); //Mensaje
+                    Toast.makeText(LoginActivity.this, "El usuario y la contraseña no  cohiciden, puede ser que el usuario no exista o la contraseña sea incorrecta, si estas seguro que el usurio existe pide reestablecer la contraseña, recibiras un correo confirmando la contraseña.",Toast.LENGTH_LONG).show(); //Mensaje
                 }
 
             }
