@@ -10,6 +10,7 @@
     <string name="perfildeusuario">Perfil  de usuario</string>
     <string name="layoutpredata">Monitor o conductor</string>
     <string name="layoutCreateAccount">Crear cuenta</string>
+    <string name="layoutReestablecer">Reestablecer contraseña</string>
 
 
 </resources>

@@ -127,22 +127,23 @@
             </RelativeLayout>
 
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+
                     >
 
                     <TextView
                         android:id="@+id/textContraseña"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Si no recuerdas la contraseña,"
+                        android:text="Si no recuerdas la contraseña"
 
 
                         />
@@ -152,11 +153,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" solicitala aquí"
-                        android:layout_toRightOf="@id/textContraseña"
                         android:textColor="@color/colorPrimaryDark"
                         />
 
-                </RelativeLayout>
+                </LinearLayout>
 
 
 
