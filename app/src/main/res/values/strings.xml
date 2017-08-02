@@ -11,6 +11,7 @@
     <string name="layoutpredata">Monitor o conductor</string>
     <string name="layoutCreateAccount">Crear cuenta</string>
     <string name="layoutReestablecer">Reestablecer contraseña</string>
+    <string name="layoutCreateRoute">Crea una ruta</string>
 
 
 </resources>

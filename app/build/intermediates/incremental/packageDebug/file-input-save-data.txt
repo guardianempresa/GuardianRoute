@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Aug 01 19:47:07 COT 2017
+#Tue Aug 01 20:01:53 COT 2017
 210.set=ANDROID_RESOURCE
 282.file=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\abc_alert_dialog_title_material.xml
 14.set=ANDROID_RESOURCE

@@ -54,7 +54,7 @@
                     android:id="@+id/resUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Usuario"
+                    android:hint="Correo electronico"
                     android:inputType="textCapCharacters" />
 
             </android.support.design.widget.TextInputLayout>

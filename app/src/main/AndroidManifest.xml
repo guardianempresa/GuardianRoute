@@ -70,7 +70,9 @@
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".PreDataActivity" />
         <activity android:name=".AutoActivity" />
-        <activity android:name=".ReestablecerActivity"></activity>
+        <activity android:name=".ReestablecerActivity" />
+        <activity android:name=".CreateRouteActivity" />
+        <activity android:name=".RouteActivity"></activity>
     </application>
 
 </manifest>

@@ -764,6 +764,7 @@
     </string>
     <string name="google_storage_bucket" translatable="false">guardian-731af.appspot.com</string>
     <string name="layoutCreateAccount">Crear cuenta</string>
+    <string name="layoutCreateRoute">Crea una ruta</string>
     <string name="layoutReestablecer">Reestablecer contraseña</string>
     <string name="layoutpredata">Monitor o conductor</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>

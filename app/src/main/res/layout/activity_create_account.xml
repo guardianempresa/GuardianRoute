@@ -38,7 +38,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Es importante registrar un correo electronico que uses, en caso de olvidar la contraseña se enviara correo para reestablecerla"
+                    android:text="Es importante registrar un correo electronico que este activo, en caso de olvidar la contraseña se enviara comunicación a este para reestablecerla."
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:textSize="17dp"
@@ -56,7 +56,7 @@
                         android:id="@+id/crearUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Usuario"
+                        android:hint="Correo electronico"
                         android:inputType="textCapCharacters" />
 
                 </android.support.design.widget.TextInputLayout>
