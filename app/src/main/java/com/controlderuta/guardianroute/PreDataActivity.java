@@ -23,13 +23,6 @@ public class PreDataActivity extends AppCompatActivity {
 
     DatabaseReference databaseReference;
 
-    //variables random
-
-    private String codeRuta;
-    private String cadenacod1;
-    private String cadenacod2;
-    private int random1;
-    private int random2;
 
     //variables de layout
 
@@ -48,6 +41,7 @@ public class PreDataActivity extends AppCompatActivity {
     private String codEmpresa;
     private String PruUidDos;
     private int a=0, b=0, c=0, d=0, prevalidador;
+    private String codeRuta;
 
 
 
@@ -58,11 +52,6 @@ public class PreDataActivity extends AppCompatActivity {
 
         showToolbar(getResources().getString(R.string.layoutpredata), true);//llamamos la toolbar
 
-        random1=(int)(Math.random()*100);
-        cadenacod1 = String.valueOf(random1);
-        random2=(int)(Math.random()*100);
-        cadenacod2 = String.valueOf(random2);
-        codeRuta = "GP"+random1+"AY"+random2;
 
 
         textnameMonitor     = (EditText)findViewById(R.id.monitorname);
@@ -87,6 +76,7 @@ public class PreDataActivity extends AppCompatActivity {
                 lastnameMonitor = textlastnameMonitor.getText().toString();
                 mobileMonitor = textmobileMonitor.getText().toString();
                 codEmpresa = textcodEmpresa.getText().toString();
+                codeRuta = "AAA001";
 
                 if (nameMonitor.equals("")) {
 

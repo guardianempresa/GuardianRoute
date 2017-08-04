@@ -42,7 +42,7 @@
 
             <TextView
 
-                android:id="@+id/codigoruta"
+                android:id="@+id/codigoruote"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -51,7 +51,7 @@
                 android:textSize="30dp" />
 
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fabcontactos"
+                android:id="@+id/fabcontactosroute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
@@ -61,7 +61,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnSigCrearRuta"
+            android:id="@+id/btnSigRoute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CREA RUTA"

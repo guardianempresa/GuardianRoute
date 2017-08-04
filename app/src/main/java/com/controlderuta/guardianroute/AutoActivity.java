@@ -11,10 +11,13 @@ import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.AutoData;
 import com.controlderuta.guardianroute.Model.PreData;
+import com.controlderuta.guardianroute.Model.RouteData;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Map;
 
 public class AutoActivity extends AppCompatActivity {
 
@@ -105,7 +108,7 @@ public class AutoActivity extends AppCompatActivity {
                     databaseReference.child("datosvehiculo").child(upautodata.getId()).setValue(upautodata);
 
 
-                    Intent intent = new Intent(AutoActivity.this, MapsActivity.class);
+                    Intent intent = new Intent(AutoActivity.this, RouteActivity.class);
                     startActivity(intent);
                     finish();
 
@@ -117,8 +120,6 @@ public class AutoActivity extends AppCompatActivity {
 
             }
         });
-
-
 
 
     }
