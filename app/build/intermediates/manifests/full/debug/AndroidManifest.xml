@@ -97,6 +97,8 @@
         <activity android:name="com.controlderuta.guardianroute.ReestablecerActivity" />
         <activity android:name="com.controlderuta.guardianroute.CreateRouteActivity" />
         <activity android:name="com.controlderuta.guardianroute.RouteActivity" />
+        <activity android:name="com.controlderuta.guardianroute.NameRouteActivity" />
+        <activity android:name="com.controlderuta.guardianroute.TypeRouteActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

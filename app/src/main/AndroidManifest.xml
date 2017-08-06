@@ -72,7 +72,9 @@
         <activity android:name=".AutoActivity" />
         <activity android:name=".ReestablecerActivity" />
         <activity android:name=".CreateRouteActivity" />
-        <activity android:name=".RouteActivity"></activity>
+        <activity android:name=".RouteActivity" />
+        <activity android:name=".NameRouteActivity" />
+        <activity android:name=".TypeRouteActivity"></activity>
     </application>
 
 </manifest>

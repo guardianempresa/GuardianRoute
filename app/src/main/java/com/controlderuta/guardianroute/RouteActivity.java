@@ -44,6 +44,7 @@ public class RouteActivity extends AppCompatActivity {
     private int alertDist=1000;
     private float acumDist=0;
     private int time=0;
+    private String link;
 
 
     //variables random
@@ -61,7 +62,7 @@ public class RouteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_route);
 
-        showToolbar(getResources().getString(R.string.layoutCreateRoute), true);//llamamos la toolbar
+        showToolbar(getResources().getString(R.string.layoutCreateRoute), false);//llamamos la toolbar
 
         textCodigo          = (TextView)findViewById(R.id.codigoruote);
         btnSigRoute         = (Button)findViewById(R.id.btnSigRoute);
@@ -100,6 +101,8 @@ public class RouteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+
               shareDeepLink(buildDeepLink(""));
 
             }
@@ -111,7 +114,8 @@ public class RouteActivity extends AppCompatActivity {
 
     private String buildDeepLink(String key){
 
-        return "?link=https://drive.google.com/open?id=0B3lY_7IS7EICeExHZUJfVFQyRFU";
+        link="¡Unete a mi Ruta Guardian! Usa el codigo de invitación "+textcode+".Descarga la aquí la app:https://drive.google.com/open?id=0B3lY_7IS7EICeExHZUJfVFQyRFU";
+        return link;
     }
 
     private void shareDeepLink(String deepLink){
