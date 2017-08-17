@@ -118,7 +118,7 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="colorAccent">#607D8B</color>
     <color name="colorPrimary"> #8BC34A</color>
-    <color name="colorPrimaryDark">#689F38</color>
+    <color name="colorPrimaryDark">#6EBC13</color>
     <color name="colorPrimarylight">#DCEDC8</color>
     <color name="colorPrimarytext">#212121</color>
     <color name="colorSecondarytext">#757575</color>
@@ -792,7 +792,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
