@@ -7,10 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.controlderuta.guardianroute.Model.PreData;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -120,7 +118,7 @@ public class PreDataActivity extends AppCompatActivity {
 
                     PreData uppredata = new PreData(PruUidDos, nameMonitor, lastnameMonitor, mobileMonitor, codEmpresa, codeRuta);
                     //sube la longitud y tatitud a la raiz de la id
-                    databaseReference.child("datosmonitorconductor").child(uppredata.getId()).setValue(uppredata);
+                    databaseReference.child("datosmonitorconductor").child(PruUidDos).setValue(uppredata);
 
 
                     Intent intent = new Intent(PreDataActivity.this, AutoActivity.class);

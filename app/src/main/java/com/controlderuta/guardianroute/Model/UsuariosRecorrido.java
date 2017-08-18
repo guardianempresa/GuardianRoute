@@ -1,0 +1,24 @@
+package com.controlderuta.guardianroute.Model;
+
+/**
+ * Created by diego on 18/08/2017.
+ */
+
+public class UsuariosRecorrido {
+    private String tokenusuarios;
+
+    public UsuariosRecorrido() {
+    }
+
+    public UsuariosRecorrido(String tokenusuarios) {
+        this.tokenusuarios = tokenusuarios;
+    }
+
+    public String getTokenusuarios() {
+        return tokenusuarios;
+    }
+
+    public void setTokenusuarios(String tokenusuarios) {
+        this.tokenusuarios = tokenusuarios;
+    }
+}

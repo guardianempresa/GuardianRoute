@@ -12,32 +12,24 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.controlderuta.guardianroute.Model.PreData;
-import com.google.android.gms.common.data.DataBuffer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.PhoneAuthCredential;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
     private static final String TAG ="LoginActivity" ;
+    int a=0, b=0, valida;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
-
-
     private TextView btnCreate;
     private Button btnLoginCreate;
-
     private EditText edtEmailCreate;
     private EditText edtPasswordCreate;
-
     private String textemail;
     private String textpassword;
-    int a=0, b=0, valida;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

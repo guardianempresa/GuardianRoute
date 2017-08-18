@@ -5,27 +5,19 @@ package com.controlderuta.guardianroute.Model;
  */
 
 public class AutoData {
-
-
-    private String id;
     private String matricula;
     private String marca;
     private String modelo;
 
 
-    public AutoData(String id, String matricula, String marca, String modelo) {
-        this.id = id;
+    public AutoData( String matricula, String marca, String modelo) {
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
+    public AutoData() {
     }
 
     public String getMatricula() {
@@ -50,8 +42,5 @@ public class AutoData {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
-    }
-
-    public AutoData() {
     }
 }
