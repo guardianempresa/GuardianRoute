@@ -1,35 +1,23 @@
 package com.controlderuta.guardianroute.Model;
 
-import android.content.Intent;
-
 /**
- * Created by eduin on 31/07/2017.
+ * Created by diego on 18/08/2017.
  */
 
-public class PreData {
-
-    private String id;
+public class DataMonitorConductor {
     private String nameconductor;
     private String lastnameconductor;
     private String mobileconductor;
-    private String codempresa;
-    private String codigoruta;
 
-    public PreData(String id, String nameconductor, String lastnameconductor, String mobileconductor, String codempresa, String codigoruta) {
-        this.id = id;
+
+    public DataMonitorConductor() {
+    }
+
+    public DataMonitorConductor(String nameconductor, String lastnameconductor, String mobileconductor) {
         this.nameconductor = nameconductor;
         this.lastnameconductor = lastnameconductor;
         this.mobileconductor = mobileconductor;
-        this.codempresa = codempresa;
-        this.codigoruta = codigoruta;
-    }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNameconductor() {
@@ -55,25 +43,4 @@ public class PreData {
     public void setMobileconductor(String mobileconductor) {
         this.mobileconductor = mobileconductor;
     }
-
-    public String getCodempresa() {
-        return codempresa;
-    }
-
-    public void setCodempresa(String codempresa) {
-        this.codempresa = codempresa;
-    }
-
-    public String getCodigoruta() {
-        return codigoruta;
-    }
-
-    public void setCodigoruta(String codigoruta) {
-        this.codigoruta = codigoruta;
-    }
-
-    public PreData() {
-    }
-
-
 }

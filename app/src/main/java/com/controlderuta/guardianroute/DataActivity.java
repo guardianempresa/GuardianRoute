@@ -18,7 +18,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.controlderuta.guardianroute.Model.UpLocation;
+import com.controlderuta.guardianroute.Model.DataMonitorConductor;
+import com.controlderuta.guardianroute.Model.Recorridos;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -27,52 +28,43 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DataActivity extends AppCompatActivity {
 
     private static final String GUARDIAN = "guardian" ;
+    ///   Link firebase
+    private static final String PROYECT_ID ="https://wx3sk.app.goo.gl/";
     Button btndata;
-
-
     //AGREGO ESTO ---------------------------------------------
     DatabaseReference databaseReference;
     String PruUid;
     LocationManager locationManager;
     LocationListener locationListener;
-    private double latitud=0.0;
-    private double longitud=0.0;
-    //----------------------------------------------------------
-
     TextInputEditText textNombreRuta;
+    //----------------------------------------------------------
     TextInputEditText textNombreConductor;
     TextInputEditText textMaticula;
     TextInputEditText textContacto;
-
-
-
-    private String NombreRuta =" ";
-    private String NombreConductor = " ";
-    private String Matricula = " ";
-    private String Contacto = " ";
-
-
     //validar
     int f=1;
     int a=1;
     int b=1;
     int c=1;
     int d=1;
-
-
-    //Random
-
     String codeRuta;
     String cadenacod1;
     String cadenacod2;
     int random1;
     int random2;
+
+
+    //Random
     TextView codigoruta;
-
-
-    ///   Link firebase
-    private static final String PROYECT_ID ="https://wx3sk.app.goo.gl/";
+    private double latitud=0.0;
+    private double longitud=0.0;
+    private String NombreRuta =" ";
+    private String NombreConductor = " ";
+    private String Matricula = " ";
+    private String Contacto = " ";
     private FloatingActionButton btncontactos;
+    private String nameconductor;
+    private String lastnameconductor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -311,9 +303,9 @@ public class DataActivity extends AppCompatActivity {
                         if (res==0){
 
                             //se suebn los datos
-                            UpLocation upLocation = new UpLocation(PruUid, latitud, longitud,NombreRuta, NombreConductor, Matricula, Contacto);
+                           DataMonitorConductor dataMonitorConductor = new DataMonitorConductor(nameconductor, lastnameconductor, Contacto);
                             //sube la longitud y tatitud a la raiz de la id
-                            databaseReference.child("datosruta").child(upLocation.getId()).setValue(upLocation);
+                            databaseReference.child("datosruta").child(PruUid).setValue(dataMonitorConductor);
 
 
                             Intent intent = new Intent(DataActivity.this, MapsActivity.class);

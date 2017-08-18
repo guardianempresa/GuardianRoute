@@ -8,6 +8,14 @@
         "source": "C:\\Users\\eduin\\.android\\build-cache\\df9c699677f1260eff8cbf47b263248b1f3b0ba9\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
+        "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\diego\\.android\\build-cache\\07f27d6efdbf01ac75ba265f5a15a7f2cb61e5b8\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\diego\\.android\\build-cache\\07f27d6efdbf01ac75ba265f5a15a7f2cb61e5b8\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\df9c699677f1260eff8cbf47b263248b1f3b0ba9\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
     },
@@ -18,6 +26,10 @@
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\df9c699677f1260eff8cbf47b263248b1f3b0ba9\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\diego\\.android\\build-cache\\07f27d6efdbf01ac75ba265f5a15a7f2cb61e5b8\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",

@@ -10,14 +10,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.AutoData;
-import com.controlderuta.guardianroute.Model.PreData;
-import com.controlderuta.guardianroute.Model.RouteData;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.Map;
 
 public class AutoActivity extends AppCompatActivity {
 
@@ -103,9 +99,9 @@ public class AutoActivity extends AppCompatActivity {
 
                 if (autovalidador==0){
 
-                    AutoData upautodata = new AutoData(PruUidTres, placa, modelo, marca);
+                    AutoData upautodata = new AutoData( placa, modelo, marca);
                     //sube la longitud y tatitud a la raiz de la id
-                    databaseReference.child("datosvehiculo").child(upautodata.getId()).setValue(upautodata);
+                    databaseReference.child("datosvehiculo").child(PruUidTres).setValue(upautodata);
 
 
                     Intent intent = new Intent(AutoActivity.this, RouteActivity.class);

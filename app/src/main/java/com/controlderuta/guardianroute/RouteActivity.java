@@ -9,8 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.controlderuta.guardianroute.Model.PreData;
-import com.controlderuta.guardianroute.Model.RouteData;
+import com.controlderuta.guardianroute.Model.Recorridos;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -54,7 +53,9 @@ public class RouteActivity extends AppCompatActivity {
     private String cadenacod2;
     private int random1;
     private int random2;
-
+    private double latitudllegada;
+    private double longitudllegada;
+    private String alerta;
 
 
     @Override
@@ -85,8 +86,8 @@ public class RouteActivity extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
                 PruUidCuatro=user.getUid(); //Guardamos Uid en variable
 
-                RouteData uproutedata = new RouteData(PruUidCuatro,textcode,nameRoute,longitud,latitud,tipRoute,estado,tipNotification,alertDist,acumDist,time);
-                databaseReference.child("datosruta").child(uproutedata.getId()).setValue(uproutedata);
+               Recorridos recorridos = new Recorridos(latitud,longitud,latitudllegada,longitudllegada,estado,alerta,nameRoute,alertDist,acumDist,time,tipRoute);
+                databaseReference.child("datosruta").child(PruUidCuatro).setValue(recorridos);
 
 
                 Intent intent = new Intent(RouteActivity.this, MapsActivity.class);
