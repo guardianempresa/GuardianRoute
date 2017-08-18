@@ -8,5 +8,6 @@
     <color name="colordividerborder">#BDBDBD</color>
     <color name="colorAccent">#607D8B</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBottonFloat">#beb913</color>
 
 </resources>

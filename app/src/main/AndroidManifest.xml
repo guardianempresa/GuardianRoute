@@ -75,7 +75,12 @@
         <activity android:name=".RouteActivity" />
         <activity android:name=".NameRouteActivity" />
         <activity android:name=".TypeRouteActivity" />
-        <activity android:name=".PhoneActivity"></activity>
+        <activity android:name=".PhoneActivity" />
+        <activity android:name=".PersonalDataActivity" />
+        <activity android:name=".IdCarActivity" />
+        <activity android:name=".RouteNameActivity" />
+        <activity android:name=".CodeActivity" />
+        <activity android:name=".NewCreateRouteActivity"></activity>
     </application>
 
 </manifest>
