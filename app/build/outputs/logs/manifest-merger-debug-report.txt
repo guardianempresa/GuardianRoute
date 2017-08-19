@@ -78,15 +78,15 @@ MERGED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\edui
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\eduin\.android\build-cache\36e84e31b3e0d82d252d651ae1ccd65b5e9f9c36\output\AndroidManifest.xml:9:5-20
 MERGED from [com.zoonref:simple-view-behavior:1.0] C:\Users\eduin\.android\build-cache\de3491dbd0e5b4687ad0f77d0bf93f311bd0d258\output\AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:design:25.3.1] C:\Users\eduin\.android\build-cache\5651df98121b1a62f8c70073ed09b71cf9e87c4e\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\eduin\.android\build-cache\4840f242ae986966063280bcb32a2f7a20b735f3\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\94e50c280bf188f7f0e06d3aed2c110e998b8b3b\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\7fcb06ac6110db3cad54a2adf884b07bf09cf737\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:transition:25.3.1] C:\Users\eduin\.android\build-cache\fd1de86f9a7de0c230bea2a769ec57f844eed269\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\eduin\.android\build-cache\4840f242ae986966063280bcb32a2f7a20b735f3\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\eduin\.android\build-cache\d705ba112285ac6fb780a572b7de1ba0235606ee\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\eduin\.android\build-cache\a1695d652003b682b017dc6f87abe093eecc2f43\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\eduin\.android\build-cache\a3334ebec2c7c30b4ee4a0bd40c1e4b2916fffcd\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\eduin\.android\build-cache\ec6922364276fba8ac4d093d8aa899c6c82ae8c4\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\eduin\.android\build-cache\5c3c8eb44c637a35ad9ae35039659f4de377eb1a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\94e50c280bf188f7f0e06d3aed2c110e998b8b3b\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\7fcb06ac6110db3cad54a2adf884b07bf09cf737\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\eduin\.android\build-cache\7f3b24d4fde9c2e201cd15a252e4c67c05e5d638\output\AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:22:9-41
@@ -272,16 +272,17 @@ MERGED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\edui
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\eduin\.android\build-cache\36e84e31b3e0d82d252d651ae1ccd65b5e9f9c36\output\AndroidManifest.xml:5:5-7:41
 MERGED from [com.zoonref:simple-view-behavior:1.0] C:\Users\eduin\.android\build-cache\de3491dbd0e5b4687ad0f77d0bf93f311bd0d258\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:25.3.1] C:\Users\eduin\.android\build-cache\5651df98121b1a62f8c70073ed09b71cf9e87c4e\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\eduin\.android\build-cache\4840f242ae986966063280bcb32a2f7a20b735f3\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\94e50c280bf188f7f0e06d3aed2c110e998b8b3b\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\7fcb06ac6110db3cad54a2adf884b07bf09cf737\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\eduin\.android\build-cache\e0010bb07ea3d931b72d9290023f5e512040ac38\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:transition:25.3.1] C:\Users\eduin\.android\build-cache\fd1de86f9a7de0c230bea2a769ec57f844eed269\output\AndroidManifest.xml:20:5-44
+MERGED from [com.github.GrenderG:Toasty:1.2.5] C:\Users\eduin\.android\build-cache\8e814e7de3c2f5c3894e5612641cb837dc32e613\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\eduin\.android\build-cache\4840f242ae986966063280bcb32a2f7a20b735f3\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\eduin\.android\build-cache\d705ba112285ac6fb780a572b7de1ba0235606ee\output\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\eduin\.android\build-cache\a1695d652003b682b017dc6f87abe093eecc2f43\output\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\eduin\.android\build-cache\a3334ebec2c7c30b4ee4a0bd40c1e4b2916fffcd\output\AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\eduin\.android\build-cache\ec6922364276fba8ac4d093d8aa899c6c82ae8c4\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\eduin\.android\build-cache\5c3c8eb44c637a35ad9ae35039659f4de377eb1a\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\94e50c280bf188f7f0e06d3aed2c110e998b8b3b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\7fcb06ac6110db3cad54a2adf884b07bf09cf737\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\eduin\.android\build-cache\7f3b24d4fde9c2e201cd15a252e4c67c05e5d638\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.3.1] C:\Users\eduin\.android\build-cache\5651df98121b1a62f8c70073ed09b71cf9e87c4e\output\AndroidManifest.xml:23:9-59
@@ -482,16 +483,16 @@ ADDED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\eduin
 		ADDED from [com.google.android.gms:play-services-basement:11.0.1] C:\Users\eduin\.android\build-cache\0fad0bb78e111a3a0fa951088cc49e42aa5a3d3d\output\AndroidManifest.xml:20:20-65
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\eduin\.android\build-cache\5651df98121b1a62f8c70073ed09b71cf9e87c4e\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\eduin\.android\build-cache\4840f242ae986966063280bcb32a2f7a20b735f3\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\94e50c280bf188f7f0e06d3aed2c110e998b8b3b\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\7fcb06ac6110db3cad54a2adf884b07bf09cf737\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\eduin\.android\build-cache\e0010bb07ea3d931b72d9290023f5e512040ac38\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:transition:25.3.1] C:\Users\eduin\.android\build-cache\fd1de86f9a7de0c230bea2a769ec57f844eed269\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\eduin\.android\build-cache\4840f242ae986966063280bcb32a2f7a20b735f3\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\eduin\.android\build-cache\d705ba112285ac6fb780a572b7de1ba0235606ee\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\eduin\.android\build-cache\a1695d652003b682b017dc6f87abe093eecc2f43\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\eduin\.android\build-cache\a3334ebec2c7c30b4ee4a0bd40c1e4b2916fffcd\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\eduin\.android\build-cache\ec6922364276fba8ac4d093d8aa899c6c82ae8c4\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\eduin\.android\build-cache\5c3c8eb44c637a35ad9ae35039659f4de377eb1a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\94e50c280bf188f7f0e06d3aed2c110e998b8b3b\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\eduin\.android\build-cache\7fcb06ac6110db3cad54a2adf884b07bf09cf737\output\AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\eduin\.android\build-cache\7f3b24d4fde9c2e201cd15a252e4c67c05e5d638\output\AndroidManifest.xml:25:5-27:34
 	android:value
 		ADDED from [com.android.support:design:25.3.1] C:\Users\eduin\.android\build-cache\5651df98121b1a62f8c70073ed09b71cf9e87c4e\output\AndroidManifest.xml:27:9-31

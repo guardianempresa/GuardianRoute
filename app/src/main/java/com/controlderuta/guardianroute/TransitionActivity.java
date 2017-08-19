@@ -1,6 +1,7 @@
 package com.controlderuta.guardianroute;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -15,7 +16,6 @@ import com.google.firebase.database.ValueEventListener;
 public class TransitionActivity extends AppCompatActivity {
 
     String PruUid;
-    String MasPru;
     String value;
     String nexo;
 
@@ -25,41 +25,49 @@ public class TransitionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
-        PruUid = user.getUid(); //Guardamos Uid en variable
 
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();//Raiz
-        DatabaseReference mensajeRef = ref.child("rutas").child(PruUid).child("code");//Nodo
-
-
-        mensajeRef.addValueEventListener(new ValueEventListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value = dataSnapshot.getValue(String.class);
-                nexo=value+"2";//esto toco hacerlo para que reconociera el if
+            public void run() {
 
-                if (nexo.equals("null2")) {
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
+                PruUid = user.getUid(); //Guardamos Uid en variable
 
-                    Intent intent = new Intent(TransitionActivity.this, PhotoActivity.class);
-                    startActivity(intent);
-                    finish();
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference();//Raiz
+                DatabaseReference mensajeRef = ref.child("rutas").child(PruUid).child("code");//Nodo cambiar ojo pr cambio de bases de datos
 
 
-                }else{
+                mensajeRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        value = dataSnapshot.getValue(String.class);
+                        nexo=value+"2";//esto toco hacerlo para que reconociera el if
 
-                    Intent intent = new Intent(TransitionActivity.this, MapsActivity.class);
-                    startActivity(intent);
-                    finish();
+                        if (nexo.equals("null2")) {
 
-                }
+                            Intent intent = new Intent(TransitionActivity.this, PhoneActivity.class);
+                            startActivity(intent);
+                            finish();
+
+
+                        }else{
+
+                            Intent intent = new Intent(TransitionActivity.this, MapsActivity.class);
+                            startActivity(intent);
+                            finish();
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+
+                    }
+                });
 
             }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-
-            }
-        });
+        },4000);
 
     }}

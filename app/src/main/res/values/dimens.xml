@@ -5,4 +5,26 @@
     <dimen name="marginBig">20dp</dimen>
     <dimen name="marginPhone">110dp</dimen>
     <dimen name="circleimageprofile">160dp</dimen>
+
+
+    <dimen name="windtlogotransition">111dp</dimen>
+    <dimen name="windtbtnlogin200dp">200dp</dimen>
+    <dimen name="windtline2dp">2dp</dimen>
+
+
+    <dimen name="margin5dp">5dp</dimen>
+    <dimen name="margin16dp">16dp</dimen>
+    <dimen name="margin30dp">30dp</dimen>
+    <dimen name="margin40dp">40dp</dimen>
+    <dimen name="margin60dp">60dp</dimen>
+    <dimen name="margin70dp">70dp</dimen>
+
+
+
+
+    <dimen name="letter15dp">15dp</dimen>
+    <dimen name="principalletter18dp">18dp</dimen>
+    <dimen name="letter22dp">22dp</dimen>
+    <dimen name="letter25dp">25dp</dimen>
+
 </resources>

@@ -1,51 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
     tools:context="com.controlderuta.guardianroute.TransitionActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
+        android:background="@drawable/pictuturetransition"
         android:orientation="vertical"
-        android:layout_margin="@dimen/marginBottom"
+        android:gravity="center"
 
-        >
+        android:weightSum="1">
 
         <ImageView
-            android:id="@+id/logotipo"
-            android:layout_width="match_parent"
-            android:layout_height="118dp"
+            android:layout_width="@dimen/windtlogotransition"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logowhiteroute"
             android:layout_gravity="center"
-            android:background="@drawable/banerguardian"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="30dp"
+            android:layout_weight="0.07"
+            android:layout_marginBottom="@dimen/margin40dp"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Es importante para iniciar la configuración, es importante que te ubiques en el lugar o casa donde debe recoger al usuario de la ruta de transporte"
+            android:layout_marginBottom="@dimen/margin30dp"
+            android:layout_marginTop="@dimen/margin60dp"
+            android:layout_marginLeft="@dimen/margin16dp"
+            android:layout_marginRight="@dimen/margin16dp"
+            android:text="@string/transitionintro"
             android:textAlignment="center"
-            android:layout_marginTop="@dimen/marginBig"
-            android:layout_marginBottom="@dimen/marginBig"
+            android:textSize="@dimen/letter15dp"
+            android:textColor="@color/colorWhite"
 
             />
 
-
-
     </LinearLayout>
-
-
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -14,25 +14,33 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarPhone"
+            android:id="@+id/toolbarWhite"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorWhite"
-            android:textAlignment="center"
-            android:title="Registro telefónico"
-            android:titleTextColor="@color/colorAccent"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
 
-            tools:title="Hola todos"
-            tools:titleTextColor="Textolone" />
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toolbartitlephone"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/letter22dp"
+                android:layout_gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
+
+
 
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/colorPrimaryDark"></LinearLayout>
+            android:layout_height="@dimen/windtline2dp"
+            android:background="@color/colorPrimaryDark">
+
+        </LinearLayout>
 
 
         <LinearLayout
@@ -52,21 +60,25 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:text="Numero de celular"
+                    android:layout_marginBottom="@dimen/margin16dp"
+                    android:text="@string/textviewphone"
                     android:textColor="@color/colorAccent"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/principalletter18dp" />
 
                 <EditText
                     android:id="@+id/phoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginRight="70dp"
+                    android:layout_marginLeft="@dimen/margin70dp"
+                    android:layout_marginRight="@dimen/margin70dp"
                     android:background="@drawable/edittextform"
-                    android:text="300282689"
+                    android:layout_gravity="center"
                     android:textAlignment="center"
-                    android:textSize="18dp"
+                    android:textSize="@dimen/principalletter18dp"
+                    android:textColor="@color/colorAccent"
+                    android:inputType="phone"
+                    android:maxLength="10"
+
 
                     />
             </LinearLayout>
@@ -82,12 +94,12 @@
                 <Button
                     android:id="@+id/btnSigPhone"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_height="@dimen/margin70dp"
+                    android:layout_marginLeft="@dimen/margin5dp"
+                    android:layout_marginRight="@dimen/margin5dp"
                     android:text="siguiente"
                     android:textAlignment="center"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/letter25dp"
                     android:theme="@style/RaisedButtonDark" />
 
             </LinearLayout>

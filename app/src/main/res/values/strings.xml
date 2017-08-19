@@ -14,4 +14,21 @@
     <string name="layoutCreateRoute">Crea una ruta</string>
 
 
+
+
+
+    <!--Text-->
+
+    <string name="transitionintro">Te ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>
+    <string name="validadorphone">Este número de celular tiene errores, verifíquelo para poder continuar.</string>
+    <string name="validadorphonezero">Debe incluir su número de celular.</string>
+    <string name="textviewphone">Número de celular</string>
+
+
+
+    <!--Title-->
+
+    <string name="toolbartitlephone">Registro telefónico</string>
+
+
 </resources>

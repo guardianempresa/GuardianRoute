@@ -116,10 +116,6 @@ public class PreDataActivity extends AppCompatActivity {
 
                 if (prevalidador==0){
 
-                    PreData uppredata = new PreData(PruUidDos, nameMonitor, lastnameMonitor, mobileMonitor, codEmpresa, codeRuta);
-                    //sube la longitud y tatitud a la raiz de la id
-                    databaseReference.child("datosmonitorconductor").child(PruUidDos).setValue(uppredata);
-
 
                     Intent intent = new Intent(PreDataActivity.this, AutoActivity.class);
                     startActivity(intent);

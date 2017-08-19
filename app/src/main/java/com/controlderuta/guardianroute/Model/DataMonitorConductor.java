@@ -14,6 +14,7 @@ public class DataMonitorConductor {
     }
 
     public DataMonitorConductor(String nameconductor, String lastnameconductor, String mobileconductor) {
+
         this.nameconductor = nameconductor;
         this.lastnameconductor = lastnameconductor;
         this.mobileconductor = mobileconductor;
