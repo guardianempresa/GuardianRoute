@@ -22,13 +22,22 @@
     <string name="transitionintro">Te ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>
     <string name="validadorphone">Este número de celular tiene errores, verifíquelo para poder continuar.</string>
     <string name="validadorphonezero">Debe incluir su número de celular.</string>
+    <string name="validadorpersonalnamevacio">Debe registrar sus nombres.</string>
+    <string name="validadorpersonallastnamevacio">Debe registrar sus apellidos.</string>
+    <string name="validadorpersonal">Debe registrar la totalidad de los espacios.</string>
+
+
     <string name="textviewphone">Número de celular</string>
+    <string name="textnamedriver">Nombres</string>
+    <string name="textlastnamedriver">Apellidos</string>
 
 
 
     <!--Title-->
 
     <string name="toolbartitlephone">Registro telefónico</string>
+    <string name="toolbartitlepersonal">Registro personal</string>
+    <string name="buttomnext">SIGUIENTE</string>
 
 
 </resources>

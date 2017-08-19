@@ -97,7 +97,7 @@
                     android:layout_height="@dimen/margin70dp"
                     android:layout_marginLeft="@dimen/margin5dp"
                     android:layout_marginRight="@dimen/margin5dp"
-                    android:text="siguiente"
+                    android:text="@string/buttomnext"
                     android:textAlignment="center"
                     android:textSize="@dimen/letter25dp"
                     android:theme="@style/RaisedButtonDark" />
