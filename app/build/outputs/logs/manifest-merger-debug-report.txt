@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:2:1-86:12
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:2:1-77:12
 	package
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml
@@ -57,7 +57,7 @@ ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\Andro
 	android:name
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:16:9-48
 application
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:19:5-84:19
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:19:5-75:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\eduin\.android\build-cache\7d71033b683fe1a841084034d6833e92d130aab3\output\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-core:11.0.1] C:\Users\eduin\.android\build-cache\08caba8b41cded2c8bfdbb95ba6afdedede0061d\output\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-messaging:11.0.1] C:\Users\eduin\.android\build-cache\0544d75f3dedc4c10b66034d8c7511e283f63b4b\output\AndroidManifest.xml:19:5-29:19
@@ -93,11 +93,11 @@ MERGED from [com.android.support:support-compat:25.3.1] C:\Users\eduin\.android\
 	android:supportsRtl
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:24:9-35
 	android:roundIcon
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:23:9-47
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:23:9-46
 	android:allowBackup
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:20:9-35
 	android:icon
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:21:9-42
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:21:9-41
 	android:theme
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:25:9-40
 provider#android.support.v4.content.FileProvider
@@ -156,96 +156,60 @@ activity#com.controlderuta.guardianroute.PhotoActivity
 ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:56:9-51
 	android:name
 		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:56:19-48
-activity#com.controlderuta.guardianroute.DataActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:57:9-50
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:57:19-47
-activity#com.controlderuta.guardianroute.AccounActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:58:9-52
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:58:19-49
 receiver#com.controlderuta.guardianroute.AlarmNotificationReceiver
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:60:9-63
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:58:9-63
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:60:19-60
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:58:19-60
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:62:9-64:71
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:60:9-62:71
 	android:value
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:64:13-68
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:62:13-68
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:63:13-58
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:61:13-58
 activity#com.controlderuta.guardianroute.CallActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:66:9-50
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:64:9-50
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:66:19-47
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:64:19-47
 activity#com.controlderuta.guardianroute.AlertasActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:67:9-53
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:65:9-53
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:67:19-50
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:65:19-50
 activity#com.controlderuta.guardianroute.AbordajeActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:68:9-54
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:66:9-54
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:68:19-51
-activity#com.controlderuta.guardianroute.FirtsRutaActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:69:9-55
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:69:19-52
-activity#com.controlderuta.guardianroute.CreateAccountActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:70:9-59
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:70:19-56
-activity#com.controlderuta.guardianroute.PreDataActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:71:9-53
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:71:19-50
-activity#com.controlderuta.guardianroute.AutoActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:72:9-50
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:72:19-47
-activity#com.controlderuta.guardianroute.ReestablecerActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:73:9-58
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:73:19-55
-activity#com.controlderuta.guardianroute.CreateRouteActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:74:9-57
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:74:19-54
-activity#com.controlderuta.guardianroute.RouteActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:75:9-51
-	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:75:19-48
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:66:19-51
 activity#com.controlderuta.guardianroute.NameRouteActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:76:9-55
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:67:9-55
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:76:19-52
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:67:19-52
 activity#com.controlderuta.guardianroute.TypeRouteActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:77:9-55
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:68:9-55
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:77:19-52
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:68:19-52
 activity#com.controlderuta.guardianroute.PhoneActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:78:9-51
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:69:9-51
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:78:19-48
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:69:19-48
 activity#com.controlderuta.guardianroute.PersonalDataActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:79:9-58
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:70:9-58
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:79:19-55
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:70:19-55
 activity#com.controlderuta.guardianroute.IdCarActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:80:9-51
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:71:9-51
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:80:19-48
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:71:19-48
 activity#com.controlderuta.guardianroute.RouteNameActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:81:9-55
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:72:9-55
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:81:19-52
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:72:19-52
 activity#com.controlderuta.guardianroute.CodeActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:82:9-50
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:73:9-50
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:82:19-47
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:73:19-47
 activity#com.controlderuta.guardianroute.NewCreateRouteActivity
-ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:83:9-69
+ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:74:9-69
 	android:name
-		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:83:19-57
+		ADDED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml:74:19-57
 uses-sdk
 INJECTED from C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\eduin\.android\build-cache\dc56cb5d9889b9e42e97c6563776399847f17963\output\AndroidManifest.xml:18:5-42

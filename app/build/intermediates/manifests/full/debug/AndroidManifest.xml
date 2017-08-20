@@ -42,9 +42,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logoruta"
+        android:icon="@drawable/iconapp"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logoruta"
+        android:roundIcon="@drawable/iconapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
@@ -78,8 +78,6 @@
         <activity android:name="com.controlderuta.guardianroute.LoginActivity" />
         <activity android:name="com.controlderuta.guardianroute.TransitionActivity" />
         <activity android:name="com.controlderuta.guardianroute.PhotoActivity" />
-        <activity android:name="com.controlderuta.guardianroute.DataActivity" />
-        <activity android:name="com.controlderuta.guardianroute.AccounActivity" />
 
         <receiver android:name="com.controlderuta.guardianroute.AlarmNotificationReceiver" />
 
@@ -90,13 +88,6 @@
         <activity android:name="com.controlderuta.guardianroute.CallActivity" />
         <activity android:name="com.controlderuta.guardianroute.AlertasActivity" />
         <activity android:name="com.controlderuta.guardianroute.AbordajeActivity" />
-        <activity android:name="com.controlderuta.guardianroute.FirtsRutaActivity" />
-        <activity android:name="com.controlderuta.guardianroute.CreateAccountActivity" />
-        <activity android:name="com.controlderuta.guardianroute.PreDataActivity" />
-        <activity android:name="com.controlderuta.guardianroute.AutoActivity" />
-        <activity android:name="com.controlderuta.guardianroute.ReestablecerActivity" />
-        <activity android:name="com.controlderuta.guardianroute.CreateRouteActivity" />
-        <activity android:name="com.controlderuta.guardianroute.RouteActivity" />
         <activity android:name="com.controlderuta.guardianroute.NameRouteActivity" />
         <activity android:name="com.controlderuta.guardianroute.TypeRouteActivity" />
         <activity android:name="com.controlderuta.guardianroute.PhoneActivity" />

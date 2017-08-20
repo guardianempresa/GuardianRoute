@@ -62,7 +62,7 @@ public class PhotoActivity extends AppCompatActivity {
         btnsigPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhotoActivity.this,DataActivity.class);
+                Intent intent = new Intent(PhotoActivity.this,MapsActivity.class);
                 startActivity(intent);
             }
         });
