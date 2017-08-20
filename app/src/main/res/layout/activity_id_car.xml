@@ -16,23 +16,30 @@
 
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarPhone"
+            android:id="@+id/toolbarWhiteAuto"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorWhite"
-            android:textAlignment="center"
-            android:title="Registro telefónico"
-            android:titleTextColor="@color/colorAccent"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
 
-            tools:title="Hola todos"
-            tools:titleTextColor="Textolone" />
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toolbartitleidcar"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/letter22dp"
+                android:layout_gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
 
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/colorPrimaryDark"></LinearLayout>
+            android:layout_height="@dimen/windtline2dp"
+            android:background="@color/colorPrimaryDark">
+
+        </LinearLayout>
 
 
         <LinearLayout
@@ -53,10 +60,10 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:text="Matrícula"
+                    android:layout_marginBottom="@dimen/principalletter18dp"
+                    android:text="@string/textmatricula"
                     android:textColor="@color/colorAccent"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/principalletter18dp" />
 
 
                 <EditText
@@ -64,13 +71,14 @@
                     android:id="@+id/idcar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="90dp"
-                    android:layout_marginRight="90dp"
+                    android:layout_marginLeft="@dimen/margin70dp"
+                    android:layout_marginRight="@dimen/margin70dp"
                     android:background="@drawable/edittextform"
+                    android:inputType="textCapCharacters|number"
                     android:textAlignment="center"
-                    android:textSize="18dp"
+                    android:maxLength="8"
+                    android:textSize="@dimen/principalletter18dp" />
 
-                    />
             </LinearLayout>
 
             <LinearLayout
@@ -84,12 +92,12 @@
                 <Button
                     android:id="@+id/btnSigIdCar"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:text="siguiente"
+                    android:layout_height="@dimen/margin70dp"
+                    android:layout_marginLeft="@dimen/margin5dp"
+                    android:layout_marginRight="@dimen/margin5dp"
+                    android:text="@string/buttomnext"
                     android:textAlignment="center"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/letter25dp"
                     android:theme="@style/RaisedButtonDark" />
 
             </LinearLayout>

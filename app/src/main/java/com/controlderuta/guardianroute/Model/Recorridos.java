@@ -11,7 +11,7 @@ public class Recorridos {
     private double  latitudllegada;
     private double  longitudllegada;
     private int estado;
-    private String alerta;
+    private int alerta;
     private String nombre;
     private int alertDist;
     private float acumDist;
@@ -21,7 +21,7 @@ public class Recorridos {
     public Recorridos() {
     }
 
-    public Recorridos(double latitud, double longitud, double latitudllegada, double longitudllegada, int estado, String alerta, String nombre, int alertDist, float acumDist, int time, int tipRoute) {
+    public Recorridos(double latitud, double longitud, double latitudllegada, double longitudllegada, int estado, int alerta, String nombre, int alertDist, float acumDist, int time, int tipRoute) {
         this.latitud = latitud;
         this.longitud = longitud;
         this.latitudllegada = latitudllegada;
@@ -75,11 +75,11 @@ public class Recorridos {
         this.estado = estado;
     }
 
-    public String getAlerta() {
+    public int getAlerta() {
         return alerta;
     }
 
-    public void setAlerta(String alerta) {
+    public void setAlerta(int alerta) {
         this.alerta = alerta;
     }
 

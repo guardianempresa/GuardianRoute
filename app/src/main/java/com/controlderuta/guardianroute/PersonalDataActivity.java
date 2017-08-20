@@ -98,7 +98,7 @@ public class PersonalDataActivity extends AppCompatActivity {
                     mensajeRef2.setValue(nameconductor);
 
 
-                    Intent intent = new Intent(PersonalDataActivity.this, IdCarActivity.class);
+                    Intent intent = new Intent(PersonalDataActivity.this, NewCreateRouteActivity.class);
                     startActivity(intent);
                     finish();
 

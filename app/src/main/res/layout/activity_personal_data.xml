@@ -68,13 +68,13 @@
                     android:id="@+id/namePerson"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin30dp"
                     android:layout_marginLeft="@dimen/margin30dp"
                     android:layout_marginRight="@dimen/margin30dp"
-                    android:layout_marginBottom="@dimen/margin30dp"
                     android:background="@drawable/edittextform"
+                    android:inputType="textCapCharacters"
                     android:textAlignment="center"
-                    android:textSize="@dimen/principalletter18dp"
-                    />
+                    android:textSize="@dimen/principalletter18dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,9 +92,9 @@
                     android:layout_marginLeft="@dimen/margin30dp"
                     android:layout_marginRight="@dimen/margin30dp"
                     android:background="@drawable/edittextform"
+                    android:inputType="textCapCharacters"
                     android:textAlignment="center"
-                    android:textSize="@dimen/principalletter18dp"
-                    />
+                    android:textSize="@dimen/principalletter18dp" />
             </LinearLayout>
 
 

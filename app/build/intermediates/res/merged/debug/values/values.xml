@@ -749,6 +749,8 @@
     <string name="app_name">Guardian Ruta</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="buttomcreate">CREAR RUTA</string>
+    <string name="buttominsertcode">INGRESA CODIGO</string>
     <string name="buttomnext">SIGUIENTE</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -792,7 +794,11 @@
     <string name="project_id" translatable="false">guardian-731af</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="textcreatecode">Comparte este código con los usuarios de la ruta.</string>
+    <string name="textcreateroller">Si estas relevando a otra ruta</string>
+    <string name="textcreateroute">Si deseas crear ruta</string>
     <string name="textlastnamedriver">Apellidos</string>
+    <string name="textmatricula">Número de matricula</string>
     <string name="textnamedriver">Nombres</string>
     <string name="textviewphone">Número de celular</string>
     <string name="title_activity_maps">Map</string>
@@ -802,6 +808,9 @@
     <string name="title_bar_maps_rutas">Guardian</string>
     <string name="toast_message">Toast message</string>
     <string name="toolbar_tittle_Maps">Guardian</string>
+    <string name="toolbartitlecreateroute">Compartir código ruta</string>
+    <string name="toolbartitleidcar">Registro matricula vehículo</string>
+    <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
     <string name="toolbartitlepersonal">Registro personal</string>
     <string name="toolbartitlephone">Registro telefónico</string>
     <string name="transitionintro">Te ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>

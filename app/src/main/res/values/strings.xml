@@ -30,6 +30,11 @@
     <string name="textviewphone">Número de celular</string>
     <string name="textnamedriver">Nombres</string>
     <string name="textlastnamedriver">Apellidos</string>
+    <string name="textmatricula">Número de matricula</string>
+    <string name="textcreateroute">Si deseas crear ruta</string>
+    <string name="textcreateroller">Si estas relevando a otra ruta</string>
+    <string name="textcreatecode">Comparte este código con los usuarios de la ruta.</string>
+
 
 
 
@@ -37,7 +42,15 @@
 
     <string name="toolbartitlephone">Registro telefónico</string>
     <string name="toolbartitlepersonal">Registro personal</string>
+    <string name="toolbartitleidcar">Registro matricula vehículo</string>
+    <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
+    <string name="toolbartitlecreateroute">Compartir código ruta</string>
+
     <string name="buttomnext">SIGUIENTE</string>
+    <string name="buttomcreate">CREAR RUTA</string>
+    <string name="buttominsertcode">INGRESA CODIGO</string>
+
+
 
 
 </resources>

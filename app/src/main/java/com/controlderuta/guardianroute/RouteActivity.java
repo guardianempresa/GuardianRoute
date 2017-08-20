@@ -86,8 +86,12 @@ public class RouteActivity extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
                 PruUidCuatro=user.getUid(); //Guardamos Uid en variable
 
-               Recorridos recorridos = new Recorridos(latitud,longitud,latitudllegada,longitudllegada,estado,alerta,nameRoute,alertDist,acumDist,time,tipRoute);
-                databaseReference.child("datosruta").child(PruUidCuatro).setValue(recorridos);
+
+
+                //Recorridos recorridos = new Recorridos(latitud,longitud,latitudllegada,longitudllegada,estado,alerta,nameRoute,alertDist,acumDist,time,tipRoute);
+                //databaseReference.child("datosruta").child(PruUidCuatro).setValue(recorridos);
+
+
 
 
                 Intent intent = new Intent(RouteActivity.this, MapsActivity.class);

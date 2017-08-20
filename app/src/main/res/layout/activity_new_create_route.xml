@@ -16,17 +16,22 @@
 
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarPhone"
+            android:id="@+id/toolbarWhite"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorWhite"
-            android:textAlignment="center"
-            android:title="Creación o asignación"
-            android:titleTextColor="@color/colorAccent"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
 
-            tools:title="Hola todos"
-            tools:titleTextColor="Textolone" />
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toolbartitlenewcreate"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/letter22dp"
+                android:layout_gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
 
         <LinearLayout
 
@@ -53,20 +58,21 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:text="Si deseas crear ruta"
+                    android:layout_marginBottom="@dimen/margin16dp"
+                    android:text="@string/textcreateroute"
                     android:textColor="@color/colorAccent"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/principalletter18dp" />
+
 
                 <Button
                     android:id="@+id/btnCreateNew"
-                    android:layout_width="260dp"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:text="crear ruta"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin70dp"
+                    android:layout_marginLeft="@dimen/margin40dp"
+                    android:layout_marginRight="@dimen/margin40dp"
+                    android:text="@string/buttomcreate"
                     android:textAlignment="center"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/letter25dp"
                     android:background="@drawable/buttomback"
                     android:theme="@style/RaisedButtonDark" />
 
@@ -74,29 +80,26 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Si estas reemplazando a otra ruta"
+                    android:layout_marginBottom="@dimen/margin16dp"
+                    android:layout_marginTop="@dimen/margin30dp"
+                    android:text="@string/textcreateroller"
                     android:textColor="@color/colorAccent"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/principalletter18dp" />
 
                 <Button
                     android:id="@+id/btnAddCode"
-                    android:layout_width="260dp"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:text="agregar codigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin70dp"
+                    android:layout_marginLeft="@dimen/margin40dp"
+                    android:layout_marginRight="@dimen/margin40dp"
+                    android:text="@string/buttominsertcode"
                     android:textAlignment="center"
-                    android:textSize="25dp"
+                    android:textSize="@dimen/letter25dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:background="@drawable/buttombackwhite"
                     android:theme="@style/RaisedButtonDark" />
 
-
             </LinearLayout>
-
-
 
         </LinearLayout>
 
