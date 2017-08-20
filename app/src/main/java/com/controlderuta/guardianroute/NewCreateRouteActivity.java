@@ -120,7 +120,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(NewCreateRouteActivity.this, CodeActivity.class);
+                Intent intent = new Intent(NewCreateRouteActivity.this,ReliefActivity.class);
                 startActivity(intent);
                 finish();
 

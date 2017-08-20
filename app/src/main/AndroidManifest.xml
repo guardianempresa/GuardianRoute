@@ -71,7 +71,9 @@
         <activity android:name=".IdCarActivity" />
         <activity android:name=".RouteNameActivity" />
         <activity android:name=".CodeActivity" />
-        <activity android:name=".NewCreateRouteActivity"></activity>
+        <activity android:name=".NewCreateRouteActivity" />
+        <activity android:name=".ReliefActivity" />
+        <activity android:name=".NewAlertActivity"></activity>
     </application>
 
 </manifest>

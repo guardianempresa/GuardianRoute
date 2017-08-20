@@ -800,6 +800,7 @@
     <string name="textlastnamedriver">Apellidos</string>
     <string name="textmatricula">Número de matricula</string>
     <string name="textnamedriver">Nombres</string>
+    <string name="textrelief">Ingresa el código suministrado por el otro conductor.</string>
     <string name="textroutename">Ponle nombre a la ruta para personalizarla.</string>
     <string name="textviewphone">Número de celular</string>
     <string name="title_activity_maps">Map</string>
@@ -814,6 +815,7 @@
     <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
     <string name="toolbartitlepersonal">Registro personal</string>
     <string name="toolbartitlephone">Registro telefónico</string>
+    <string name="toolbartitlerelief">Codigo de relevo</string>
     <string name="toolbartitleroutename">Nombre de ruta</string>
     <string name="transitionintro">Te ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>
     <string name="vacio"/>
