@@ -800,6 +800,7 @@
     <string name="textlastnamedriver">Apellidos</string>
     <string name="textmatricula">Número de matricula</string>
     <string name="textnamedriver">Nombres</string>
+    <string name="textroutename">Ponle nombre a la ruta para personalizarla.</string>
     <string name="textviewphone">Número de celular</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps_ruta">MapsActivityRuta</string>
@@ -813,6 +814,7 @@
     <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
     <string name="toolbartitlepersonal">Registro personal</string>
     <string name="toolbartitlephone">Registro telefónico</string>
+    <string name="toolbartitleroutename">Nombre de ruta</string>
     <string name="transitionintro">Te ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>
     <string name="vacio"/>
     <string name="validadorpersonal">Debe registrar la totalidad de los espacios.</string>
@@ -820,6 +822,7 @@
     <string name="validadorpersonalnamevacio">Debe registrar sus nombres.</string>
     <string name="validadorphone">Este número de celular tiene errores, verifíquelo para poder continuar.</string>
     <string name="validadorphonezero">Debe incluir su número de celular.</string>
+    <string name="validadorroutename">Debe darle un nombre a la ruta.</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

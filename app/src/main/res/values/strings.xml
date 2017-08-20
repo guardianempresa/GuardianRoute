@@ -25,6 +25,8 @@
     <string name="validadorpersonalnamevacio">Debe registrar sus nombres.</string>
     <string name="validadorpersonallastnamevacio">Debe registrar sus apellidos.</string>
     <string name="validadorpersonal">Debe registrar la totalidad de los espacios.</string>
+    <string name="validadorroutename">Debe darle un nombre a la ruta.</string>
+
 
 
     <string name="textviewphone">Número de celular</string>
@@ -34,6 +36,7 @@
     <string name="textcreateroute">Si deseas crear ruta</string>
     <string name="textcreateroller">Si estas relevando a otra ruta</string>
     <string name="textcreatecode">Comparte este código con los usuarios de la ruta.</string>
+    <string name="textroutename">Ponle nombre a la ruta para personalizarla.</string>
 
 
 
@@ -45,6 +48,8 @@
     <string name="toolbartitleidcar">Registro matricula vehículo</string>
     <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
     <string name="toolbartitlecreateroute">Compartir código ruta</string>
+    <string name="toolbartitleroutename">Nombre de ruta</string>
+
 
     <string name="buttomnext">SIGUIENTE</string>
     <string name="buttomcreate">CREAR RUTA</string>
