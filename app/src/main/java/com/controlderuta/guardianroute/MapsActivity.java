@@ -19,6 +19,8 @@ import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.controlderuta.guardianroute.Model.DataUsuarios;
+import com.controlderuta.guardianroute.Model.UsuariosRecorrido;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -27,28 +29,33 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, View.OnClickListener {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback{
 
 
     private static final String TAG ="" ;
-    //Variables Geolocalizacion
-    private GoogleMap mMap;
     Location location;//objeto localition
     LocationManager locationManager;// objeto location manager
     LocationListener locationListener;
     double latitud=0.0;
     double longitud=0.0;
+    //Variables Geolocalizacion
+    private GoogleMap mMap;
 
     //Variables FireBase
-
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private String PruUid; //Para traer token del otro activity
-
-
+    private DatabaseReference mensajeRef;
+    private String padreid;
+    private double latitudusuario;
+    private double longitudusuario;
 
 
     @Override
@@ -67,7 +74,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
     }
-
     public void showToolbar (String tittle, boolean upButton) {//Metoodo de la toolbar
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -76,7 +82,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);//habilitamos la visibilidad de botton de up
 
     }
-
         @Override
     public void onRequestPermissionsResult (int requestCode,String[] permission,int[] grantResult){
         switch (requestCode){
@@ -148,31 +153,66 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
     private void escribirposicion(Location location) {
-        if (location!=null){//verifica que no se null
+        if (location!=null){
+            //verifica que no se null
             //lee la variable location para que no sea null y obtiene la latitud y longitud
             //pilas no puede existir un valor null para obtener el latitud y longitud
             longitud = location.getLongitude();
             latitud=location.getLatitude();
             LatLng actual =new LatLng(latitud,longitud);
-            LatLng av_68 =new LatLng(4.686204,-74.080497);
-            LatLng nqs_cll75 =new LatLng(4.670347,-74.071378);
-            LatLng u_nacional =new LatLng(4.637391, -74.079281);
-            LatLng Santa_isabel =new LatLng(4.601504, -74.102666);
-            LatLng san_mateo =new LatLng(4.585796, -74.205717);
             mMap.clear();//limpia el mapa
-
-            mMap.addMarker(new MarkerOptions().position(actual).title("mi pocicion").snippet(latitud+","+longitud).icon(BitmapDescriptorFactory.fromResource(R.drawable.transporte)));
-            mMap.addMarker(new MarkerOptions().position(av_68).icon(BitmapDescriptorFactory.fromResource(R.drawable.marcadorpadre)));
-            mMap.addMarker(new MarkerOptions().position(nqs_cll75).icon(BitmapDescriptorFactory.fromResource(R.drawable.marcadorpadre)));
-            mMap.addMarker(new MarkerOptions().position(u_nacional).icon(BitmapDescriptorFactory.fromResource(R.drawable.marcadorpadre)));
-            mMap.addMarker(new MarkerOptions().position(Santa_isabel).icon(BitmapDescriptorFactory.fromResource(R.drawable.marcadorpadre)));
-            mMap.addMarker(new MarkerOptions().position(san_mateo).icon(BitmapDescriptorFactory.fromResource(R.drawable.marcadorpadre)));
-
+            mMap.addMarker(new MarkerOptions().position(actual).title("mi pocicion").snippet(latitud+","+longitud));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual,14));
-
-            //UpLocation upLocation =new UpLocation(PruUid,latitud,longitud);//sube la longitud y tatitud a la raiz de la id
-            //databaseReference.child("rutas").child(upLocation.getId()).setValue(upLocation);
+            //se va actualizando la lat y long en la vase de datos
+            databaseReference = FirebaseDatabase.getInstance().getReference();
+            mensajeRef = databaseReference.child("travel").child("coderecorrido").child("latitudup");//Nodo
+            mensajeRef.setValue(latitud);
+            mensajeRef = databaseReference.child("travel").child("coderecorrido").child("longitudup");//Nodo
+            mensajeRef.setValue(longitud);
+            //---------------------------------------
+            tokenpadres();
         }
+    }
+    private void tokenpadres(){//se consulta la base de datos de usuarios recorridos para obtener los token que le corresponden al recorrrido
+        databaseReference.child("ususariosrecorrido").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        UsuariosRecorrido usuariosRecorrido = snapshot.getValue(UsuariosRecorrido.class);
+                        padreid = usuariosRecorrido.getTokenusuarios();
+                        if (padreid!=null) {
+                        padredatos(padreid);
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void padredatos(String tokenpadre) {// se obtiene datos como la latitud y longitud y agrega el marcador
+        databaseReference.child("datausuarios").child(tokenpadre).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapsh) {
+                DataUsuarios dataUsuarios = dataSnapsh.getValue(DataUsuarios.class);
+                if (dataUsuarios != null) {
+                    latitudusuario = dataUsuarios.getLatitud();
+                    longitudusuario = dataUsuarios.getLongitud();
+                    LatLng padre = new LatLng(latitudusuario, longitudusuario);
+                    mMap.addMarker(new MarkerOptions().position(padre));
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+
+        });
     }
     //liberacion de los servicios*
     protected void onPause(Bundle savedInstanceState) {
@@ -183,30 +223,5 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             else {locationManager.removeUpdates(locationListener);}}
         else { locationManager.removeUpdates(locationListener);}
     }
-
-    @Override
-    public void onClick(View v) {
-
-
-    }
-
-
-    //metodo alarma
-
-
-    private void starAlarm() { ///metodo notificacion
-
-        AlarmManager manager =(AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        Intent myIntent;
-        PendingIntent pendingIntent;
-
-        myIntent=new Intent(MapsActivity.this,AlarmNotificationReceiver.class);
-        pendingIntent=PendingIntent.getBroadcast(this,0,myIntent,0);
-        manager.set(AlarmManager.RTC_WAKEUP, 0,pendingIntent);
-
-    }
-
-
-
 }
 
