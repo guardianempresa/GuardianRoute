@@ -34,6 +34,15 @@
     <string name="textcreatecode">Comparte este código con los usuarios de la ruta.</string>
     <string name="textroutename">Ponle nombre a la ruta para personalizarla.</string>
     <string name="textrelief">Ingresa el código suministrado por el otro conductor.</string>
+    <string name="textralertcrash">Accidente</string>
+    <string name="textralertengine">Avería mecánica</string>
+    <string name="textralerttraffic">Atasco</string>
+    <string name="textralert">Reporta incidentes a los usuarios en tiempo real.</string>
+    <string name="textconfirmation">Confirmación y contacto directo con usuarios.</string>
+    <string name="textapproach">Abordaje</string>
+    <string name="textcall">Llamada</string>
+    <string name="textchat">Mensaje</string>
+    <string name="textroutelist">Selecciona el recorrido que vas a realizar.</string>
 
 
     <!--Title-->
@@ -45,6 +54,8 @@
     <string name="toolbartitlecreateroute">Compartir código ruta</string>
     <string name="toolbartitleroutename">Nombre de ruta</string>
     <string name="toolbartitlerelief">Codigo de relevo</string>
+    <string name="toolbartitleroutelist">Selección recorridos</string>
+
 
 
     <string name="buttomnext">SIGUIENTE</string>

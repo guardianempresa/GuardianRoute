@@ -30,7 +30,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
     private double  longitudllegada=0;
     private int estado=0;
     private int alerta=0;
-    private String nameRoute="";
+    private String nameRoute="DEMO";
     private int alertDist=0;
     private float acumDist=0;
     private int time=0;
@@ -101,7 +101,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
                 PruUid=user.getUid(); //Guardamos Uid en variable|
 
-                databaseReference.child("drivervstravel").child(PruUid).setValue(letra);
+                databaseReference.child("drivervstravel").child(PruUid).child(letra).child("name").setValue("");
 
                 Recorridos recorridos = new Recorridos(latitud,longitud,latitudllegada,longitudllegada,estado,alerta,nameRoute,alertDist,acumDist,time,tipRoute);
                 databaseReference.child("travel").child(letra).setValue(recorridos);

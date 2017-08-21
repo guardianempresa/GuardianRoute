@@ -1,9 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.controlderuta.guardianroute.NewAlertActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <include layout="@layout/actionbar_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textralert"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/principalletter18dp"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin30dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin40dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                android:elevation="10dp"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabalertcrash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin70dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:elevation="10dp"
+                    android:src="@drawable/traffic"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin30dp"
+                    android:layout_marginRight="@dimen/margin30dp"
+                    android:text="@string/textralerttraffic"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/principalletter18dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin40dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                android:elevation="10dp"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabalertemergecy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin70dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:elevation="10dp"
+                    android:src="@drawable/crash"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin30dp"
+                    android:layout_marginRight="@dimen/margin30dp"
+                    android:text="@string/textralertcrash"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/principalletter18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin40dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                android:elevation="10dp"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabalerttraffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin70dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:elevation="10dp"
+                    android:src="@drawable/engine"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin30dp"
+                    android:layout_marginRight="@dimen/margin30dp"
+                    android:text="@string/textralertengine"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/principalletter18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

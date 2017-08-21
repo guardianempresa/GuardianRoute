@@ -73,7 +73,9 @@
         <activity android:name=".CodeActivity" />
         <activity android:name=".NewCreateRouteActivity" />
         <activity android:name=".ReliefActivity" />
-        <activity android:name=".NewAlertActivity"></activity>
+        <activity android:name=".NewAlertActivity" />
+        <activity android:name=".ConfirmationActivity" />
+        <activity android:name=".RouteListActivity"></activity>
     </application>
 
 </manifest>

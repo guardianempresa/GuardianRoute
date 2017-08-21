@@ -74,9 +74,9 @@
                     android:layout_marginLeft="@dimen/margin30dp"
                     android:layout_marginRight="@dimen/margin30dp"
                     android:background="@drawable/edittextform"
-                    android:inputType="textCapCharacters|number"
-                    android:textAlignment="center"
+                    android:inputType="textCapWords"
 
+                    android:textAlignment="center"
                     android:textSize="@dimen/principalletter18dp" />
             </LinearLayout>
 

@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.DataMonitorConductor;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,6 +21,8 @@ import es.dmoral.toasty.Toasty;
 
 public class RouteNameActivity extends AppCompatActivity {
 
+    private DatabaseReference databaseReference;
+
     Button btnSigRouteName;
     EditText edtRouteName;
     String txtRouteName;
@@ -26,10 +30,17 @@ public class RouteNameActivity extends AppCompatActivity {
     int a=0;
     int autovalidador;
 
+    String PruUid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_route_name);
+
+
+        databaseReference =FirebaseDatabase.getInstance().getReference();  //raiz
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
+        PruUid=user.getUid(); //Guardamos Uid en variable
 
         codintent=getIntent().getExtras().getString("codigo");
 
@@ -61,11 +72,11 @@ public class RouteNameActivity extends AppCompatActivity {
                     //como la base de datos ya aesta creada en el activity anterior solo refresacamos los datos de nombre y apellidosllegando al nodo
 
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-                    DatabaseReference mensajeRef = ref.child("travel").child(codintent).child("nombre");
+                    DatabaseReference mensajeRef = ref.child("drivervstravel").child(PruUid).child(codintent).child("name");
                     mensajeRef.setValue(txtRouteName);
 
 
-                    Intent intent = new Intent(RouteNameActivity.this, MapsActivity.class);
+                    Intent intent = new Intent(RouteNameActivity.this, RouteListActivity.class);
                     startActivity(intent);
                     finish();
 
