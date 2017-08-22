@@ -100,6 +100,11 @@
         <activity android:name="com.controlderuta.guardianroute.NewAlertActivity" />
         <activity android:name="com.controlderuta.guardianroute.ConfirmationActivity" />
         <activity android:name="com.controlderuta.guardianroute.RouteListActivity" />
+        <activity android:name="com.controlderuta.guardianroute.PruebaActivity" />
+        <activity
+            android:name="com.controlderuta.guardianroute.NewMapActivity"
+            android:label="@string/title_activity_new_map"
+            android:theme="@style/AppTheme" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

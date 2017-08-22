@@ -164,6 +164,10 @@
         "source": "C:\\Users\\diego\\.android\\build-cache\\ce7ffe26c9b57350c8d384e576912416dcc462e9\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
         "source": "C:\\Users\\diego\\.android\\build-cache\\ce7ffe26c9b57350c8d384e576912416dcc462e9\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },

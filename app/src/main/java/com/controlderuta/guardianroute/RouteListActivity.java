@@ -1,10 +1,13 @@
 package com.controlderuta.guardianroute;
 
+import android.content.Intent;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -29,6 +32,8 @@ public class RouteListActivity extends AppCompatActivity {
     private ListView lstArtist;
     private ArrayAdapter arrayAdapter;
     private List<String> artistNames;
+    private List<DataListRoute> prueba;
+
 
     String PruUid;
 
@@ -39,6 +44,7 @@ public class RouteListActivity extends AppCompatActivity {
 
         lstArtist = (ListView)findViewById(R.id.lstArtist);
         artistNames = new ArrayList<>();
+        prueba=new ArrayList<>();
         arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,artistNames);
         lstArtist.setAdapter(arrayAdapter);
 
@@ -55,11 +61,17 @@ public class RouteListActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 artistNames.clear();
+                prueba.clear();
+
                 if (dataSnapshot.exists()){
                     for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
                         DataListRoute datalist = snapshot.getValue(DataListRoute.class);
                         Log.w(TAG,datalist.getName());
                         artistNames.add(datalist.getName());
+                        prueba.add(datalist);
+
+
+
                     }
                 }
                 arrayAdapter.notifyDataSetChanged();
@@ -67,6 +79,20 @@ public class RouteListActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        lstArtist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                String coderoute = prueba.get(position).getId();
+
+                Intent intent = new Intent(RouteListActivity.this, NewMapActivity.class);
+                //intent.putExtra("codigo", coderoute);
+                startActivity(intent);
+                finish();
 
             }
         });

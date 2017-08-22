@@ -18,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 import com.controlderuta.guardianroute.Model.DataUsuarios;
 import com.controlderuta.guardianroute.Model.UsuariosRecorrido;
@@ -56,6 +57,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private String padreid;
     private double latitudusuario;
     private double longitudusuario;
+
+
 
 
     @Override

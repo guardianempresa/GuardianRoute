@@ -75,7 +75,12 @@
         <activity android:name=".ReliefActivity" />
         <activity android:name=".NewAlertActivity" />
         <activity android:name=".ConfirmationActivity" />
-        <activity android:name=".RouteListActivity"></activity>
+        <activity android:name=".RouteListActivity" />
+        <activity android:name=".PruebaActivity" />
+        <activity
+            android:name=".NewMapActivity"
+            android:label="@string/title_activity_new_map"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
