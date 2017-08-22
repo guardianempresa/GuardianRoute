@@ -26,7 +26,7 @@ import java.util.List;
 
 public class SelectListActivity extends AppCompatActivity {
 
-    private static final String TAG = "RouteListActivity";
+    private static final String TAG = "SelectListActivity";
     private DatabaseReference databaseReference;
 
     private ListView lstArtist;
@@ -35,12 +35,16 @@ public class SelectListActivity extends AppCompatActivity {
     private List<DataListRoute> prueba;
 
 
+
+    String Code;
     String PruUid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_list);
+
+        Code=getIntent().getExtras().getString("parametro");
 
         showToolbar("", true);//llamamos la toolbar
 
@@ -92,7 +96,11 @@ public class SelectListActivity extends AppCompatActivity {
                 String coderoute = prueba.get(position).getId();
 
                 Intent intent = new Intent(SelectListActivity.this, NewMapActivity.class);
-                //intent.putExtra("codigo", coderoute);
+                DatabaseReference ref =FirebaseDatabase.getInstance().getReference();
+                DatabaseReference mensajeRef = ref.child("master").child(PruUid).child("code");
+                mensajeRef.setValue(coderoute);
+
+                intent.putExtra("parametro", coderoute);
                 startActivity(intent);
                 finish();
 

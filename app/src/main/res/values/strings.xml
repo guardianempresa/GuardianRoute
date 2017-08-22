@@ -67,8 +67,6 @@
     <string name="textmenuoutlogin">Salir</string>
 
 
-
-
     <!--Title-->
 
     <string name="toolbartitlephone">Registro telefónico</string>
@@ -95,6 +93,7 @@
     <string name="action_settings">Settings</string>
     <string name="toolbartitlenewcreatemenu">Nueva ruta</string>
     <string name="toolbartitlealert">Reporte de alertas</string>
+    <string name="toolbartitleuserlist">Usuarios de ruta</string>
 
 
 </resources>

@@ -83,7 +83,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".RemoveRouteActivity" />
         <activity android:name=".SelectListActivity" />
-        <activity android:name=".CreateRouteMenuActivity"></activity>
+        <activity android:name=".CreateRouteMenuActivity" />
+        <activity android:name=".UsersListActivity"></activity>
     </application>
 
 </manifest>

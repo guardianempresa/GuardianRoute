@@ -14,13 +14,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.controlderuta.guardianroute.Model.UserList;
+
 public class NewMapActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    String Code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_map);
+
+        Code=getIntent().getExtras().getString("parametro");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -93,17 +100,20 @@ public class NewMapActivity extends AppCompatActivity
             // Handle the camera action
 
             Intent intent = new Intent(NewMapActivity.this, SelectListActivity.class);
+            intent.putExtra("parametro", Code);
             startActivity(intent);
 
 
         } else if (id == R.id.nav_plus) {
 
             Intent intent = new Intent(NewMapActivity.this, CreateRouteMenuActivity.class);
+            intent.putExtra("parametro", Code);
             startActivity(intent);
 
         }else if (id == R.id.nav_minus) {
 
             Intent intent = new Intent(NewMapActivity.this, RemoveRouteActivity.class);
+            intent.putExtra("parametro", Code);
             startActivity(intent);
 
         } else if (id == R.id.nav_alert) {
@@ -113,6 +123,11 @@ public class NewMapActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_chat) {
+
+            Intent intent = new Intent(NewMapActivity.this, UsersListActivity.class);
+            intent.putExtra("parametro", Code);
+            startActivity(intent);
+
 
         } else if (id == R.id.nav_call) {
 
