@@ -6,6 +6,8 @@
     <string name="title_activity_maps_rutas">Map</string>
     <string name="title_activity_maps_ruta">MapsActivityRuta</string>
     <string name="title_bar_maps_rutas">Guardian</string>
+    <string name="title_activity_new_map">Mapa de ruta</string>
+
     <string name="vacio"></string>
     <string name="perfildeusuario">Perfil  de usuario</string>
     <string name="layoutpredata">Monitor o conductor</string>
@@ -43,9 +45,28 @@
     <string name="textcall">Llamada</string>
     <string name="textchat">Mensaje</string>
     <string name="textroutelist">Selecciona el recorrido que vas a realizar.</string>
+    <string name="textremovelist">Maten pulsada la ruta por unos segundos para eliminarla.</string>
+    <string name="textcreatenewroute">Crea una nueva ruta dando clic aquí.</string>
+
 
     <string name="textnavigatorguardian">Guardián</string>
     <string name="textnavigatorsubguardian">Control de rutas</string>
+
+    <string name="textmenuplusroute">Agregar ruta</string>
+    <string name="textmenuminusroute">Eliminar ruta</string>
+    <string name="textmenualertroute">Alertar</string>
+    <string name="textmenuchatroute">Chat</string>
+    <string name="textmenucallroute">Llamada</string>
+    <string name="textmenuaddroute">Compartir ruta a:</string>
+    <string name="textmenuusersroute">Usuarios</string>
+    <string name="textmenudriversroute">Otro conductor</string>
+    <string name="textmenuchangeroute">Cambiar ruta</string>
+
+    <string name="textmenuperfil">Perfil</string>
+    <string name="textmenuconfig">Configuración</string>
+    <string name="textmenuoutlogin">Salir</string>
+
+
 
 
     <!--Title-->
@@ -58,6 +79,7 @@
     <string name="toolbartitleroutename">Nombre de ruta</string>
     <string name="toolbartitlerelief">Codigo de relevo</string>
     <string name="toolbartitleroutelist">Selección recorridos</string>
+    <string name="toolbartitleremoveroute">Eliminar ruta</string>
 
 
     <string name="buttomnext">SIGUIENTE</string>
@@ -71,7 +93,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_new_map">NewMapActivity</string>
+    <string name="toolbartitlenewcreatemenu">Nueva ruta</string>
+    <string name="toolbartitlealert">Reporte de alertas</string>
 
 
 </resources>

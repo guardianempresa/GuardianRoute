@@ -144,6 +144,10 @@
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_route_name.xml"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_create_route_menu.xml",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_create_route_menu.xml"
+    },
+    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
@@ -278,6 +282,10 @@
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\5651df98121b1a62f8c70073ed09b71cf9e87c4e\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_remove_route.xml",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_remove_route.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
@@ -478,6 +486,10 @@
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_transition.xml",
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_transition.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_select_list.xml",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_select_list.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",

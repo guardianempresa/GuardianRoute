@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.controlderuta.guardianroute.RemoveRouteActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarremove"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toolbartitleremoveroute"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/letter22dp"
+                android:layout_gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/windtline2dp"
+            android:background="@color/colorPrimaryDark">
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/colorWhite"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin30dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                android:gravity="center"
+                android:text="@string/textremovelist"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/principalletter18dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorWhite"
+            android:layout_weight="7"
+            >
+            <ListView
+                android:id="@+id/lstRemove"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin40dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                >
+            </ListView>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            >
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+

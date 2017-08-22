@@ -117,6 +117,7 @@
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="colorAccent">#607D8B</color>
+    <color name="colorAccentGris">#607D8B</color>
     <color name="colorBottonFloat">#beb913</color>
     <color name="colorEditText">#F1F1F1</color>
     <color name="colorPrimary"> #8BC34A</color>
@@ -814,36 +815,53 @@
     <string name="textchat">Mensaje</string>
     <string name="textconfirmation">Confirmación y contacto directo con usuarios.</string>
     <string name="textcreatecode">Comparte este código con los usuarios de la ruta.</string>
+    <string name="textcreatenewroute">Crea una nueva ruta dando clic aquí.</string>
     <string name="textcreateroller">Si estas relevando a otra ruta</string>
     <string name="textcreateroute">Si deseas crear ruta</string>
     <string name="textlastnamedriver">Apellidos</string>
     <string name="textmatricula">Número de matricula</string>
+    <string name="textmenuaddroute">Compartir ruta a:</string>
+    <string name="textmenualertroute">Alertar</string>
+    <string name="textmenucallroute">Llamada</string>
+    <string name="textmenuchangeroute">Cambiar ruta</string>
+    <string name="textmenuchatroute">Chat</string>
+    <string name="textmenuconfig">Configuración</string>
+    <string name="textmenudriversroute">Otro conductor</string>
+    <string name="textmenuminusroute">Eliminar ruta</string>
+    <string name="textmenuoutlogin">Salir</string>
+    <string name="textmenuperfil">Perfil</string>
+    <string name="textmenuplusroute">Agregar ruta</string>
+    <string name="textmenuusersroute">Usuarios</string>
     <string name="textnamedriver">Nombres</string>
     <string name="textnavigatorguardian">Guardián</string>
-    <string name="textnavigatorsubguardian">Control de transporte escolar y empresarial</string>
+    <string name="textnavigatorsubguardian">Control de rutas</string>
     <string name="textralert">Reporta incidentes a los usuarios en tiempo real.</string>
     <string name="textralertcrash">Accidente</string>
     <string name="textralertengine">Avería mecánica</string>
     <string name="textralerttraffic">Atasco</string>
     <string name="textrelief">Ingresa el código suministrado por el otro conductor.</string>
+    <string name="textremovelist">Maten pulsada la ruta por unos segundos para eliminarla.</string>
     <string name="textroutelist">Selecciona el recorrido que vas a realizar.</string>
     <string name="textroutename">Ponle nombre a la ruta para personalizarla.</string>
     <string name="textviewphone">Número de celular</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps_ruta">MapsActivityRuta</string>
     <string name="title_activity_maps_rutas">Map</string>
-    <string name="title_activity_new_map">NewMapActivity</string>
+    <string name="title_activity_new_map">Mapa de ruta</string>
     <string name="title_activity_options_route">OptionsRouteActivity</string>
     <string name="title_activity_referencia">ReferenciaActivity</string>
     <string name="title_bar_maps_rutas">Guardian</string>
     <string name="toast_message">Toast message</string>
     <string name="toolbar_tittle_Maps">Guardian</string>
+    <string name="toolbartitlealert">Reporte de alertas</string>
     <string name="toolbartitlecreateroute">Compartir código ruta</string>
     <string name="toolbartitleidcar">Registro matricula vehículo</string>
     <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
+    <string name="toolbartitlenewcreatemenu">Nueva ruta</string>
     <string name="toolbartitlepersonal">Registro personal</string>
     <string name="toolbartitlephone">Registro telefónico</string>
     <string name="toolbartitlerelief">Codigo de relevo</string>
+    <string name="toolbartitleremoveroute">Eliminar ruta</string>
     <string name="toolbartitleroutelist">Selección recorridos</string>
     <string name="toolbartitleroutename">Nombre de ruta</string>
     <string name="transitionintro">Te ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>
@@ -863,7 +881,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

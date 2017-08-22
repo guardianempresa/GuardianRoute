@@ -23,7 +23,7 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/logowhiteroute"
 
-                android:layout_weight="0.22" />
+                android:layout_weight="0.25" />
 
         </LinearLayout>
 

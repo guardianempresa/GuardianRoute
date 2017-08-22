@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.controlderuta.guardianroute.CreateRouteMenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarWhiteCreate"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/toolbartitlenewcreatemenu"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/letter22dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8.5"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin30dp"
+                    android:layout_marginLeft="@dimen/margin30dp"
+                    android:layout_marginRight="@dimen/margin30dp"
+                    android:text="@string/textcreatenewroute"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/principalletter18dp" />
+
+
+                <Button
+                    android:id="@+id/btnCreateNewRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin70dp"
+                    android:layout_marginLeft="@dimen/margin40dp"
+                    android:layout_marginRight="@dimen/margin40dp"
+                    android:background="@drawable/buttomgreen"
+                    android:text="@string/buttomcreate"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/letter25dp"
+                    android:theme="@style/RaisedButtonDark" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+

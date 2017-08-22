@@ -80,7 +80,10 @@
         <activity
             android:name=".NewMapActivity"
             android:label="@string/title_activity_new_map"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".RemoveRouteActivity" />
+        <activity android:name=".SelectListActivity" />
+        <activity android:name=".CreateRouteMenuActivity"></activity>
     </application>
 
 </manifest>

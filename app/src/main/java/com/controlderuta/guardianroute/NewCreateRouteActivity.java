@@ -20,6 +20,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
     Button btnSingRoute;
 
 
+
     String letra1,letra2,letra3,letra4,letra5,letra6,letra;
     int valor1,valor2,valor3,valor4,valor5,valor6;
     char a,b,c,d;

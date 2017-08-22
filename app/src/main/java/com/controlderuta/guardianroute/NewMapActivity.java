@@ -1,5 +1,6 @@
 package com.controlderuta.guardianroute;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -67,7 +68,15 @@ public class NewMapActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.action_perfil) {
+            return true;
+        }
+
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.action_outlogin) {
             return true;
         }
 
@@ -80,19 +89,39 @@ public class NewMapActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_change) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(NewMapActivity.this, SelectListActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_plus) {
 
-        } else if (id == R.id.nav_send) {
+            Intent intent = new Intent(NewMapActivity.this, CreateRouteMenuActivity.class);
+            startActivity(intent);
+
+        }else if (id == R.id.nav_minus) {
+
+            Intent intent = new Intent(NewMapActivity.this, RemoveRouteActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_alert) {
+
+            Intent intent = new Intent(NewMapActivity.this, NewAlertActivity.class);
+            startActivity(intent);
+
+
+        } else if (id == R.id.nav_chat) {
+
+        } else if (id == R.id.nav_call) {
+
+        } else if (id == R.id.nav_users) {
+
+        }else if (id == R.id.nav_drivers) {
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
