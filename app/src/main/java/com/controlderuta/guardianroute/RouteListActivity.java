@@ -90,11 +90,6 @@ public class RouteListActivity extends AppCompatActivity {
                 String coderoute = prueba.get(position).getId();
 
                 Intent intent = new Intent(RouteListActivity.this, NewMapActivity.class);
-                DatabaseReference ref =FirebaseDatabase.getInstance().getReference();
-                DatabaseReference mensajeRef = ref.child("master").child(PruUid).child("code");
-                mensajeRef.setValue(coderoute);
-
-
                 intent.putExtra("parametro", coderoute);
                 startActivity(intent);
                 finish();

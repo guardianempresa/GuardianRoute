@@ -8,13 +8,23 @@ public class DataListRoute {
 
     private String id;
     private String name;
+    private String code;
+    private String lastname;
+    private Double latitud;
+    private Double longitud;
+
 
     public DataListRoute() {
     }
 
-    public DataListRoute(String id, String name) {
+    public DataListRoute(String id, String name, String code, String lastname, Double latitud, Double longitud) {
         this.id = id;
         this.name = name;
+        this.code = code;
+        this.lastname = lastname;
+        this.latitud = latitud;
+        this.longitud = longitud;
+
     }
 
     public String getId() {
@@ -33,4 +43,39 @@ public class DataListRoute {
         this.name = name;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public Double getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(Double latitud) {
+        this.latitud = latitud;
+    }
+
+    public Double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(Double longitud) {
+        this.longitud = longitud;
+    }
+
 }
+
+
+

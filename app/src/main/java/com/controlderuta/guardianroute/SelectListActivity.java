@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.controlderuta.guardianroute.Model.Artist;
 import com.controlderuta.guardianroute.Model.DataListRoute;
+import com.controlderuta.guardianroute.Model.UserList;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -76,8 +77,6 @@ public class SelectListActivity extends AppCompatActivity {
                         artistNames.add(datalist.getName());
                         prueba.add(datalist);
 
-
-
                     }
                 }
                 arrayAdapter.notifyDataSetChanged();
@@ -96,10 +95,6 @@ public class SelectListActivity extends AppCompatActivity {
                 String coderoute = prueba.get(position).getId();
 
                 Intent intent = new Intent(SelectListActivity.this, NewMapActivity.class);
-                DatabaseReference ref =FirebaseDatabase.getInstance().getReference();
-                DatabaseReference mensajeRef = ref.child("master").child(PruUid).child("code");
-                mensajeRef.setValue(coderoute);
-
                 intent.putExtra("parametro", coderoute);
                 startActivity(intent);
                 finish();
