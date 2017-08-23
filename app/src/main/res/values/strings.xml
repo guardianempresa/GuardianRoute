@@ -94,6 +94,7 @@
     <string name="toolbartitlenewcreatemenu">Nueva ruta</string>
     <string name="toolbartitlealert">Reporte de alertas</string>
     <string name="toolbartitleuserlist">Usuarios de ruta</string>
+    <string name="toolbartitlecall">Contacto usuario</string>
 
 
 </resources>

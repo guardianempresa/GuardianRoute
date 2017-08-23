@@ -52,6 +52,7 @@ public class UsersListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_list);
 
+
         Code=getIntent().getExtras().getString("parametro");
 
         showToolbar("", true);//llamamos la toolbar
@@ -83,7 +84,8 @@ public class UsersListActivity extends AppCompatActivity {
                     for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
                         DataListRoute datalist = snapshot.getValue(DataListRoute.class);
                         Log.w(TAG,datalist.getName());
-                        artistNames.add(datalist.getName());
+                        Log.w(TAG,datalist.getLastname());
+                        artistNames.add(datalist.getName()+" "+datalist.getLastname());
                         prueba.add(datalist);
 
                     }
@@ -99,14 +101,16 @@ public class UsersListActivity extends AppCompatActivity {
 
 
 
-       lstArtist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lstArtist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String coderoute = prueba.get(position).getId();
+                String iduserroute= prueba.get(position).getId();
+                String coderoute= prueba.get(position).getCode();
 
-                Intent intent = new Intent(UsersListActivity.this, NewMapActivity.class);
-                //intent.putExtra("codigo", coderoute);
+                Intent intent = new Intent(UsersListActivity.this, ChatActivity.class);
+                intent.putExtra("id", iduserroute);
+                intent.putExtra("parametro", coderoute);
                 startActivity(intent);
                 finish();
 
@@ -121,5 +125,4 @@ public class UsersListActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(tittle);
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);//habilitamos la visibilidad de botton de up
     }
-
 }

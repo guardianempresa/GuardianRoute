@@ -496,6 +496,10 @@
         "source": "C:\\Users\\eduin\\.android\\build-cache\\5651df98121b1a62f8c70073ed09b71cf9e87c4e\\output\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_list_call.xml",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_user_list_call.xml"
+    },
+    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
@@ -558,6 +562,10 @@
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_confirmation.xml",
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_confirmation.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_chat.xml",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\layout\\activity_chat.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",

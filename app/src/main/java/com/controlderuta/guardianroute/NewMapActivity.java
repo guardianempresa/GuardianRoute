@@ -131,6 +131,10 @@ public class NewMapActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_call) {
 
+            Intent intent = new Intent(NewMapActivity.this, UserListCallActivity.class);
+            intent.putExtra("parametro", Code);
+            startActivity(intent);
+
         } else if (id == R.id.nav_users) {
 
         }else if (id == R.id.nav_drivers) {
