@@ -8,6 +8,8 @@
     android:fitsSystemWindows="true"
     tools:context="com.controlderuta.guardianroute.ChatActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,53 +22,99 @@
             android:id="@+id/toolbarchat"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorWhite"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/toolbartitleroutelist"
-                android:textColor="@color/colorWhite"
+                android:text="@string/toolbartitleuserlist"
+                android:textColor="@color/colorSecondarytext"
                 android:textSize="@dimen/letter22dp"
                 android:layout_gravity="center" />
 
         </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/windtline2dp"
+            android:background="@color/colorPrimaryDark">
+
+        </LinearLayout>
+
+
+
 
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2.5"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:layout_weight="9"
             >
-
-            <TextView
-                android:id="@+id/codigochat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin30dp"
+            <ListView
+                android:id="@+id/lstArtist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin40dp"
                 android:layout_marginRight="@dimen/margin30dp"
-                android:gravity="center"
-                android:text="@string/textroutelist"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/principalletter18dp" />
 
-            <TextView
-                android:id="@+id/idchat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin30dp"
-                android:layout_marginRight="@dimen/margin30dp"
-                android:gravity="center"
-                android:text="@string/textroutelist"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/principalletter18dp" />
+
+
+                >
+            </ListView>
 
         </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/emoji_button"
+                android:padding="4dp"
+                android:src="@drawable/ic_menu_share"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/margin5dp"
+                />
+
+
+
+            <EditText
+                android:id="@+id/textMensaje"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittextform"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="@dimen/principalletter18dp"
+                android:textColor="@color/colorAccent"
+                android:layout_weight="8"
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabsend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_send"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin5dp"
+                />
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

@@ -51,7 +51,7 @@ public class PhoneActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mobileconductor = edtPhoneNumber.getText().toString();
+                mobileconductor = "tel:"+edtPhoneNumber.getText().toString();
                 autovalidador   = edtPhoneNumber.getText().length();
 
 
@@ -85,7 +85,6 @@ public class PhoneActivity extends AppCompatActivity {
 
                     Toasty.info(PhoneActivity.this,getText(R.string.validadorphone), Toast.LENGTH_SHORT, true).show();//info del toasty
                 }
-
 
             }
         });

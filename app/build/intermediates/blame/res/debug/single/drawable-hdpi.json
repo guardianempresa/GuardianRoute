@@ -8,12 +8,16 @@
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\photo.png"
     },
     {
-        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\cara.png",
-        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\cara.png"
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar1.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar1.png"
     },
     {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\backlog.png",
         "source": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\src\\main\\res\\drawable-hdpi\\backlog.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\cara.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\cara.png"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usuario.png",
@@ -32,12 +36,20 @@
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\app.png"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bus.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\bus.png"
+    },
+    {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\mensaje.png",
         "source": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\src\\main\\res\\drawable-hdpi\\mensaje.png"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\menuminus.png",
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\menuminus.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar7.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar7.png"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\engine.png",
@@ -50,6 +62,10 @@
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\menuhead.png",
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\menuhead.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar6.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar6.png"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\menuchat.png",
@@ -112,6 +128,18 @@
         "source": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\src\\main\\res\\drawable-hdpi\\photo.png"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar8.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar8.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar2.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar2.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar5.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar5.png"
+    },
+    {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\banerguardian.png",
         "source": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\src\\main\\res\\drawable-hdpi\\banerguardian.png"
     },
@@ -152,6 +180,10 @@
         "source": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\src\\main\\res\\drawable-hdpi\\contact.png"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar4.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar4.png"
+    },
+    {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\marcadorpadres.png",
         "source": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\src\\main\\res\\drawable-hdpi\\marcadorpadres.png"
     },
@@ -174,6 +206,14 @@
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\mensaje.png",
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\mensaje.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar3.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar3.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\avatar9.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\avatar9.png"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\photo.png",
@@ -226,6 +266,10 @@
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\menuplus.png",
         "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\menuplus.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\marketend.png",
+        "source": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\src\\main\\res\\drawable-hdpi\\marketend.png"
     },
     {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo.png",

@@ -78,9 +78,8 @@
                     android:textColor="@color/colorAccent"
                     android:inputType="phone"
                     android:maxLength="10"
-
-
                     />
+
             </LinearLayout>
 
             <LinearLayout

@@ -17,7 +17,7 @@ import java.util.Random;
 public class NewCreateRouteActivity extends AppCompatActivity {
 
     Button btnCreate;
-    Button btnSingRoute;
+    //Button btnSingRoute;
 
 
 
@@ -52,7 +52,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
 
 
         btnCreate = (Button)findViewById(R.id.btnCreateNew);
-        btnSingRoute = (Button)findViewById(R.id.btnAddCode);
+       // btnSingRoute = (Button)findViewById(R.id.btnAddCode);
 
         //Random codigo aleatorio
 
@@ -118,7 +118,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
             }
         });
 
-        btnSingRoute.setOnClickListener(new View.OnClickListener() {
+        /*btnSingRoute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -127,7 +127,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
                 finish();
 
             }
-        });
+        });*/
 
 
 

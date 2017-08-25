@@ -86,7 +86,8 @@
         <activity android:name=".CreateRouteMenuActivity" />
         <activity android:name=".UsersListActivity" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".UserListCallActivity"></activity>
+        <activity android:name=".UserListCallActivity" />
+        <activity android:name=".PointEndActivity"></activity>
     </application>
 
 </manifest>

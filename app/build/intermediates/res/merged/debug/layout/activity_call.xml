@@ -17,7 +17,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarselectlistcall"
+            android:id="@+id/toolbarcall"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorWhite"
@@ -27,7 +27,7 @@
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/toolbartitleuserlist"
+                android:text="@string/toolbartitlecall"
                 android:textColor="@color/colorSecondarytext"
                 android:textSize="@dimen/letter22dp"
                 android:layout_gravity="center" />

@@ -75,7 +75,7 @@
                     android:textSize="@dimen/letter25dp"
                     android:theme="@style/RaisedButtonDark" />
 
-                <TextView
+               <!-- <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/letter25dp"
-                    android:theme="@style/RaisedButtonDark" />
+                    android:theme="@style/RaisedButtonDark" />-->
 
             </LinearLayout>
 

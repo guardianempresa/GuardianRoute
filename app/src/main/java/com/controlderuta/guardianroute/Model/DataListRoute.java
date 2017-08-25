@@ -13,11 +13,12 @@ public class DataListRoute {
     private Double latitud;
     private Double longitud;
     private String phone;
+    private String messageuser;
 
     public DataListRoute() {
     }
 
-    public DataListRoute(String id, String name, String code, String lastname, Double latitud, Double longitud, String phone) {
+    public DataListRoute(String id, String name, String code, String lastname, Double latitud, Double longitud, String phone, String messageuser) {
         this.id = id;
         this.name = name;
         this.code = code;
@@ -25,7 +26,7 @@ public class DataListRoute {
         this.latitud = latitud;
         this.longitud = longitud;
         this.phone = phone;
-
+        this.messageuser = messageuser;
     }
 
     public String getId() {
@@ -68,6 +69,14 @@ public class DataListRoute {
         this.latitud = latitud;
     }
 
+    public Double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(Double longitud) {
+        this.longitud = longitud;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -76,9 +85,11 @@ public class DataListRoute {
         this.phone = phone;
     }
 
+    public String getMessageuser() {
+        return messageuser;
+    }
 
-
+    public void setMessageuser(String messageuser) {
+        this.messageuser = messageuser;
+    }
 }
-
-
-

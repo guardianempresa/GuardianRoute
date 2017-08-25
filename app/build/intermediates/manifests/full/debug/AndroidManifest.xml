@@ -111,6 +111,7 @@
         <activity android:name="com.controlderuta.guardianroute.UsersListActivity" />
         <activity android:name="com.controlderuta.guardianroute.ChatActivity" />
         <activity android:name="com.controlderuta.guardianroute.UserListCallActivity" />
+        <activity android:name="com.controlderuta.guardianroute.PointEndActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

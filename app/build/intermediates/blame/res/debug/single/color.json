@@ -16,6 +16,10 @@
         "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\color\\abc_tint_default.xml"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\color\\com_facebook_button_text_color.xml",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\7667503d9e20aa2f961c65c8463584e54ad962ee\\output\\res\\color\\com_facebook_button_text_color.xml"
+    },
+    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\color\\abc_primary_text_material_light.xml"
     },
@@ -134,6 +138,10 @@
     {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_error.xml",
         "source": "C:\\Users\\diego\\.android\\build-cache\\b17665d0a3cbd36d0e3fedaa41975d12e2b9c913\\output\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\color\\com_facebook_send_button_text_color.xml",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\7667503d9e20aa2f961c65c8463584e54ad962ee\\output\\res\\color\\com_facebook_send_button_text_color.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",

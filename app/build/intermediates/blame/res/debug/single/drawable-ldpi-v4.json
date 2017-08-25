@@ -1,10 +1,46 @@
 [
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_googleg_color_24dp.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\6f28f4e80a011fb1af15cf75ee3e7c1f4d873596\\output\\res\\drawable-ldpi-v4\\ic_googleg_color_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_facebook.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\050238003f8cd2e2f6ec1cf77a1b2dde86b4c1f3\\output\\res\\drawable-ldpi-v4\\ic_facebook.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_facebook_white_22dp.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\6f28f4e80a011fb1af15cf75ee3e7c1f4d873596\\output\\res\\drawable-ldpi-v4\\ic_facebook_white_22dp.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_settings_phone_white_24dp.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\6f28f4e80a011fb1af15cf75ee3e7c1f4d873596\\output\\res\\drawable-ldpi-v4\\ic_settings_phone_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_mail_white_24dp.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\6f28f4e80a011fb1af15cf75ee3e7c1f4d873596\\output\\res\\drawable-ldpi-v4\\ic_mail_white_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\a2159a533d3d815b78ef2892969c51d437b5b4f7\\output\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
     },
     {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_twitter_bird_white_24dp.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\6f28f4e80a011fb1af15cf75ee3e7c1f4d873596\\output\\res\\drawable-ldpi-v4\\ic_twitter_bird_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_google.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\050238003f8cd2e2f6ec1cf77a1b2dde86b4c1f3\\output\\res\\drawable-ldpi-v4\\ic_google.png"
+    },
+    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\toast_frame.9.png",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\8e814e7de3c2f5c3894e5612641cb837dc32e613\\output\\res\\drawable-ldpi-v4\\toast_frame.9.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\done_check_mark.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\6f28f4e80a011fb1af15cf75ee3e7c1f4d873596\\output\\res\\drawable-ldpi-v4\\done_check_mark.png"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_twitter.png",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\050238003f8cd2e2f6ec1cf77a1b2dde86b4c1f3\\output\\res\\drawable-ldpi-v4\\ic_twitter.png"
     }
 ]

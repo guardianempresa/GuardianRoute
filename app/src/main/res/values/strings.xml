@@ -97,4 +97,9 @@
     <string name="toolbartitlecall">Contacto usuario</string>
 
 
+    <string name="alertGps">El sistema GPS esta desactivado,¿Desea activarlo?</string>
+    <string name="yesGps">Si</string>
+    <string name="noGps">No</string>
+    <string name="toolbartitlepoint">Punto de llegada</string>
+
 </resources>

@@ -50,16 +50,13 @@ public class CodeActivity extends AppCompatActivity {
         txttextView.setText(Code);
 
 
-
-
         btnSigCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-
-                Intent intent = new Intent(CodeActivity.this, RouteNameActivity.class);
-                intent.putExtra("codigo", Code);
+                Intent intent = new Intent(CodeActivity.this, PointEndActivity.class);
+                intent.putExtra("parametro", Code);
                 startActivity(intent);
                 finish();
 

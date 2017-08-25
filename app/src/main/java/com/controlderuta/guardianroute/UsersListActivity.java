@@ -53,6 +53,7 @@ public class UsersListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_users_list);
 
 
+
         Code=getIntent().getExtras().getString("parametro");
 
         showToolbar("", true);//llamamos la toolbar
@@ -85,7 +86,8 @@ public class UsersListActivity extends AppCompatActivity {
                         DataListRoute datalist = snapshot.getValue(DataListRoute.class);
                         Log.w(TAG,datalist.getName());
                         Log.w(TAG,datalist.getLastname());
-                        artistNames.add(datalist.getName()+" "+datalist.getLastname());
+                        artistNames.add((datalist.getName()+" "+datalist.getLastname()).toString());
+
                         prueba.add(datalist);
 
                     }

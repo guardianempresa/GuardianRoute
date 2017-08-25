@@ -34,7 +34,7 @@ public class TransitionActivity extends AppCompatActivity {
                 PruUid = user.getUid(); //Guardamos Uid en variable
 
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference();//Raiz
-                DatabaseReference mensajeRef = ref.child("datadriver").child(PruUid).child("mobileconductor");//Nodo cambiar ojo pr cambio de bases de datos
+                DatabaseReference mensajeRef = ref.child("datadriver").child(PruUid).child("nameconductor");//Nodo cambiar ojo pr cambio de bases de datos
 
 
                 mensajeRef.addValueEventListener(new ValueEventListener() {
@@ -50,11 +50,13 @@ public class TransitionActivity extends AppCompatActivity {
                             finish();
 
 
+
                         }else{
 
                             Intent intent = new Intent(TransitionActivity.this, RouteListActivity.class);
                             startActivity(intent);
                             finish();
+
 
                         }
 

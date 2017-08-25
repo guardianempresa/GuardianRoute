@@ -27,6 +27,7 @@ public class RouteNameActivity extends AppCompatActivity {
     EditText edtRouteName;
     String txtRouteName;
     String codintent;
+
     int a=0;
     int autovalidador;
 
@@ -42,7 +43,7 @@ public class RouteNameActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
         PruUid=user.getUid(); //Guardamos Uid en variable
 
-        codintent=getIntent().getExtras().getString("codigo");
+        codintent=getIntent().getExtras().getString("parametro");
 
         btnSigRouteName =(Button)findViewById(R.id.btnSigRouteName);
         edtRouteName=(EditText)findViewById(R.id.routeName);
@@ -76,7 +77,8 @@ public class RouteNameActivity extends AppCompatActivity {
                     mensajeRef.setValue(txtRouteName);
 
 
-                    Intent intent = new Intent(RouteNameActivity.this, RouteListActivity.class);
+                    Intent intent = new Intent(RouteNameActivity.this, NewMapActivity.class);
+                    intent.putExtra("parametro", codintent);
                     startActivity(intent);
                     finish();
 

@@ -29,6 +29,9 @@ dependencies {
     //Parte Gps Permisos de api soporte de 5.0 para abajo
 
 
+
+
+
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:support-v4:25.2.0'
@@ -46,6 +49,7 @@ dependencies {
     compile 'com.zoonref:simple-view-behavior:1.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.GrenderG:Toasty:1.2.5'
+    compile 'com.github.hani-momanii:SuperNova-Emoji:1.0'
     testCompile 'junit:junit:4.12'
 }
 

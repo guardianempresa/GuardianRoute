@@ -19,6 +19,7 @@ import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.controlderuta.guardianroute.Model.DataUsuarios;
 import com.controlderuta.guardianroute.Model.UsuariosRecorrido;
@@ -57,6 +58,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private String padreid;
     private double latitudusuario;
     private double longitudusuario;
+
+
 
 
 
@@ -115,10 +118,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 0, locationListener);//actualizacion de ubicacion cada 15seg
             }
-
-
-
-
     }
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -151,10 +150,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         };
         geolocalizar();
-
-
-
     }
+
+
     private void escribirposicion(Location location) {
         if (location!=null){
             //verifica que no se null
