@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
-        "source": "C:\\Users\\eduin\\.android\\build-cache\\5651df98121b1a62f8c70073ed09b71cf9e87c4e\\output\\res\\drawable\\design_password_eye.xml"
-    },
-    {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
         "source": "C:\\Users\\diego\\.android\\build-cache\\ce7ffe26c9b57350c8d384e576912416dcc462e9\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\5651df98121b1a62f8c70073ed09b71cf9e87c4e\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
-        "source": "C:\\Users\\eduin\\.android\\build-cache\\5651df98121b1a62f8c70073ed09b71cf9e87c4e\\output\\res\\drawable\\design_password_eye.xml"
-    },
-    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\5651df98121b1a62f8c70073ed09b71cf9e87c4e\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\eduin\\.android\\build-cache\\7667503d9e20aa2f961c65c8463584e54ad962ee\\output\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
-        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
-    },
-    {
         "merged": "C:\\Users\\diego\\AndroidStudioProjects\\GuardianRoute_of_git\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_normal.xml",
         "source": "C:\\Users\\diego\\.android\\build-cache\\49f6676f3bfd286d09435105ca40b18039c69329\\output\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
@@ -220,12 +220,12 @@
         "source": "C:\\Users\\diego\\.android\\build-cache\\ce7ffe26c9b57350c8d384e576912416dcc462e9\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
-    },
-    {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_emoji_nature.xml",
         "source": "C:\\Users\\eduin\\.android\\build-cache\\5debe0774b4a28cd42b0fd52ae3c449101c1be21\\output\\res\\drawable\\selector_emoji_nature.xml"
+    },
+    {
+        "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\Copias\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\eduin\\.android\\build-cache\\4840f242ae986966063280bcb32a2f7a20b735f3\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "C:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",

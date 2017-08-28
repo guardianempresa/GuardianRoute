@@ -696,6 +696,7 @@
     <dimen name="notification_top_pad_large_text">5dp</dimen>
     <dimen name="principalletter18dp">18dp</dimen>
     <dimen name="windtbtnlogin200dp">200dp</dimen>
+    <dimen name="windtline1dp">1dp</dimen>
     <dimen name="windtline2dp">2dp</dimen>
     <dimen name="windtlogotransition">111dp</dimen>
     <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
@@ -825,6 +826,8 @@
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="textapproach">Abordaje</string>
+    <string name="textbtnCancel">Cancelar</string>
+    <string name="textbtnOk">Ok</string>
     <string name="textcall">Llamada</string>
     <string name="textchat">Mensaje</string>
     <string name="textconfirmation">Confirmación y contacto directo con usuarios.</string>
@@ -842,7 +845,7 @@
     <string name="textmenuconfig">Configuración</string>
     <string name="textmenudriversroute">Otro conductor</string>
     <string name="textmenuminusroute">Eliminar ruta</string>
-    <string name="textmenuoutlogin">Salir</string>
+    <string name="textmenuoutlogin">Cerrar sesión</string>
     <string name="textmenuperfil">Perfil</string>
     <string name="textmenuplusroute">Agregar ruta</string>
     <string name="textmenuusersroute">Usuarios</string>
@@ -872,6 +875,7 @@
     <string name="toolbartitlecall">Contacto usuario</string>
     <string name="toolbartitlecheck">Abordaje o descenso</string>
     <string name="toolbartitlecreateroute">Compartir código ruta</string>
+    <string name="toolbartitleedit">Perfil de ruta</string>
     <string name="toolbartitleidcar">Registro matricula vehículo</string>
     <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
     <string name="toolbartitlenewcreatemenu">Nueva ruta</string>

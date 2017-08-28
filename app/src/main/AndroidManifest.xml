@@ -46,10 +46,7 @@
         <activity
             android:name=".NewMapActivity"
             android:label="@string/title_activity_new_map"
-            android:theme="@style/AppTheme" >
-            </activity>
-
-
+            android:theme="@style/AppTheme" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".TransitionActivity" />
         <activity android:name=".CallActivity" />
@@ -64,14 +61,12 @@
         <activity android:name=".ConfirmationActivity" />
         <activity android:name=".RouteListActivity" />
         <activity android:name=".RemoveRouteActivity" />
-
         <activity android:name=".SelectListActivity" />
-
         <activity android:name=".CreateRouteMenuActivity" />
         <activity android:name=".UsersListActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".UserListCallActivity" />
-        <activity android:name=".PointEndActivity"></activity>
+        <activity android:name=".PointEndActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -89,7 +84,11 @@
 
         <receiver android:name=".AlarmNotificationReceiver" />
 
-        <activity android:name=".SendCodeActivity"></activity>
+        <activity android:name=".SendCodeActivity" />
+        <activity android:name=".PerfilEditActivity" />
+        <activity android:name=".EditNameActivity" />
+        <activity android:name=".EditLastNameActivity" />
+        <activity android:name=".EditPhoneActivity"></activity>
     </application>
 
 </manifest>

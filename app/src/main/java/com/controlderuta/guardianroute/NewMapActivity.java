@@ -14,9 +14,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.DialogPreference;
 import android.provider.Settings;
+import android.service.carrier.CarrierMessagingService;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +45,11 @@ import com.controlderuta.guardianroute.Model.Markets;
 import com.controlderuta.guardianroute.Model.Recorridos;
 import com.controlderuta.guardianroute.Model.UserList;
 import com.controlderuta.guardianroute.Model.UsuariosRecorrido;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -57,6 +65,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+
 
 import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
@@ -64,7 +75,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener  {
+import es.dmoral.toasty.Toasty;
+
+public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
 
 
     //Variables diego viejas
@@ -84,11 +97,16 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     AlertDialog alert = null;
 
     //Variables FireBase
+    private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
+   // private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener firebaseAuthListener;
     private String PruUid; //Para traer token del otro activity
     private DatabaseReference mensajeRef;
+
+    private static final int RC_SIGN_IN=1;
+    private GoogleApiClient googleApiClient;
+
 
     //consulta de marcadores  usuarios
 
@@ -130,6 +148,34 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
         setContentView(R.layout.activity_new_map);
 
         Code=getIntent().getExtras().getString("parametro");
+
+        ///Firebase ultimo para logOut
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+
+        googleApiClient=new GoogleApiClient.Builder(this)
+                .enableAutoManage(this,this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
+                .build();
+
+
+
+        firebaseAuth = FirebaseAuth.getInstance();//Firebase Ultimo
+        firebaseAuthListener = new FirebaseAuth.AuthStateListener(){
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
+
+                FirebaseUser user =firebaseAuth.getCurrentUser();
+            }
+        };
+        //-----fin ///Firebase ultimo para logOut
+
+
+
+
 
         btnPlay = (FloatingActionButton) findViewById(R.id.fabMapPlay);
         btnStop = (FloatingActionButton) findViewById(R.id.fabMapStop);
@@ -285,6 +331,13 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_perfil) {
+
+            //Intent intent = new Intent(NewMapActivity.this, EditNameActivity.class);
+            Intent intent = new Intent(NewMapActivity.this, PerfilEditActivity.class);
+            intent.putExtra("parametro", Code);
+            startActivity(intent);
+
+
             return true;
         }
 
@@ -293,6 +346,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
         }
 
         if (id == R.id.action_outlogin) {
+            logOut();//Firebase Ultimo
             return true;
         }
 
@@ -688,5 +742,67 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                 return;}
             else {locationManager.removeUpdates(locationListener);}}
         else { locationManager.removeUpdates(locationListener);}
+    }
+
+
+    private void goLogInScreen(){///Firebase ultimo para logOut
+        Intent intent=new Intent(this,SplashScreenActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+
+    public void logOut(){///Firebase ultimo para logOut
+
+        firebaseAuth.signOut();
+
+        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+            @Override
+            public void onResult(@NonNull Status status) {
+                if (status.isSuccess()){
+                    goLogInScreen();
+                }else{
+                    Toast.makeText(NewMapActivity.this,"La cague",Toast.LENGTH_SHORT);
+                }
+            }
+        });
+    }
+
+    public void revoke(View view){///Firebase ultimo para logOut
+
+        firebaseAuth.signOut();
+
+        Auth.GoogleSignInApi.revokeAccess(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+            @Override
+            public void onResult(@NonNull Status status) {
+                if (status.isSuccess()){
+                    goLogInScreen();
+                }else{
+                    Toast.makeText(NewMapActivity.this,"La cague mas revocado",Toast.LENGTH_SHORT);
+                }
+            }
+        });
+    }
+
+    @Override///Firebase ultimo para logOut
+    protected void onStart() {
+        super.onStart();
+
+        firebaseAuth.addAuthStateListener(firebaseAuthListener);
+    }
+
+    @Override///Firebase ultimo para logOut
+
+    protected void onStop() {
+        super.onStop();
+
+        if (firebaseAuthListener!=null){
+            firebaseAuth.removeAuthStateListener(firebaseAuthListener);
+        }
+    }
+
+    @Override///Firebase ultimo para logOut
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
     }
 }

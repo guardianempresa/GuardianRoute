@@ -70,8 +70,7 @@
         <activity
             android:name="com.controlderuta.guardianroute.NewMapActivity"
             android:label="@string/title_activity_new_map"
-            android:theme="@style/AppTheme" >
-        </activity>
+            android:theme="@style/AppTheme" />
         <activity android:name="com.controlderuta.guardianroute.LoginActivity" />
         <activity android:name="com.controlderuta.guardianroute.TransitionActivity" />
         <activity android:name="com.controlderuta.guardianroute.CallActivity" />
@@ -110,6 +109,10 @@
         <receiver android:name="com.controlderuta.guardianroute.AlarmNotificationReceiver" />
 
         <activity android:name="com.controlderuta.guardianroute.SendCodeActivity" />
+        <activity android:name="com.controlderuta.guardianroute.PerfilEditActivity" />
+        <activity android:name="com.controlderuta.guardianroute.EditNameActivity" />
+        <activity android:name="com.controlderuta.guardianroute.EditLastNameActivity" />
+        <activity android:name="com.controlderuta.guardianroute.EditPhoneActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

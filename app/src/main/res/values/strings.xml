@@ -65,7 +65,7 @@
 
     <string name="textmenuperfil">Perfil</string>
     <string name="textmenuconfig">Configuración</string>
-    <string name="textmenuoutlogin">Salir</string>
+    <string name="textmenuoutlogin">Cerrar sesión</string>
 
 
     <!--Title-->
@@ -112,9 +112,11 @@
     <string name="helpPointThree">Cuando este seguro de su elección. Presione el marcador por unos segundos para confirmar. </string>
 
 
-
     <string name="alertone">Enviaste una alerta ¡Estamos en un trancón grave!, a tus usuarios de ruta.</string>
     <string name="alerttwo">Enviaste una alerta ¡Sufrimos un accidente!, a tus usuarios de ruta.</string>
     <string name="alertthree">Enviaste una alerta ¡Tenemos un daño mecánico!, a tus usuarios de ruta.</string>
+    <string name="toolbartitleedit">Perfil de ruta</string>
+    <string name="textbtnCancel">Cancelar</string>
+    <string name="textbtnOk">Ok</string>
 
 </resources>
