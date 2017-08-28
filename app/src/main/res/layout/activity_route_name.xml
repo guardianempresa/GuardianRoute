@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toolbartitleroutename"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorSecondarytext"
                 android:textSize="@dimen/letter22dp"
                 android:layout_gravity="center" />
 
@@ -97,6 +97,7 @@
                     android:text="@string/buttomnext"
                     android:textAlignment="center"
                     android:textSize="@dimen/letter25dp"
+                    android:elevation="10dp"
                     android:theme="@style/RaisedButtonDark" />
 
             </LinearLayout>

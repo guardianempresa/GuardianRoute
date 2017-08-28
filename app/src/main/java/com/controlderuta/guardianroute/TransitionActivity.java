@@ -4,7 +4,13 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.controlderuta.guardianroute.Model.DataListRoute;
+import com.controlderuta.guardianroute.Model.Markets;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -13,11 +19,22 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TransitionActivity extends AppCompatActivity {
+
+
+    private static final String TAG = "RouteListActivity";
+    private DatabaseReference databaseReference;
+
+    private List<String> artistNames;
+
 
     String PruUid;
     String value;
     String nexo;
+    String validacion;
 
 
     @Override
@@ -26,15 +43,24 @@ public class TransitionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_transition);
 
 
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
+
+                //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+                //databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
-                PruUid = user.getUid(); //Guardamos Uid en variable
+                PruUid=user.getUid(); //Guardamos Uid en variable
+
+
+
+
 
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference();//Raiz
-                DatabaseReference mensajeRef = ref.child("datadriver").child(PruUid).child("nameconductor");//Nodo cambiar ojo pr cambio de bases de datos
+                DatabaseReference mensajeRef = ref.child("login").child(PruUid).child("login");//Nodo cambiar ojo pr cambio de bases de datos
 
 
                 mensajeRef.addValueEventListener(new ValueEventListener() {

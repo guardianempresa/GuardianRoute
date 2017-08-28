@@ -65,6 +65,8 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this,TransitionActivity.class);
                     startActivity(intent);
                     finish();
+
+
                 }
 
             }
@@ -145,6 +147,8 @@ public class LoginActivity extends AppCompatActivity {
                             Log.w(TAG, "signInWithCredential", task.getException());
                             Toast.makeText(LoginActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
+                        }else{
+
                         }
                         // ...
                     }

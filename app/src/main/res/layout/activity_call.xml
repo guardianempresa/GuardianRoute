@@ -11,8 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@color/colorWhite"
+        android:orientation="vertical"
         android:weightSum="10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -21,16 +21,26 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorWhite"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+
+            >
+
+            <Button
+                android:id="@+id/backcall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/back"
+
+                />
 
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/toolbartitlecall"
                 android:textColor="@color/colorSecondarytext"
-                android:textSize="@dimen/letter22dp"
-                android:layout_gravity="center" />
+                android:textSize="@dimen/letter22dp" />
 
         </android.support.v7.widget.Toolbar>
 
@@ -43,47 +53,70 @@
         </LinearLayout>
 
 
-
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="4"
+            android:background="@color/colorWhite"
             android:gravity="center"
-            android:orientation="vertical"
+
             >
+
+            <ImageView
+                android:id="@+id/imagenperfil"
+                android:layout_width="150dp"
+                android:layout_height="160dp"
+                android:elevation="10dp"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/windtline2dp"
+            android:background="@color/colorPrimaryDark">
+
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8.5"
+            android:layout_weight="6"
             android:gravity="center"
-            android:weightSum="1">
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/nameUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin30dp"
+                android:background="@drawable/buttomgreen"
+                android:elevation="@dimen/margin5dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/principalletter18dp" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fabPhoneCall"
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="0.21"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="10dp"
                 android:src="@drawable/telefono"
-                android:layout_weight="0.21" />
+                app:backgroundTint="@color/colorPrimaryDark" />
 
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            >
 
         </LinearLayout>
 
 
     </LinearLayout>
-
 
 
 </android.support.design.widget.CoordinatorLayout>

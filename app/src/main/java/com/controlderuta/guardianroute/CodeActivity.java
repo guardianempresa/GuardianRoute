@@ -54,6 +54,10 @@ public class CodeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                databaseReference = FirebaseDatabase.getInstance().getReference();//obtiene el enlace de la db "ejemplos-android:"
+                databaseReference.child("alert").child(Code).child("type").setValue("0");
+                databaseReference.child("alert").child(Code).child("hour").setValue("0");
+
 
                 Intent intent = new Intent(CodeActivity.this, PointEndActivity.class);
                 intent.putExtra("parametro", Code);

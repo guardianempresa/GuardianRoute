@@ -20,10 +20,10 @@
             android:id="@+id/nav_alert"
             android:icon="@drawable/menualert"
             android:title="@string/textmenualertroute" />
-        <item
+     <!--   <item
             android:id="@+id/nav_chat"
             android:icon="@drawable/menuchat"
-            android:title="@string/textmenuchatroute" />
+            android:title="@string/textmenuchatroute" />  Mientras lo desarrollamos-->
 
         <item
             android:id="@+id/nav_call"
@@ -37,10 +37,10 @@
                 android:id="@+id/nav_users"
                 android:icon="@drawable/menuusers"
                 android:title="@string/textmenuusersroute" />
-            <item
+     <!--       <item
                 android:id="@+id/nav_drivers"
                 android:icon="@drawable/menudrivers"
-                android:title="@string/textmenudriversroute" />
+                android:title="@string/textmenudriversroute" />-->
         </menu>
     </item>
 

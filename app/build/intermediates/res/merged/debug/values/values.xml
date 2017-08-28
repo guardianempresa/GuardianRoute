@@ -120,6 +120,7 @@
     <color name="colorAccentGris">#607D8B</color>
     <color name="colorBottonFloat">#beb913</color>
     <color name="colorEditText">#F1F1F1</color>
+    <color name="colorEmergency">#FF0000</color>
     <color name="colorPrimary"> #8BC34A</color>
     <color name="colorPrimaryDark">#6EBC13</color>
     <color name="colorPrimarylight">#DCEDC8</color>
@@ -763,6 +764,9 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Settings</string>
     <string name="alertGps">El sistema GPS esta desactivado,¿Desea activarlo?</string>
+    <string name="alertone">Enviaste una alerta ¡Estamos en un trancón grave!, a tus usuarios de ruta.</string>
+    <string name="alertthree">Enviaste una alerta ¡Tenemos un daño mecánico!, a tus usuarios de ruta.</string>
+    <string name="alerttwo">Enviaste una alerta ¡Sufrimos un accidente!, a tus usuarios de ruta.</string>
     <string name="app_name">Guardian Ruta</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
@@ -798,6 +802,10 @@
         AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ
     </string>
     <string name="google_storage_bucket" translatable="false">guardian-731af.appspot.com</string>
+    <string name="helpConfirm">Ok</string>
+    <string name="helpPoint">Mantenga presionado con su dedo en el mapa el punto al cual llegara la ruta. Recuerde que puede moverse por el mapa, acercarlo y alejarlo de ser necesario.</string>
+    <string name="helpPointThree">Cuando este seguro de su elección. Presione el marcador por unos segundos para confirmar. </string>
+    <string name="helpPointTwo">Aparecerá un marcador que le confirma el lugar con exactitud, puede cambiarlo cuantas veces quiera, solamente debe seleccionar otro punto. </string>
     <string name="layoutCreateAccount">Crear cuenta</string>
     <string name="layoutCreateRoute">Crea una ruta</string>
     <string name="layoutReestablecer">Reestablecer contraseña</string>
@@ -827,7 +835,7 @@
     <string name="textlastnamedriver">Apellidos</string>
     <string name="textmatricula">Número de matricula</string>
     <string name="textmenuaddroute">Compartir ruta a:</string>
-    <string name="textmenualertroute">Alertar</string>
+    <string name="textmenualertroute">Alertas</string>
     <string name="textmenucallroute">Llamada</string>
     <string name="textmenuchangeroute">Cambiar ruta</string>
     <string name="textmenuchatroute">Chat</string>
@@ -843,8 +851,8 @@
     <string name="textnavigatorsubguardian">Control de rutas</string>
     <string name="textralert">Reporta incidentes a los usuarios en tiempo real.</string>
     <string name="textralertcrash">Accidente</string>
-    <string name="textralertengine">Avería mecánica</string>
-    <string name="textralerttraffic">Atasco</string>
+    <string name="textralertengine">Daño mecánico</string>
+    <string name="textralerttraffic">Trancon</string>
     <string name="textrelief">Ingresa el código suministrado por el otro conductor.</string>
     <string name="textremovelist">Maten pulsada la ruta por unos segundos para eliminarla.</string>
     <string name="textroutelist">Selecciona el recorrido que vas a realizar.</string>
@@ -855,12 +863,14 @@
     <string name="title_activity_maps_rutas">Map</string>
     <string name="title_activity_new_map">Mapa de ruta</string>
     <string name="title_activity_options_route">OptionsRouteActivity</string>
+    <string name="title_activity_point_end">Selección de llegada</string>
     <string name="title_activity_referencia">ReferenciaActivity</string>
     <string name="title_bar_maps_rutas">Guardian</string>
     <string name="toast_message">Toast message</string>
     <string name="toolbar_tittle_Maps">Guardian</string>
     <string name="toolbartitlealert">Reporte de alertas</string>
     <string name="toolbartitlecall">Contacto usuario</string>
+    <string name="toolbartitlecheck">Abordaje o descenso</string>
     <string name="toolbartitlecreateroute">Compartir código ruta</string>
     <string name="toolbartitleidcar">Registro matricula vehículo</string>
     <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>

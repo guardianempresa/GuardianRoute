@@ -31,6 +31,7 @@ public class RouteNameActivity extends AppCompatActivity {
     int a=0;
     int autovalidador;
 
+    String Code;
     String PruUid;
 
     @Override
@@ -39,11 +40,8 @@ public class RouteNameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_route_name);
 
 
-        databaseReference =FirebaseDatabase.getInstance().getReference();  //raiz
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
-        PruUid=user.getUid(); //Guardamos Uid en variable
-
         codintent=getIntent().getExtras().getString("parametro");
+
 
         btnSigRouteName =(Button)findViewById(R.id.btnSigRouteName);
         edtRouteName=(EditText)findViewById(R.id.routeName);
@@ -70,11 +68,18 @@ public class RouteNameActivity extends AppCompatActivity {
 
                 if (a==1){
 
+                    databaseReference =FirebaseDatabase.getInstance().getReference();  //raiz
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
+                    PruUid=user.getUid(); //Guardamos Uid en variable
+
                     //como la base de datos ya aesta creada en el activity anterior solo refresacamos los datos de nombre y apellidosllegando al nodo
 
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
                     DatabaseReference mensajeRef = ref.child("drivervstravel").child(PruUid).child(codintent).child("name");
                     mensajeRef.setValue(txtRouteName);
+
+                    DatabaseReference mensajeRef2 = ref.child("login").child(PruUid).child("login");
+                    mensajeRef2.setValue("1");
 
 
                     Intent intent = new Intent(RouteNameActivity.this, NewMapActivity.class);

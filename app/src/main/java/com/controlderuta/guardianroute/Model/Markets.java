@@ -15,11 +15,12 @@ public class Markets {
     private String id;
     private String name;
     private String lastname;
+    private String check;
 
     public Markets() {
     }
 
-    public Markets(String code, String icon, double latitud, double longitud, String id, String name, String lastname) {
+    public Markets(String code, String icon, double latitud, double longitud, String id, String name, String lastname, String check) {
         this.code = code;
         this.icon = icon;
         this.latitud = latitud;
@@ -27,6 +28,7 @@ public class Markets {
         this.id = id;
         this.name = name;
         this.lastname = lastname;
+        this.check = check;
     }
 
     public String getCode() {
@@ -83,5 +85,13 @@ public class Markets {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    public String getCheck() {
+        return check;
+    }
+
+    public void setCheck(String check) {
+        this.check = check;
     }
 }

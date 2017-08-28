@@ -22,13 +22,21 @@
             android:background="@color/colorWhite"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
+            <Button
+                android:id="@+id/backcreatemenu"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/back"
+
+                />
+
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/toolbartitlenewcreatemenu"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorSecondarytext"
                 android:textSize="@dimen/letter22dp" />
 
         </android.support.v7.widget.Toolbar>
@@ -53,16 +61,7 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin30dp"
-                    android:layout_marginLeft="@dimen/margin30dp"
-                    android:layout_marginRight="@dimen/margin30dp"
-                    android:text="@string/textcreatenewroute"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/principalletter18dp" />
 
 
                 <Button
@@ -75,6 +74,7 @@
                     android:text="@string/buttomcreate"
                     android:textAlignment="center"
                     android:textSize="@dimen/letter25dp"
+                    android:elevation="10dp"
                     android:theme="@style/RaisedButtonDark" />
 
 

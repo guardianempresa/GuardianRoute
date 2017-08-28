@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.Artist;
+import com.controlderuta.guardianroute.Model.CheckList;
 import com.controlderuta.guardianroute.Model.DataListRoute;
 import com.controlderuta.guardianroute.Model.DataUsuarios;
 import com.controlderuta.guardianroute.Model.UserList;
@@ -47,6 +48,7 @@ public class UsersListActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +63,7 @@ public class UsersListActivity extends AppCompatActivity {
         lstArtist = (ListView)findViewById(R.id.lstArtist);
         artistNames = new ArrayList<>();
         prueba=new ArrayList<>();
-        arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,artistNames);
+        arrayAdapter = new ArrayAdapter(this,R.layout.fila_listas,R.id.nombre_fila_lista,artistNames);
         lstArtist.setAdapter(arrayAdapter);
 
 
@@ -86,8 +88,8 @@ public class UsersListActivity extends AppCompatActivity {
                         DataListRoute datalist = snapshot.getValue(DataListRoute.class);
                         Log.w(TAG,datalist.getName());
                         Log.w(TAG,datalist.getLastname());
-                        artistNames.add((datalist.getName()+" "+datalist.getLastname()).toString());
-
+                        artistNames.add(R.drawable.avatar1,(datalist.getName()+" "+datalist.getLastname()));
+                        artistNames.add(datalist.getName());
                         prueba.add(datalist);
 
                     }

@@ -82,7 +82,7 @@ public class PointEndActivity extends AppCompatActivity implements OnMapReadyCal
     private double latitudllegada;
     private  double longitudllegada;
 
-    Button btnSigPoint;
+    //Button btnSigPoint;
 
 
 
@@ -103,25 +103,8 @@ public class PointEndActivity extends AppCompatActivity implements OnMapReadyCal
                 .findFragmentById(R.id.mapstar);
         mapFragment.getMapAsync(this);
 
-        btnSigPoint = (Button)findViewById(R.id.btnSigPoint);
-        btnSigPoint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        AlertHelp();
 
-
-                databaseReference = FirebaseDatabase.getInstance().getReference();
-                mensajeRef = databaseReference.child("travel").child(Code).child("latitudllegada");//Nodo
-                mensajeRef.setValue(latitudllegada);
-                mensajeRef = databaseReference.child("travel").child(Code).child("longitudllegada");//Nodo
-                mensajeRef.setValue(longitudllegada);
-
-                Intent intent = new Intent(PointEndActivity.this, RouteNameActivity.class);
-                intent.putExtra("parametro", Code);
-                startActivity(intent);
-                finish();
-
-            }
-        });
 
     }
 
@@ -206,6 +189,54 @@ public class PointEndActivity extends AppCompatActivity implements OnMapReadyCal
     }
 
 
+    private void AlertHelp(){
+        final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.helpPoint))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.helpConfirm), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused")final DialogInterface dialog, @SuppressWarnings("unused") final int which) {
+                        dialog.cancel();
+                        AlertHelpTwo();
+                    }
+
+                });
+        alert = builder.create();
+        alert.show();
+    }
+
+    private void AlertHelpTwo(){
+        final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.helpPointTwo))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.helpConfirm), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused")final DialogInterface dialog, @SuppressWarnings("unused") final int which) {
+                        dialog.cancel();
+                        AlertHelpThree();
+                    }
+
+                });
+        alert = builder.create();
+        alert.show();
+    }
+
+    private void AlertHelpThree(){
+        final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.helpPointThree))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.helpConfirm), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused")final DialogInterface dialog, @SuppressWarnings("unused") final int which) {
+                        dialog.cancel();
+                    }
+
+                });
+        alert = builder.create();
+        alert.show();
+    }
+
+
     @Override
     protected void onDestroy(){
         super.onDestroy();
@@ -278,8 +309,27 @@ public class PointEndActivity extends AppCompatActivity implements OnMapReadyCal
 
             //---------------------------------------
 
+            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                @Override
+                public boolean onMarkerClick(Marker marker) {
+
+                    databaseReference = FirebaseDatabase.getInstance().getReference();
+                    mensajeRef = databaseReference.child("travel").child(Code).child("latitudllegada");//Nodo
+                    mensajeRef.setValue(latitudllegada);
+                    mensajeRef = databaseReference.child("travel").child(Code).child("longitudllegada");//Nodo
+                    mensajeRef.setValue(longitudllegada);
+
+                    Intent intent = new Intent(PointEndActivity.this, RouteNameActivity.class);
+                    intent.putExtra("parametro", Code);
+                    startActivity(intent);
+                    finish();
+                    return false;
+                }
+            });
         }
     }
+
+
 
 
 

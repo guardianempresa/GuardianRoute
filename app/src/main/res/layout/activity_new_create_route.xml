@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/toolbartitlenewcreate"
+                android:text="@string/toolbartitlenewcreatemenu"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/letter22dp" />
 
@@ -73,6 +73,7 @@
                     android:text="@string/buttomcreate"
                     android:textAlignment="center"
                     android:textSize="@dimen/letter25dp"
+                    android:elevation="10dp"
                     android:theme="@style/RaisedButtonDark" />
 
                <!-- <TextView

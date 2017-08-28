@@ -23,13 +23,30 @@
     <include layout="@layout/content_new_map" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabMapStop"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin70dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="bottom|end"
+        android:elevation="10dp"
+        android:src="@drawable/stop"
+        android:layout_marginRight="@dimen/margin16dp"
+        android:layout_marginBottom="@dimen/margin16dp"
+        app:backgroundTint="@color/colorBottonFloat" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabMapPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
         android:background="@color/colorPrimaryDark"
-        android:layout_marginBottom="@dimen/margin16dp"
+        android:layout_gravity="bottom|end"
+        android:elevation="10dp"
+        android:src="@drawable/play"
         android:layout_marginRight="@dimen/margin16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginBottom="@dimen/margin16dp"
+        app:backgroundTint="@color/colorPrimaryDark" />
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>

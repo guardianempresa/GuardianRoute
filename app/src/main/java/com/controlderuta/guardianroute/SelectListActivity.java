@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.controlderuta.guardianroute.Model.Artist;
@@ -34,6 +35,7 @@ public class SelectListActivity extends AppCompatActivity {
     private ArrayAdapter arrayAdapter;
     private List<String> artistNames;
     private List<DataListRoute> prueba;
+    Button btnSelect;
 
 
 
@@ -47,12 +49,25 @@ public class SelectListActivity extends AppCompatActivity {
 
         Code=getIntent().getExtras().getString("parametro");
 
-        showToolbar("", true);//llamamos la toolbar
+        btnSelect=(Button)findViewById(R.id.backselect);
+
+        btnSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(SelectListActivity.this, NewMapActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        showToolbar("", false);//llamamos la toolbar
 
         lstArtist = (ListView)findViewById(R.id.lstArtist);
         artistNames = new ArrayList<>();
         prueba=new ArrayList<>();
-        arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,artistNames);
+        arrayAdapter = new ArrayAdapter(this,R.layout.fila_lista,R.id.nombre_fila_lista,artistNames);
         lstArtist.setAdapter(arrayAdapter);
 
 

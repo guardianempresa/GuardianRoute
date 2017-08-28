@@ -20,6 +20,7 @@ public class CreateRouteMenuActivity extends AppCompatActivity {
 
     Button btnCreate;
     Button btnSingRoute;
+    Button btnMenu;
 
 
 
@@ -41,7 +42,7 @@ public class CreateRouteMenuActivity extends AppCompatActivity {
 
     private String link;
     String PruUid;
-
+    String Code;
     //variables firebase
 
     DatabaseReference databaseReference;
@@ -52,9 +53,22 @@ public class CreateRouteMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_route_menu);
 
-        showToolbar("", true);//llamamos la toolbar
+        showToolbar("", false);//llamamos la toolbar
+
+        Code=getIntent().getExtras().getString("parametro");
 
         btnCreate = (Button)findViewById(R.id.btnCreateNewRoute);
+        btnMenu=(Button)findViewById(R.id.backcreatemenu);
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateRouteMenuActivity.this, NewMapActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         //Random codigo aleatorio
@@ -108,8 +122,10 @@ public class CreateRouteMenuActivity extends AppCompatActivity {
                 databaseReference.child("drivervstravel").child(PruUid).child(letra).child("name").setValue("");
                 databaseReference.child("drivervstravel").child(PruUid).child(letra).child("id").setValue(letra);
 
+
                 Recorridos recorridos = new Recorridos(latitud,longitud,latitudllegada,longitudllegada,estado,alerta,nameRoute,alertDist,acumDist,time,tipRoute);
                 databaseReference.child("travel").child(letra).setValue(recorridos);
+
 
 
 

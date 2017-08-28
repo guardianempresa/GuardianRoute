@@ -8,6 +8,7 @@
     android:fitsSystemWindows="true"
     tools:context="com.controlderuta.guardianroute.SelectListActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,12 +24,20 @@
             android:background="@color/colorWhite"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
+            <Button
+                android:id="@+id/backselect"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/back"
+
+                />
+
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toolbartitleroutelist"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorSecondarytext"
                 android:textSize="@dimen/letter22dp"
                 android:layout_gravity="center" />
 
@@ -47,7 +56,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2.5"
+            android:layout_weight="2"
             android:gravity="center"
             android:orientation="vertical"
             >
@@ -68,13 +77,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="7"
+            android:layout_weight="7.5"
             >
             <ListView
                 android:id="@+id/lstArtist"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/margin40dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="@dimen/margin30dp"
                 >
             </ListView>

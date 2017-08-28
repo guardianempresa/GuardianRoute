@@ -68,43 +68,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.controlderuta.guardianroute.MapsActivity"
-            android:label="@string/title_activity_maps_rutas"
-            android:parentActivityName="com.controlderuta.guardianroute.TransitionActivity" >
-            <meta-data
-                android:name="android.support.PARENT.ACTIVITY"
-                android:value=".TransitionActivity" />
+            android:name="com.controlderuta.guardianroute.NewMapActivity"
+            android:label="@string/title_activity_new_map"
+            android:theme="@style/AppTheme" >
         </activity>
         <activity android:name="com.controlderuta.guardianroute.LoginActivity" />
         <activity android:name="com.controlderuta.guardianroute.TransitionActivity" />
-        <activity android:name="com.controlderuta.guardianroute.PhotoActivity" />
-
-        <receiver android:name="com.controlderuta.guardianroute.AlarmNotificationReceiver" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ" />
-
         <activity android:name="com.controlderuta.guardianroute.CallActivity" />
         <activity android:name="com.controlderuta.guardianroute.AlertasActivity" />
         <activity android:name="com.controlderuta.guardianroute.AbordajeActivity" />
-        <activity android:name="com.controlderuta.guardianroute.NameRouteActivity" />
-        <activity android:name="com.controlderuta.guardianroute.TypeRouteActivity" />
         <activity android:name="com.controlderuta.guardianroute.PhoneActivity" />
         <activity android:name="com.controlderuta.guardianroute.PersonalDataActivity" />
-        <activity android:name="com.controlderuta.guardianroute.IdCarActivity" />
         <activity android:name="com.controlderuta.guardianroute.RouteNameActivity" />
         <activity android:name="com.controlderuta.guardianroute.CodeActivity" />
         <activity android:name="com.controlderuta.guardianroute.NewCreateRouteActivity" />
-        <activity android:name="com.controlderuta.guardianroute.ReliefActivity" />
         <activity android:name="com.controlderuta.guardianroute.NewAlertActivity" />
         <activity android:name="com.controlderuta.guardianroute.ConfirmationActivity" />
         <activity android:name="com.controlderuta.guardianroute.RouteListActivity" />
-        <activity android:name="com.controlderuta.guardianroute.PruebaActivity" />
-        <activity
-            android:name="com.controlderuta.guardianroute.NewMapActivity"
-            android:label="@string/title_activity_new_map"
-            android:theme="@style/AppTheme" />
         <activity android:name="com.controlderuta.guardianroute.RemoveRouteActivity" />
         <activity android:name="com.controlderuta.guardianroute.SelectListActivity" />
         <activity android:name="com.controlderuta.guardianroute.CreateRouteMenuActivity" />
@@ -112,6 +92,24 @@
         <activity android:name="com.controlderuta.guardianroute.ChatActivity" />
         <activity android:name="com.controlderuta.guardianroute.UserListCallActivity" />
         <activity android:name="com.controlderuta.guardianroute.PointEndActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+                    <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <receiver android:name="com.controlderuta.guardianroute.AlarmNotificationReceiver" />
+
+        <activity android:name="com.controlderuta.guardianroute.SendCodeActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

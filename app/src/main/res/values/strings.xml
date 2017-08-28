@@ -7,6 +7,7 @@
     <string name="title_activity_maps_ruta">MapsActivityRuta</string>
     <string name="title_bar_maps_rutas">Guardian</string>
     <string name="title_activity_new_map">Mapa de ruta</string>
+    <string name="title_activity_point_end">Selección de llegada</string>
 
     <string name="vacio"></string>
     <string name="perfildeusuario">Perfil  de usuario</string>
@@ -37,8 +38,8 @@
     <string name="textroutename">Ponle nombre a la ruta para personalizarla.</string>
     <string name="textrelief">Ingresa el código suministrado por el otro conductor.</string>
     <string name="textralertcrash">Accidente</string>
-    <string name="textralertengine">Avería mecánica</string>
-    <string name="textralerttraffic">Atasco</string>
+    <string name="textralertengine">Daño mecánico</string>
+    <string name="textralerttraffic">Trancon</string>
     <string name="textralert">Reporta incidentes a los usuarios en tiempo real.</string>
     <string name="textconfirmation">Confirmación y contacto directo con usuarios.</string>
     <string name="textapproach">Abordaje</string>
@@ -54,7 +55,7 @@
 
     <string name="textmenuplusroute">Agregar ruta</string>
     <string name="textmenuminusroute">Eliminar ruta</string>
-    <string name="textmenualertroute">Alertar</string>
+    <string name="textmenualertroute">Alertas</string>
     <string name="textmenuchatroute">Chat</string>
     <string name="textmenucallroute">Llamada</string>
     <string name="textmenuaddroute">Compartir ruta a:</string>
@@ -101,5 +102,19 @@
     <string name="yesGps">Si</string>
     <string name="noGps">No</string>
     <string name="toolbartitlepoint">Punto de llegada</string>
+    <string name="toolbartitlecheck">Abordaje o descenso</string>
+
+
+    <string name="helpPoint">Mantenga presionado con su dedo en el mapa el punto al cual llegara la ruta. Recuerde que puede moverse por el mapa, acercarlo y alejarlo de ser necesario.</string>
+    <string name="helpConfirm">Ok</string>
+
+    <string name="helpPointTwo">Aparecerá un marcador que le confirma el lugar con exactitud, puede cambiarlo cuantas veces quiera, solamente debe seleccionar otro punto. </string>
+    <string name="helpPointThree">Cuando este seguro de su elección. Presione el marcador por unos segundos para confirmar. </string>
+
+
+
+    <string name="alertone">Enviaste una alerta ¡Estamos en un trancón grave!, a tus usuarios de ruta.</string>
+    <string name="alerttwo">Enviaste una alerta ¡Sufrimos un accidente!, a tus usuarios de ruta.</string>
+    <string name="alertthree">Enviaste una alerta ¡Tenemos un daño mecánico!, a tus usuarios de ruta.</string>
 
 </resources>

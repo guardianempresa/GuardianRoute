@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.Artist;
 import com.controlderuta.guardianroute.Model.DataListRoute;
@@ -26,13 +27,14 @@ import java.util.List;
 
 public class RouteListActivity extends AppCompatActivity {
 
-    private static final String TAG = "RouteListActivity";
+    private static final String TAG = "SelectListActivity";
     private DatabaseReference databaseReference;
 
     private ListView lstArtist;
     private ArrayAdapter arrayAdapter;
     private List<String> artistNames;
     private List<DataListRoute> prueba;
+
 
 
     String PruUid;
@@ -45,9 +47,8 @@ public class RouteListActivity extends AppCompatActivity {
         lstArtist = (ListView)findViewById(R.id.lstArtist);
         artistNames = new ArrayList<>();
         prueba=new ArrayList<>();
-        arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,artistNames);
+        arrayAdapter = new ArrayAdapter(this,R.layout.fila_lista,R.id.nombre_fila_lista,artistNames);
         lstArtist.setAdapter(arrayAdapter);
-
 
 
         //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
@@ -70,8 +71,6 @@ public class RouteListActivity extends AppCompatActivity {
                         artistNames.add(datalist.getName());
                         prueba.add(datalist);
 
-
-
                     }
                 }
                 arrayAdapter.notifyDataSetChanged();
@@ -83,12 +82,13 @@ public class RouteListActivity extends AppCompatActivity {
             }
         });
 
+
         lstArtist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 String coderoute = prueba.get(position).getId();
-
+                Toast.makeText(RouteListActivity.this,coderoute,Toast.LENGTH_SHORT);
                 Intent intent = new Intent(RouteListActivity.this, NewMapActivity.class);
                 intent.putExtra("parametro", coderoute);
                 startActivity(intent);

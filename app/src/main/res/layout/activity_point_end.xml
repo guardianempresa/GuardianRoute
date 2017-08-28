@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.controlderuta.guardianroute.PhoneActivity">
+    tools:context="com.controlderuta.guardianroute.PointEndActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/toolbartitlepoint"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorSecondarytext"
                 android:textSize="@dimen/letter22dp" />
 
         </android.support.v7.widget.Toolbar>
@@ -51,7 +51,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="8.5"
+                android:layout_weight="10"
                 >
 
                 <fragment
@@ -59,33 +59,35 @@
                     android:name="com.google.android.gms.maps.SupportMapFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:context="com.controlderuta.guardianroute.MapsActivity" />
+                    tools:context="com.controlderuta.guardianroute.PointEndActivity" />
+
+
 
             </LinearLayout>
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.5"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
+            <!--  <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1.5"
+                   android:orientation="horizontal"
+                   android:gravity="center"
+                   >
 
 
-                <Button
-                    android:id="@+id/btnSigPoint"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin70dp"
-                    android:layout_marginLeft="@dimen/margin5dp"
-                    android:layout_marginRight="@dimen/margin5dp"
-                    android:text="@string/buttomnext"
-                    android:textAlignment="center"
-                    android:textSize="@dimen/letter25dp"
-                    android:theme="@style/RaisedButtonDark" />
+                   <Button
+                       android:id="@+id/btnSigPoint"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/margin70dp"
+                       android:layout_marginLeft="@dimen/margin5dp"
+                       android:layout_marginRight="@dimen/margin5dp"
+                       android:text="@string/buttomnext"
+                       android:textAlignment="center"
+                       android:textSize="@dimen/letter25dp"
+                       android:theme="@style/RaisedButtonDark" />
 
-            </LinearLayout>
+            </LinearLayout>-->
 
         </LinearLayout>
 

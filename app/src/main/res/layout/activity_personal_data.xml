@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/toolbartitlepersonal"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorSecondarytext"
                 android:textSize="@dimen/letter22dp" />
 
         </android.support.v7.widget.Toolbar>
@@ -114,6 +114,7 @@
                     android:layout_marginRight="@dimen/margin5dp"
                     android:text="@string/buttomnext"
                     android:textAlignment="center"
+                    android:elevation="10dp"
                     android:textSize="@dimen/letter25dp"
                     android:theme="@style/RaisedButtonDark" />
 

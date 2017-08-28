@@ -44,50 +44,52 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps_rutas"
-            android:parentActivityName=".TransitionActivity">
-            <meta-data
-                android:name="android.support.PARENT.ACTIVITY"
-                android:value=".TransitionActivity" />
-        </activity>
+            android:name=".NewMapActivity"
+            android:label="@string/title_activity_new_map"
+            android:theme="@style/AppTheme" >
+            </activity>
+
+
         <activity android:name=".LoginActivity" />
         <activity android:name=".TransitionActivity" />
-        <activity android:name=".PhotoActivity" />
-
-        <receiver android:name=".AlarmNotificationReceiver" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ" />
-
         <activity android:name=".CallActivity" />
         <activity android:name=".AlertasActivity" />
         <activity android:name=".AbordajeActivity" />
-        <activity android:name=".NameRouteActivity" />
-        <activity android:name=".TypeRouteActivity" />
         <activity android:name=".PhoneActivity" />
         <activity android:name=".PersonalDataActivity" />
-        <activity android:name=".IdCarActivity" />
         <activity android:name=".RouteNameActivity" />
         <activity android:name=".CodeActivity" />
         <activity android:name=".NewCreateRouteActivity" />
-        <activity android:name=".ReliefActivity" />
         <activity android:name=".NewAlertActivity" />
         <activity android:name=".ConfirmationActivity" />
         <activity android:name=".RouteListActivity" />
-        <activity android:name=".PruebaActivity" />
-        <activity
-            android:name=".NewMapActivity"
-            android:label="@string/title_activity_new_map"
-            android:theme="@style/AppTheme" />
         <activity android:name=".RemoveRouteActivity" />
+
         <activity android:name=".SelectListActivity" />
+
         <activity android:name=".CreateRouteMenuActivity" />
         <activity android:name=".UsersListActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".UserListCallActivity" />
         <activity android:name=".PointEndActivity"></activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+                    <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <receiver android:name=".AlarmNotificationReceiver" />
+
+        <activity android:name=".SendCodeActivity"></activity>
     </application>
 
 </manifest>

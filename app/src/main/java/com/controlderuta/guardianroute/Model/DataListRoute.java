@@ -14,11 +14,14 @@ public class DataListRoute {
     private Double longitud;
     private String phone;
     private String messageuser;
+    private float distance;
+    private String check;
+    private String iconface;
 
     public DataListRoute() {
     }
 
-    public DataListRoute(String id, String name, String code, String lastname, Double latitud, Double longitud, String phone, String messageuser) {
+    public DataListRoute(String id, String name, String code, String lastname, Double latitud, Double longitud, String phone, String messageuser, float distance, String check, String iconface) {
         this.id = id;
         this.name = name;
         this.code = code;
@@ -27,6 +30,9 @@ public class DataListRoute {
         this.longitud = longitud;
         this.phone = phone;
         this.messageuser = messageuser;
+        this.distance = distance;
+        this.check = check;
+        this.iconface = iconface;
     }
 
     public String getId() {
@@ -91,5 +97,29 @@ public class DataListRoute {
 
     public void setMessageuser(String messageuser) {
         this.messageuser = messageuser;
+    }
+
+    public float getDistance() {
+        return distance;
+    }
+
+    public void setDistance(float distance) {
+        this.distance = distance;
+    }
+
+    public String getCheck() {
+        return check;
+    }
+
+    public void setCheck(String check) {
+        this.check = check;
+    }
+
+    public String getIconface() {
+        return iconface;
+    }
+
+    public void setIconface(String iconface) {
+        this.iconface = iconface;
     }
 }

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.controlderuta.guardianroute.Model.Artist;
@@ -25,28 +26,45 @@ import java.util.List;
 
 public class RemoveRouteActivity extends AppCompatActivity {
 
-    private static final String TAG = "RouteListActivity";
+    private static final String TAG = "RemoveRouteActivity";
     private DatabaseReference databaseReference;
 
     private ListView lstArtist;
     private ArrayAdapter arrayAdapter;
     private List<String> artistNames;
     private List<DataListRoute> prueba;
+    Button btnRemove;
+
 
 
     String PruUid;
+    String Code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remove_route);
 
-        showToolbar("", true);//llamamos la toolbar
+        showToolbar("", false);//llamamos la toolbar
+
+        Code=getIntent().getExtras().getString("parametro");
+
+        btnRemove=(Button)findViewById(R.id.backremove);
+
+        btnRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RemoveRouteActivity.this, NewMapActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         lstArtist = (ListView)findViewById(R.id.lstRemove);
         artistNames = new ArrayList<>();
         prueba=new ArrayList<>();
-        arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,artistNames);
+        arrayAdapter = new ArrayAdapter(this,R.layout.fila_lista,R.id.nombre_fila_lista,artistNames);
         lstArtist.setAdapter(arrayAdapter);
 
 
@@ -90,7 +108,10 @@ public class RemoveRouteActivity extends AppCompatActivity {
                 prueba.remove(position);
                 artistNames.remove(position);
                 databaseReference.child("drivervstravel").child(PruUid).child(idPrueba).removeValue();
-
+                databaseReference.child("alert").child(idPrueba).removeValue();
+                databaseReference.child("chat").child(idPrueba).removeValue();
+                databaseReference.child("travel").child(idPrueba).removeValue();
+                databaseReference.child("datauser").child(idPrueba).removeValue();
 
                 return true;
             }

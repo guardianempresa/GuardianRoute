@@ -1,6 +1,7 @@
 package com.controlderuta.guardianroute;
 
 import android.*;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -28,14 +29,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.ArrayMarkets;
+import com.controlderuta.guardianroute.Model.CheckList;
 import com.controlderuta.guardianroute.Model.DataListRoute;
 import com.controlderuta.guardianroute.Model.DataUsuarios;
 import com.controlderuta.guardianroute.Model.Markets;
+import com.controlderuta.guardianroute.Model.Recorridos;
 import com.controlderuta.guardianroute.Model.UserList;
 import com.controlderuta.guardianroute.Model.UsuariosRecorrido;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -55,7 +59,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Array;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener  {
@@ -86,18 +92,12 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
     //consulta de marcadores  usuarios
 
-
-
-
-    private ArrayMarkets aMarkets;
-
     double value;
     double value2;
-
-
-
+    String Check;
     String Completename;
     String Code;
+    String VarButtom;
 
 
     // Variables Markets
@@ -109,8 +109,18 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     String Name;
     String LastName;
 
+    //variables de calculo de distancias
+    float distance;
+    LatLng actual;
 
+    //Botones
 
+    FloatingActionButton btnPlay;
+    FloatingActionButton btnStop;
+    String IdCheck;
+    String IdCheckYes;
+    String CheckPlay;
+    String CheckStop;
 
 
 
@@ -121,11 +131,109 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
         Code=getIntent().getExtras().getString("parametro");
 
+        btnPlay = (FloatingActionButton) findViewById(R.id.fabMapPlay);
+        btnStop = (FloatingActionButton) findViewById(R.id.fabMapStop);
+
+
+        btnPlay.setVisibility(View.VISIBLE );
+        btnStop.setVisibility(View.INVISIBLE );
+
+
+        btnPlay.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return false;
+            }
+        });
+
+        //inicia eventos de botones
+
+        btnPlay.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+
+                btnPlay.setVisibility(View.INVISIBLE );
+                btnStop.setVisibility(View.VISIBLE );
+
+                databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
+                databaseReference.child("usersvstravel").child(Code).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+                    @Override
+
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        //For que busca en firebase segun nodo y barre la base de datos
+                        if (dataSnapshot.exists()){
+                            for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                                Markets datacheck = snapshot.getValue(Markets.class);
+                                IdCheck=datacheck.getId();
+                                CheckPlay=datacheck.getCheck();
+
+
+                                databaseReference.child("usersvstravel").child(Code).child(IdCheck).child("check").setValue("n");
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+                return false;
+            }
+        });
+
+        btnStop.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+
+                btnPlay.setVisibility(View.VISIBLE );
+                btnStop.setVisibility(View.INVISIBLE );
+
+                //------
+
+                databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
+                databaseReference.child("usersvstravel").child(Code).addListenerForSingleValueEvent(new ValueEventListener() {//callback Unico evento
+
+                    @Override
+
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        //For que busca en firebase segun nodo y barre la base de datos
+                        if (dataSnapshot.exists()){
+                            for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                                Markets datacheck = snapshot.getValue(Markets.class);
+
+                                //Extraigo la variables
+
+                                IdCheckYes=datacheck.getId();
+                                CheckStop=datacheck.getCheck();
+
+                                //subo datos
+
+                                    databaseReference.child("usersvstravel").child(Code).child(IdCheckYes).child("check").setValue("s");
+
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+                return false;
+            }}
+        );
+
+        //----- terminan los eventos de botinoes
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -140,14 +248,6 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
         PruUid=user.getUid(); //Guardamos Uid en variable
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -228,17 +328,18 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
         } else if (id == R.id.nav_alert) {
 
             Intent intent = new Intent(NewMapActivity.this, NewAlertActivity.class);
+            intent.putExtra("parametro", Code);
             startActivity(intent);
 
 
-        } else if (id == R.id.nav_chat) {
+        } /*else if (id == R.id.nav_chat) {
 
             Intent intent = new Intent(NewMapActivity.this, UsersListActivity.class);
             intent.putExtra("parametro", Code);
             startActivity(intent);
 
 
-        } else if (id == R.id.nav_call) {
+        } */else if (id == R.id.nav_call) {
 
             Intent intent = new Intent(NewMapActivity.this, UserListCallActivity.class);
             intent.putExtra("parametro", Code);
@@ -246,9 +347,13 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
         } else if (id == R.id.nav_users) {
 
-        }else if (id == R.id.nav_drivers) {
+            Intent intent = new Intent(NewMapActivity.this, SendCodeActivity.class);
+            intent.putExtra("parametro", Code);
+            startActivity(intent);
 
-        }
+        }/*else if (id == R.id.nav_drivers) {
+
+        }*/
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -262,6 +367,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);//se asigna el servicio de localizacion
 
         //Alerta de GPS no encendido
@@ -378,17 +484,22 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     //Escribe los datos en firebase travel
 
 
-    private void escribirposicion(Location location) {
+    private void escribirposicion(final Location location) {
         if (location!=null){
             //verifica que no se null
             //lee la variable location para que no sea null y obtiene la latitud y longitud
             //pilas no puede existir un valor null para obtener el latitud y longitud
             longitud = location.getLongitude();
             latitud=location.getLatitude();
-            LatLng actual =new LatLng(latitud,longitud);
+            actual =new LatLng(latitud,longitud);
             mMap.clear();//limpia el mapa
             mMap.addMarker(new MarkerOptions().position(actual).icon(BitmapDescriptorFactory.fromResource(R.drawable.bus)).title("mi pocicion").snippet(latitud+","+longitud));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual,16));
+
+
+
+
+
             //se va actualizando la lat y long en la vase de datos
 
 
@@ -409,13 +520,13 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
                 public void onDataChange(DataSnapshot dataSnapshot) {
 
-
+            //For que busca en firebase segun nodo y barre la base de datos
                     if (dataSnapshot.exists()){
                         for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
                             Markets datalist = snapshot.getValue(Markets.class);
-                            //Log.w(TAG,datalist.getName());
-                            //Log.w(TAG,datalist.getLastname());
-                            //artistNames.add((datalist.getName()+" "+datalist.getLastname()).toString());
+
+                            //Extraigo la variables
+
                             Cod = datalist.getCode();
                             Icon = datalist.getIcon();
                             LatitudUser = datalist.getLatitud();
@@ -423,14 +534,32 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                             Id=datalist.getId();
                             Name=datalist.getName();
                             LastName=datalist.getLastname();
+                            Check=datalist.getCheck();
 
-                            Markets user = new Markets(Cod, Icon, LatitudUser, LongitudUser,Id,Name,LastName);
+                            Markets user = new Markets(Cod, Icon, LatitudUser, LongitudUser,Id,Name,LastName,Check);
+                            //aMarkets.addMarkets(user);
+                            //Toast.makeText(NewMapActivity.this,"Prueba"+aMarkets.getMarkets(),Toast.LENGTH_LONG).show();
 
-                            LatLng nuevo = new LatLng(LatitudUser, LongitudUser);
+                            LatLng nuevo = new LatLng(LatitudUser, LongitudUser); ///Concateno para hacer marcador
 
-                            Completename = Name+" "+LastName;
+                            Completename = Name+" "+LastName; //Concatenar para poner nombre de la persona en el marcador
 
 
+                            Location locationA = new Location("punto A");
+
+                            locationA.setLatitude(latitud);
+                            locationA.setLongitude(longitud);
+
+                            Location locationB = new Location("punto B");
+
+                            locationB.setLatitude(LatitudUser);
+                            locationB.setLongitude(LongitudUser);
+
+                            distance = locationA.distanceTo(locationB); //calcula distancia entre la ruta y todos los usuarios
+
+
+
+                            //Coloca el avatar segun el que tenga escogido el usuario
 
                             if (Icon.equals("avatar1")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar1)));
@@ -460,7 +589,27 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar9)));
 
                             }
-                        }}
+
+                            //Si esta cerca suba datos
+
+                            if (Check.equals("n")&&distance<100){
+
+                                //Sube datos distancia
+
+
+
+                                CheckList checking = new CheckList(distance,Name,LastName,Icon,Id);
+                                databaseReference.child("check").child(Code).child(Id).setValue(checking);
+
+
+
+                            }else{
+
+                            }
+                        }
+
+
+                    }
 
                 }
 
@@ -469,6 +618,9 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
                 }
             });
+
+
+            //Marcador dde llegada se coloca en mapa longitud
 
             DatabaseReference ref =FirebaseDatabase.getInstance().getReference();
             DatabaseReference mensajeRef = ref.child("travel").child(Code).child("longitudllegada");
@@ -485,6 +637,10 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
             }
         });
+
+
+
+            //Marcador dde llegada se coloca en mapa latitud
 
             DatabaseReference ref2 =FirebaseDatabase.getInstance().getReference();
             DatabaseReference mensajeRef2 = ref2.child("travel").child(Code).child("latitudllegada");
@@ -506,13 +662,20 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             mMap.addMarker(new MarkerOptions().position(llegada).icon(BitmapDescriptorFactory.fromResource(R.drawable.marketend)));
 
 
+            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                @Override
+                public boolean onMarkerClick(Marker marker) {
+
+                    Intent intent = new Intent(NewMapActivity.this, AbordajeActivity.class);
+                    intent.putExtra("parametro", Code);
+                    startActivity(intent);
+                    finish();
+                    return false;
+                }
+            });
 
         }
     }
-
-
-
-
 
 
 

@@ -105,6 +105,8 @@ public class NewCreateRouteActivity extends AppCompatActivity {
                 databaseReference.child("drivervstravel").child(PruUid).child(letra).child("name").setValue("");
                 databaseReference.child("drivervstravel").child(PruUid).child(letra).child("id").setValue(letra);
 
+
+
                 Recorridos recorridos = new Recorridos(latitud,longitud,latitudllegada,longitudllegada,estado,alerta,nameRoute,alertDist,acumDist,time,tipRoute);
                 databaseReference.child("travel").child(letra).setValue(recorridos);
 

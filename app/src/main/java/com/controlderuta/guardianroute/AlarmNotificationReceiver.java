@@ -25,7 +25,7 @@ public class AlarmNotificationReceiver extends BroadcastReceiver {
         builder.setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.marcadorpadre)
+                .setSmallIcon(R.drawable.marketend)
                 .setContentTitle("Guadian")
                 .setContentText("Tu ruta esta muy cerca, corre para que no te deje")
                 .setDefaults(Notification.DEFAULT_LIGHTS| RingtonePreference.DEFAULT_ORDER)
