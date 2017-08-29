@@ -59,7 +59,7 @@ public class CodeActivity extends AppCompatActivity {
                 databaseReference.child("alert").child(Code).child("hour").setValue("0");
 
 
-                Intent intent = new Intent(CodeActivity.this, PointEndActivity.class);
+                Intent intent = new Intent(CodeActivity.this, RouteNameActivity.class);
                 intent.putExtra("parametro", Code);
                 startActivity(intent);
                 finish();

@@ -5150,9 +5150,8 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0e0077;
         public static final int action_mode_bar_stub=0x7f0e0076;
         public static final int action_mode_close_button=0x7f0e0059;
-        public static final int action_outlogin=0x7f0e0117;
+        public static final int action_outlogin=0x7f0e0116;
         public static final int action_perfil=0x7f0e0115;
-        public static final int action_settings=0x7f0e0116;
         public static final int action_text=0x7f0e00f3;
         public static final int actions=0x7f0e0101;
         public static final int activity_chooser_view_content=0x7f0e005a;

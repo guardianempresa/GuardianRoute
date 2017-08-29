@@ -341,9 +341,9 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             return true;
         }
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) { Pendiente para el futuro
+          //  return true;
+        //}
 
         if (id == R.id.action_outlogin) {
             logOut();//Firebase Ultimo
@@ -673,7 +673,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                 }
             });
 
-
+/*
             //Marcador dde llegada se coloca en mapa longitud
 
             DatabaseReference ref =FirebaseDatabase.getInstance().getReference();
@@ -690,11 +690,11 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
 
 
-            //Marcador dde llegada se coloca en mapa latitud
+         /*   //Marcador dde llegada se coloca en mapa latitud ---Provisional
 
             DatabaseReference ref2 =FirebaseDatabase.getInstance().getReference();
             DatabaseReference mensajeRef2 = ref2.child("travel").child(Code).child("latitudllegada");
@@ -710,7 +710,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
             LatLng llegada =new LatLng(value2,value);
             mMap.addMarker(new MarkerOptions().position(llegada).icon(BitmapDescriptorFactory.fromResource(R.drawable.marketend)));

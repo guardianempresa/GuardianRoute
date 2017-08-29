@@ -2356,9 +2356,8 @@ int id action_menu_presenter 0x7f0e0003
 int id action_mode_bar 0x7f0e0077
 int id action_mode_bar_stub 0x7f0e0076
 int id action_mode_close_button 0x7f0e0059
-int id action_outlogin 0x7f0e0117
+int id action_outlogin 0x7f0e0116
 int id action_perfil 0x7f0e0115
-int id action_settings 0x7f0e0116
 int id action_text 0x7f0e00f3
 int id actions 0x7f0e0101
 int id activity_chooser_view_content 0x7f0e005a

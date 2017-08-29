@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Aug 28 18:42:26 COT 2017
+#Mon Aug 28 20:50:10 COT 2017
 1863.set=ANDROID_RESOURCE
 1117.file=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-nodpi-v4\\emoji_1f505.png
 1391.set=ANDROID_RESOURCE
