@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/colorWhite"
         android:weightSum="10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -20,14 +19,16 @@
             android:id="@+id/toolbarselectlist"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorWhite"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="4dp"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <Button
                 android:id="@+id/backabordaje"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@drawable/back"
+                android:background="@drawable/backarrowwhite"
+                android:layout_marginLeft="@dimen/letter20dp"
 
                 />
 
@@ -36,8 +37,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toolbartitlecheck"
-                android:textColor="@color/colorSecondarytext"
-                android:textSize="@dimen/letter22dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/letter20dp"
                 android:layout_gravity="center" />
 
         </android.support.v7.widget.Toolbar>
@@ -46,6 +47,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="@dimen/windtline2dp"
+            android:elevation="4dp"
             android:background="@color/colorPrimaryDark">
 
         </LinearLayout>
@@ -55,11 +57,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:gravity="center"
             android:orientation="vertical"
             >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin16dp"
+                android:text="@string/textabord"
+                android:textColor="@color/colorAccentTwo"
+                android:textSize="@dimen/principalletter16dp"
+                android:layout_marginLeft="@dimen/margin30dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                android:textAlignment="center"
+                />
 
 
         </LinearLayout>
@@ -75,7 +88,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="@dimen/margin30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWhite"
                 >
             </ListView>
 

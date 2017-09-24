@@ -6,10 +6,10 @@
 
     <ImageView
         android:id="@+id/iconos"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="6dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="4dp"
         android:layout_marginTop="6dp"
         android:src="@drawable/iconroute" />
@@ -18,7 +18,7 @@
         android:id="@+id/nombre_fila_lista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/principalletter18dp"
+        android:textSize="@dimen/principalletter16dp"
         android:layout_marginLeft="@dimen/margin16dp"
         android:layout_gravity="center_vertical"
         />

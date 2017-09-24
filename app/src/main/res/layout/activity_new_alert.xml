@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/colorWhite"
         android:weightSum="10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -21,14 +20,16 @@
         android:id="@+id/toolbarselectlist"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorWhite"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
         app:popupTheme="@style/AppTheme.PopupOverlay" >
 
         <Button
             android:id="@+id/backalert"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/back"
+            android:layout_marginLeft="@dimen/letter20dp"
+            android:background="@drawable/backarrowwhite"
 
             />
 
@@ -37,8 +38,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toolbartitlealert"
-            android:textColor="@color/colorSecondarytext"
-            android:textSize="@dimen/letter22dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/letter20dp"
             android:layout_gravity="center" />
 
     </android.support.v7.widget.Toolbar>
@@ -62,8 +63,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/textralert"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/principalletter18dp"
+                android:textColor="@color/colorAccentTwo"
+                android:textSize="@dimen/principalletter16dp"
                 android:gravity="center"
                 android:layout_marginLeft="@dimen/margin30dp"
                 android:layout_marginRight="@dimen/margin30dp"
@@ -86,17 +87,20 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:layout_marginLeft="@dimen/margin40dp"
-                android:layout_marginRight="@dimen/margin30dp"
-                android:elevation="10dp"
+                android:layout_marginLeft="@dimen/margin10dp"
+                android:layout_marginRight="@dimen/margin10dp"
+                android:background="@color/colorWhite"
+                android:layout_marginBottom="5dp"
+                android:elevation="2dp"
                 >
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/fabalerttrafic"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/margin70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin30dp"
                     android:background="@color/colorPrimaryDark"
-                    android:elevation="10dp"
+                    android:elevation="6dp"
                     android:src="@drawable/traffic"
                     app:backgroundTint="@color/colorPrimaryDark" />
 
@@ -109,7 +113,7 @@
                     android:layout_marginRight="@dimen/margin30dp"
                     android:text="@string/textralerttraffic"
                     android:textColor="@color/colorSecondarytext"
-                    android:textSize="@dimen/principalletter18dp" />
+                    android:textSize="@dimen/principalletter16dp" />
 
 
             </LinearLayout>
@@ -120,9 +124,11 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:layout_marginLeft="@dimen/margin40dp"
-                android:layout_marginRight="@dimen/margin30dp"
-                android:elevation="10dp"
+                android:layout_marginBottom="@dimen/margin5dp"
+                android:layout_marginLeft="@dimen/margin10dp"
+                android:layout_marginRight="@dimen/margin10dp"
+                android:background="@color/colorWhite"
+                android:elevation="2dp"
                 >
 
                 <android.support.design.widget.FloatingActionButton
@@ -130,7 +136,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/margin70dp"
                     android:background="@color/colorPrimaryDark"
-                    android:elevation="10dp"
+                    android:elevation="6dp"
+                    android:layout_marginLeft="@dimen/margin30dp"
                     android:src="@drawable/crash"
                     app:backgroundTint="@color/colorPrimaryDark" />
 
@@ -142,7 +149,7 @@
                     android:layout_marginRight="@dimen/margin30dp"
                     android:text="@string/textralertcrash"
                     android:textColor="@color/colorSecondarytext"
-                    android:textSize="@dimen/principalletter18dp" />
+                    android:textSize="@dimen/principalletter16dp" />
 
             </LinearLayout>
 
@@ -152,17 +159,19 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:layout_marginLeft="@dimen/margin40dp"
-                android:layout_marginRight="@dimen/margin30dp"
-                android:elevation="10dp"
+                android:layout_marginLeft="@dimen/margin10dp"
+                android:layout_marginRight="@dimen/margin10dp"
+                android:background="@color/colorWhite"
+                android:elevation="2dp"
                 >
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/fabalertcrash"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/margin70dp"
+                    android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
-                    android:elevation="10dp"
+                    android:elevation="2dp"
+                    android:layout_marginLeft="@dimen/margin30dp"
                     android:src="@drawable/engine"
                     app:backgroundTint="@color/colorPrimaryDark" />
 
@@ -173,7 +182,7 @@
                     android:layout_marginRight="@dimen/margin30dp"
                     android:text="@string/textralertengine"
                     android:textColor="@color/colorSecondarytext"
-                    android:textSize="@dimen/principalletter18dp" />
+                    android:textSize="@dimen/principalletter16dp" />
 
             </LinearLayout>
 

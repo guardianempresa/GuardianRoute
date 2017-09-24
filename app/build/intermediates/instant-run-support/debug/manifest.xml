@@ -42,9 +42,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logoruta"
+        android:icon="@drawable/logoapprutas"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logoruta"
+        android:roundIcon="@drawable/logoapprutas"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
@@ -60,7 +60,9 @@
                 android:resource="@xml/file_path" />
         </provider>
 
-        <activity android:name="com.controlderuta.guardianroute.SplashScreenActivity" >
+        <activity
+            android:name="com.controlderuta.guardianroute.SplashScreenActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -68,29 +70,94 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.controlderuta.guardianroute.MapsActivity"
-            android:label="@string/title_activity_maps_rutas"
-            android:parentActivityName="com.controlderuta.guardianroute.TransitionActivity" >
-            <meta-data
-                android:name="android.support.PARENT.ACTIVITY"
-                android:value=".TransitionActivity" />
-        </activity>
-        <activity android:name="com.controlderuta.guardianroute.LoginActivity" />
-        <activity android:name="com.controlderuta.guardianroute.TransitionActivity" />
-        <activity android:name="com.controlderuta.guardianroute.PhotoActivity" />
-        <activity android:name="com.controlderuta.guardianroute.DataActivity" />
-        <activity android:name="com.controlderuta.guardianroute.AccounActivity" />
-
-        <receiver android:name="com.controlderuta.guardianroute.AlarmNotificationReceiver" />
-
+            android:name="com.controlderuta.guardianroute.NewMapActivity"
+            android:label="@string/title_activity_new_map"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.controlderuta.guardianroute.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.TransitionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.AbordajeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.PhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.PersonalDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.RouteNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.CodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.NewCreateRouteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.NewAlertActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.ConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.RouteListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.RemoveRouteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.SelectListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.CreateRouteMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.UsersListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.UserListCallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.PointEndActivity"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+                    <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ" />
+        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ" />
+            android:value="@string/google_maps_key" />
 
-        <activity android:name="com.controlderuta.guardianroute.CallActivity" />
-        <activity android:name="com.controlderuta.guardianroute.AlertasActivity" />
-        <activity android:name="com.controlderuta.guardianroute.AbordajeActivity" />
-        <activity android:name="com.controlderuta.guardianroute.FirtsRutaActivity" />
+        <activity
+            android:name="com.controlderuta.guardianroute.SendCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.PerfilEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.EditNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.EditLastNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.controlderuta.guardianroute.EditPhoneActivity"
+            android:screenOrientation="portrait" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

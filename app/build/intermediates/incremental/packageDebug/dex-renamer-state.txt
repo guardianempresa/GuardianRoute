@@ -1,4 +1,7 @@
-#Mon Aug 28 20:50:09 COT 2017
-base.0=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Sat Sep 23 20:27:06 COT 2017
+base.0=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_72434315b70c9f70bf4fa47c5472820eeeb4cd29
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.1=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_83516056ecb98c2131943f185581ccc0006cde5b\\classes.dex
+base.1=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_83516056ecb98c2131943f185581ccc0006cde5b
+file.0=C\:\\Users\\eduin\\AndroidStudioProjects\\GuardianRoute\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_72434315b70c9f70bf4fa47c5472820eeeb4cd29\\classes.dex

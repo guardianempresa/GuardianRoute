@@ -73,7 +73,7 @@
                     android:layout_marginRight="@dimen/margin30dp"
                     android:text="@string/textapproach"
                     android:textAlignment="center"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorPrimarytext"
                     android:textSize="@dimen/principalletter18dp" />
 
 

@@ -51,6 +51,8 @@ public class PerfilEditActivity extends AppCompatActivity {
     String Phone;
     String Phonerecord;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,6 +126,8 @@ public class PerfilEditActivity extends AppCompatActivity {
             }
         });
 
+
+
         btnBackPerfil       = (Button)findViewById(R.id.backEditPerfil);
         btneditName         = (Button) findViewById(R.id.fabEditName);
         btneditlastName     = (Button) findViewById(R.id.fabEditLastName);
@@ -137,7 +141,7 @@ public class PerfilEditActivity extends AppCompatActivity {
                 intent.putExtra("parametro", Code);
                 intent.putExtra("name", Name);
                 startActivity(intent);
-                finish();
+                //finish();
 
             }
         });
@@ -150,7 +154,7 @@ public class PerfilEditActivity extends AppCompatActivity {
                 intent.putExtra("parametro", Code);
                 intent.putExtra("lastname", Lastname);
                 startActivity(intent);
-                finish();
+                //finish();
 
             }
         });
@@ -163,7 +167,7 @@ public class PerfilEditActivity extends AppCompatActivity {
                 intent.putExtra("parametro", Code);
                 intent.putExtra("phone", Phonerecord);
                 startActivity(intent);
-                finish();
+                //finish();
 
             }
         });
@@ -174,18 +178,14 @@ public class PerfilEditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(PerfilEditActivity.this,NewMapActivity.class);
-                intent.putExtra("parametro", Code);
-                startActivity(intent);
+                //Intent intent = new Intent(PerfilEditActivity.this,NewMapActivity.class);
+                //intent.putExtra("parametro", Code);
+                //startActivity(intent);
+                finish();
             }
         });
 
-
-
-
-
     }
-
 
 
             public void showToolbar (String tittle, boolean upButton){//Metoodo de la toolbar

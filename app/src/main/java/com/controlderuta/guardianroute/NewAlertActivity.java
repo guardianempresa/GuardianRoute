@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -30,6 +31,7 @@ public class NewAlertActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
 
     String keyfecha;
+    String ampm;
     String one;
     String two;
     String three;
@@ -64,7 +66,7 @@ public class NewAlertActivity extends AppCompatActivity {
                 keyfecha = s.format(new Date());
 
                 databaseReference = FirebaseDatabase.getInstance().getReference();//obtiene el enlace de la db "ejemplos-android:"
-                databaseReference.child("alert").child(Code).child("type").setValue("0");
+                databaseReference.child("alert").child(Code).child("type").setValue(0);
                 databaseReference.child("alert").child(Code).child("hour").setValue(keyfecha);
 
                 Intent intent = new Intent(NewAlertActivity.this, NewMapActivity.class);
@@ -78,21 +80,27 @@ public class NewAlertActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SimpleDateFormat s = new SimpleDateFormat("hh:mm:ss");
+                SimpleDateFormat s = new SimpleDateFormat("hh:mm:ssaa");
                 keyfecha = s.format(new Date());
 
                 databaseReference = FirebaseDatabase.getInstance().getReference();//obtiene el enlace de la db "ejemplos-android:"
-                databaseReference.child("alert").child(Code).child("type").setValue("1");
+                databaseReference.child("alert").child(Code).child("type").setValue(1);
                 databaseReference.child("alert").child(Code).child("hour").setValue(keyfecha);
 
 
                 Toasty.Config.getInstance() //Configuracion del toasty
 
-                        .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorPrimaryDark)) //Color de relleno
+                        .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorTraffic)) //Color de relleno
                         .setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite))  //Color de letra
                         .apply();
 
                 Toasty.info(NewAlertActivity.this,one, Toast.LENGTH_LONG, true).show();//info del toast
+
+                Intent intent = new Intent(NewAlertActivity.this, NewMapActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
+
 
 
             }
@@ -102,11 +110,12 @@ public class NewAlertActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SimpleDateFormat s = new SimpleDateFormat("hh:mm:ss");
+                DateFormat s = new SimpleDateFormat("hh:mm:ssaa");
                 keyfecha = s.format(new Date());
 
+
                 databaseReference = FirebaseDatabase.getInstance().getReference();//obtiene el enlace de la db "ejemplos-android:"
-                databaseReference.child("alert").child(Code).child("type").setValue("2");
+                databaseReference.child("alert").child(Code).child("type").setValue(2);
                 databaseReference.child("alert").child(Code).child("hour").setValue(keyfecha);
 
 
@@ -118,6 +127,12 @@ public class NewAlertActivity extends AppCompatActivity {
 
                 Toasty.info(NewAlertActivity.this,two, Toast.LENGTH_LONG, true).show();//info del toast
 
+                Intent intent = new Intent(NewAlertActivity.this, NewMapActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
+
+
             }
         });
 
@@ -125,21 +140,26 @@ public class NewAlertActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SimpleDateFormat s = new SimpleDateFormat("hh:mm:ss");
+                SimpleDateFormat s = new SimpleDateFormat("hh:mm:ssaa");
                 keyfecha = s.format(new Date());
 
                 databaseReference = FirebaseDatabase.getInstance().getReference();//obtiene el enlace de la db "ejemplos-android:"
-                databaseReference.child("alert").child(Code).child("type").setValue("3");
+                databaseReference.child("alert").child(Code).child("type").setValue(3);
                 databaseReference.child("alert").child(Code).child("hour").setValue(keyfecha);
 
 
                 Toasty.Config.getInstance() //Configuracion del toasty
 
-                        .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorAccent)) //Color de relleno
+                        .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorMechanich)) //Color de relleno
                         .setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite))  //Color de letra
                         .apply();
 
                 Toasty.info(NewAlertActivity.this,three,Toast.LENGTH_LONG, true).show();//info del toast
+
+                Intent intent = new Intent(NewAlertActivity.this, NewMapActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
 
             }
         });

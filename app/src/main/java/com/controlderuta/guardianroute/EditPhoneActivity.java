@@ -58,10 +58,10 @@ public class EditPhoneActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(EditPhoneActivity.this, PerfilEditActivity.class);
-                intent.putExtra("parametro", Code);
-                intent.putExtra("phone", Phone);
-                startActivity(intent);
+                //Intent intent = new Intent(EditPhoneActivity.this, PerfilEditActivity.class);
+                //intent.putExtra("parametro", Code);
+                //intent.putExtra("phone", Phone);
+                //startActivity(intent);
                 finish();
 
             }
@@ -83,9 +83,9 @@ public class EditPhoneActivity extends AppCompatActivity {
                     databaseReference.child("datadriver").child(PruUid).child("mobileconductor").setValue(mobileconductor);
 
 
-                    Intent intent = new Intent(EditPhoneActivity.this, PerfilEditActivity.class);
-                    intent.putExtra("parametro", Code);
-                    startActivity(intent);
+                    //Intent intent = new Intent(EditPhoneActivity.this, PerfilEditActivity.class);
+                    //intent.putExtra("parametro", Code);
+                    //startActivity(intent);
                     finish();
 
                 }else if(autovalidador==0){

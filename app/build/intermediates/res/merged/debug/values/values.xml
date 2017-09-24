@@ -116,16 +116,19 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#607D8B</color>
+    <color name="colorAccent">#333333</color>
     <color name="colorAccentGris">#607D8B</color>
-    <color name="colorBottonFloat">#beb913</color>
+    <color name="colorAccentTwo">#607D8B</color>
+    <color name="colorBottonFloat">#6EBC13</color>
     <color name="colorEditText">#F1F1F1</color>
-    <color name="colorEmergency">#FF0000</color>
-    <color name="colorPrimary"> #8BC34A</color>
-    <color name="colorPrimaryDark">#6EBC13</color>
+    <color name="colorEmergency">#333333</color>
+    <color name="colorMechanich">#9E9E9E</color>
+    <color name="colorPrimary">#9E9E9E</color>
+    <color name="colorPrimaryDark">#333333</color>
     <color name="colorPrimarylight">#DCEDC8</color>
     <color name="colorPrimarytext">#212121</color>
     <color name="colorSecondarytext">#757575</color>
+    <color name="colorTraffic">#616161</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colordividerborder">#BDBDBD</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
@@ -666,14 +669,19 @@
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="letter15dp">15dp</dimen>
+    <dimen name="letter18dp">18dp</dimen>
+    <dimen name="letter20dp">20dp</dimen>
     <dimen name="letter22dp">22dp</dimen>
     <dimen name="letter25dp">25dp</dimen>
+    <dimen name="margin10dp">10dp</dimen>
     <dimen name="margin16dp">16dp</dimen>
     <dimen name="margin30dp">30dp</dimen>
     <dimen name="margin40dp">40dp</dimen>
+    <dimen name="margin50dp">50dp</dimen>
     <dimen name="margin5dp">5dp</dimen>
     <dimen name="margin60dp">60dp</dimen>
     <dimen name="margin70dp">70dp</dimen>
+    <dimen name="margin80dp">80dp</dimen>
     <dimen name="marginBig">20dp</dimen>
     <dimen name="marginBottom">16dp</dimen>
     <dimen name="marginPhone">110dp</dimen>
@@ -694,6 +702,7 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="principalletter16dp">16dp</dimen>
     <dimen name="principalletter18dp">18dp</dimen>
     <dimen name="windtbtnlogin200dp">200dp</dimen>
     <dimen name="windtline1dp">1dp</dimen>
@@ -765,16 +774,19 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Settings</string>
     <string name="alertGps">El sistema GPS esta desactivado,¿Desea activarlo?</string>
-    <string name="alertone">Enviaste una alerta ¡Estamos en un trancón grave!, a tus usuarios de ruta.</string>
-    <string name="alertthree">Enviaste una alerta ¡Tenemos un daño mecánico!, a tus usuarios de ruta.</string>
-    <string name="alerttwo">Enviaste una alerta ¡Sufrimos un accidente!, a tus usuarios de ruta.</string>
-    <string name="app_name">Guardian Ruta</string>
+    <string name="alertone">Envió una alerta ¡Estamos en un congestión vehicular grave!, a sus usuarios de ruta.</string>
+    <string name="alertthree">Envió una alerta ¡Tenemos un daño mecánico!, a sus usuarios de ruta.</string>
+    <string name="alerttwo">Envió una alerta ¡Sufrimos un accidente!, a sus usuarios de ruta.</string>
+    <string name="app_name">Guardián Rutas</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="ayudaGps">El sistema Gps de su celulara no identifica su posicion actual, busque un lugar cercano a la calle o ventana</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="buttomcreate">CREAR RUTA</string>
     <string name="buttominsertcode">INGRESA CODIGO</string>
     <string name="buttomnext">SIGUIENTE</string>
+    <string name="calldialog">¿Hacer llamada?</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="closesesion">Guardián necesita tener su GPS activo para funcionar, al seleccionar NO, la aplicación por seguridad cerro sesión y así proteger sus datos. Inicie sesión y active el GPS para disfrutar del servicio.</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -803,10 +815,14 @@
         AIzaSyD-BTV8T07NjwXs5Zb5nSTzsJ5YBuLc_AQ
     </string>
     <string name="google_storage_bucket" translatable="false">guardian-731af.appspot.com</string>
+    <string name="hacerGps">Guardian necesita que active el Gps de su celular para su funcionamiento.</string>
     <string name="helpConfirm">Ok</string>
     <string name="helpPoint">Mantenga presionado con su dedo en el mapa el punto al cual llegara la ruta. Recuerde que puede moverse por el mapa, acercarlo y alejarlo de ser necesario.</string>
     <string name="helpPointThree">Cuando este seguro de su elección. Presione el marcador por unos segundos para confirmar. </string>
     <string name="helpPointTwo">Aparecerá un marcador que le confirma el lugar con exactitud, puede cambiarlo cuantas veces quiera, solamente debe seleccionar otro punto. </string>
+    <string name="helpcreate">Cree uno aquí.</string>
+    <string name="helpselect">¿No tiene recorridos?</string>
+    <string name="ida">Ida</string>
     <string name="layoutCreateAccount">Crear cuenta</string>
     <string name="layoutCreateRoute">Crea una ruta</string>
     <string name="layoutReestablecer">Reestablecer contraseña</string>
@@ -823,18 +839,27 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="perfildeusuario">Perfil  de usuario</string>
     <string name="project_id" translatable="false">guardian-731af</string>
+    <string name="proveedorGps">Su proveedor Gps esta desactivado.</string>
+    <string name="regreso">Regreso</string>
+    <string name="removeconfirm">¿Está seguro de eliminar este recorrido?</string>
+    <string name="removeinfo">Si elimina un recorrido nunca más podrá recuperar históricos he información del mismo.</string>
+    <string name="routetext">¿El recorrido es de ida o regreso?</string>
     <string name="search_menu_title">Search</string>
+    <string name="selectGps">Guardian necesita que active el Gps para seleccionar un recorrido y continuar</string>
+    <string name="star">¿Va a iniciar el recorrido ahora? </string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="textabord">Presione cada usuario para confirmar su abordaje</string>
     <string name="textapproach">Abordaje</string>
     <string name="textbtnCancel">Cancelar</string>
     <string name="textbtnOk">Ok</string>
     <string name="textcall">Llamada</string>
     <string name="textchat">Mensaje</string>
     <string name="textconfirmation">Confirmación y contacto directo con usuarios.</string>
-    <string name="textcreatecode">Comparte este código con los usuarios de la ruta.</string>
-    <string name="textcreatenewroute">Crea una nueva ruta dando clic aquí.</string>
-    <string name="textcreateroller">Si estas relevando a otra ruta</string>
-    <string name="textcreateroute">Si deseas crear ruta</string>
+    <string name="textcreatecode">Comparta este código con los usuarios de la ruta.</string>
+    <string name="textcreatenewroute">Cree una nueva ruta dando clic aquí.</string>
+    <string name="textcreateroller">Si esta relevando a otra ruta</string>
+    <string name="textcreateroute">Si desea crear ruta</string>
+    <string name="texteditperfil">Actualice la información de perfil para mejorar el servicio.</string>
     <string name="textlastnamedriver">Apellidos</string>
     <string name="textmatricula">Número de matricula</string>
     <string name="textmenuaddroute">Compartir ruta a:</string>
@@ -850,23 +875,25 @@
     <string name="textmenuplusroute">Agregar ruta</string>
     <string name="textmenuusersroute">Usuarios</string>
     <string name="textnamedriver">Nombres</string>
+    <string name="textnameroute">Nombre de recorrido</string>
     <string name="textnavigatorguardian">Guardián</string>
     <string name="textnavigatorsubguardian">Control de rutas</string>
-    <string name="textralert">Reporta incidentes a los usuarios en tiempo real.</string>
+    <string name="textralert">Reporte incidentes a los usuarios en tiempo real.</string>
     <string name="textralertcrash">Accidente</string>
     <string name="textralertengine">Daño mecánico</string>
-    <string name="textralerttraffic">Trancon</string>
-    <string name="textrelief">Ingresa el código suministrado por el otro conductor.</string>
-    <string name="textremovelist">Maten pulsada la ruta por unos segundos para eliminarla.</string>
-    <string name="textroutelist">Selecciona el recorrido que vas a realizar.</string>
-    <string name="textroutename">Ponle nombre a la ruta para personalizarla.</string>
+    <string name="textralerttraffic">Congestión vehicular</string>
+    <string name="textrelief">Ingrese el código suministrado por el otro conductor.</string>
+    <string name="textremovelist">Mantenga pulsado el recorrido por unos segundos para eliminarlo.</string>
+    <string name="textroutelist">Seleccione el recorrido que va a realizar.</string>
+    <string name="textroutename">Coloque un nombre al recorrido que realizara.</string>
     <string name="textviewphone">Número de celular</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps_ruta">MapsActivityRuta</string>
     <string name="title_activity_maps_rutas">Map</string>
-    <string name="title_activity_new_map">Mapa de ruta</string>
+    <string name="title_activity_new_map">Recorrido</string>
     <string name="title_activity_options_route">OptionsRouteActivity</string>
     <string name="title_activity_point_end">Selección de llegada</string>
+    <string name="title_activity_pruebamap">Map</string>
     <string name="title_activity_referencia">ReferenciaActivity</string>
     <string name="title_bar_maps_rutas">Guardian</string>
     <string name="toast_message">Toast message</string>
@@ -876,6 +903,7 @@
     <string name="toolbartitlecheck">Abordaje o descenso</string>
     <string name="toolbartitlecreateroute">Compartir código ruta</string>
     <string name="toolbartitleedit">Perfil de ruta</string>
+    <string name="toolbartitleeditdriver">Perfil de conductor</string>
     <string name="toolbartitleidcar">Registro matricula vehículo</string>
     <string name="toolbartitlenewcreate">Crear ruta o asignar relevo</string>
     <string name="toolbartitlenewcreatemenu">Nueva ruta</string>
@@ -886,8 +914,9 @@
     <string name="toolbartitleremoveroute">Eliminar ruta</string>
     <string name="toolbartitleroutelist">Selección recorridos</string>
     <string name="toolbartitleroutename">Nombre de ruta</string>
-    <string name="toolbartitleuserlist">Usuarios de ruta</string>
-    <string name="transitionintro">Te ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>
+    <string name="toolbartitleuser">Usuarios de ruta</string>
+    <string name="toolbartitleuserlist">Contactos de ruta</string>
+    <string name="transitionintro">Le ayudamos a hacer la diferencia en el servicio de transporte escolar y empresarial, controlando, coordinando y gestionando, de forma ágil y efectiva.</string>
     <string name="vacio"/>
     <string name="validadorpersonal">Debe registrar la totalidad de los espacios.</string>
     <string name="validadorpersonallastnamevacio">Debe registrar sus apellidos.</string>
@@ -1934,6 +1963,15 @@
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="EditTextMaterial" parent="Theme.AppCompat">
+        <item name="android:textColorHint">@color/colorAccentTwo</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/letter18dp</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+
     </style>
     <style name="MyRadioButton" parent="Theme.AppCompat.Light">
         <item name="colorControlNormal">@color/colorPrimaryDark</item>

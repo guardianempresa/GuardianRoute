@@ -1,60 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="24"
-    build-mode="FULL"
-    density="xxhdpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
+    build-mode="COLD"
+    density="hdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1500923841763"
+    timestamp="1506223675019"
     token="8872363548786549576"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="9718" />
+        duration="1709" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3634" />
+        duration="14" />
     <task
         name="verifier"
-        duration="424" />
+        duration="28" />
 
     <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\outputs\apk\app-debug.apk"
@@ -62,10 +32,34 @@
 
     <build
         build-mode="FULL"
-        timestamp="1500923841763"
+        timestamp="1506212819579"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -76,11 +70,16 @@
         <artifact
             location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1506216363766"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
@@ -89,13 +88,23 @@
             location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1506222464730"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1506223675019"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
             location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\eduin\AndroidStudioProjects\GuardianRoute\app\build\outputs\apk\app-debug.apk"

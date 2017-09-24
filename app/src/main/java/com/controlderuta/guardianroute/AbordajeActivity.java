@@ -26,6 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -63,9 +64,9 @@ public class AbordajeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(AbordajeActivity.this, NewMapActivity.class);
-                intent.putExtra("parametro", Code);
-                startActivity(intent);
+                //Intent intent = new Intent(AbordajeActivity.this, NewMapActivity.class);
+                //intent.putExtra("parametro", Code);
+                //startActivity(intent);
                 finish();
             }
         });
@@ -106,7 +107,7 @@ public class AbordajeActivity extends AppCompatActivity {
 
                         //Sube datos distancia
 
-                        SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
+                        DateFormat s = new SimpleDateFormat("ddMMyyyyhhmmssaa");
                         keyfecha = s.format(new Date());
 
                     }
@@ -120,24 +121,32 @@ public class AbordajeActivity extends AppCompatActivity {
             }
         });
 
-
-
-        lstArtist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        lstArtist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 String idPrueba = prueba.get(position).getId();
                 databaseReference.child("usersvstravel").child(Code).child(idPrueba).child("check").setValue("s");
-                databaseReference.child("checkconfirm").child(Code).child(idPrueba).child("date").setValue(keyfecha);
+                databaseReference.child("checkconfirm").child(Code).child(idPrueba).child(keyfecha).child("date").setValue(keyfecha);
 
                 prueba.remove(position);
                 artistNames.remove(position);
                 databaseReference.child("check").child(Code).child(idPrueba).removeValue();
 
+            }
+        });
+
+
+      /*  lstArtist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+
 
                 return true;
             }
-        });
+        });*/
     }
 
     public void showToolbar (String tittle, boolean upButton){//Metoodo de la toolbar

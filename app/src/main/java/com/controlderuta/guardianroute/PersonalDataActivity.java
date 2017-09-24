@@ -1,6 +1,7 @@
 package com.controlderuta.guardianroute;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import es.dmoral.toasty.Toasty;
 
 public class PersonalDataActivity extends AppCompatActivity {
 
-    Button btnSigPerson;
+    FloatingActionButton btnSigPerson;
     EditText edtNameDriver;
     EditText edtLastNameDriver;
     String nameconductor;
@@ -37,7 +38,7 @@ public class PersonalDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_data);
 
-        btnSigPerson        = (Button)findViewById(R.id.btnSigPersonal);
+        btnSigPerson        = (FloatingActionButton) findViewById(R.id.btnSigPersonal);
         edtNameDriver       = (EditText)findViewById(R.id.namePerson);
         edtLastNameDriver   = (EditText)findViewById(R.id.lastnamePerson);
 

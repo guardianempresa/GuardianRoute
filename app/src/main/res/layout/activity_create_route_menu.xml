@@ -19,14 +19,16 @@
             android:id="@+id/toolbarWhiteCreate"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorWhite"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="4dp"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <Button
                 android:id="@+id/backcreatemenu"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@drawable/back"
+                android:background="@drawable/backarrowwhite"
+                android:layout_marginLeft="@dimen/letter20dp"
 
                 />
 
@@ -36,8 +38,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/toolbartitlenewcreatemenu"
-                android:textColor="@color/colorSecondarytext"
-                android:textSize="@dimen/letter22dp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/letter20dp" />
 
         </android.support.v7.widget.Toolbar>
 
@@ -45,7 +47,10 @@
 
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/colorPrimaryDark"></LinearLayout>
+            android:elevation="4dp"
+            android:background="@color/colorPrimaryDark">
+
+        </LinearLayout>
 
 
         <LinearLayout
@@ -56,25 +61,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="8.5"
-                android:background="@color/colorWhite"
+                android:layout_weight="10"
                 android:gravity="center"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
-
-
-
 
                 <Button
                     android:id="@+id/btnCreateNewRoute"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin70dp"
-                    android:layout_marginLeft="@dimen/margin40dp"
-                    android:layout_marginRight="@dimen/margin40dp"
-                    android:background="@drawable/buttomgreen"
+                    android:layout_height="@dimen/margin50dp"
                     android:text="@string/buttomcreate"
                     android:textAlignment="center"
-                    android:textSize="@dimen/letter25dp"
-                    android:elevation="10dp"
+                    android:textSize="@dimen/letter18dp"
+                    android:elevation="2dp"
                     android:theme="@style/RaisedButtonDark" />
 
 

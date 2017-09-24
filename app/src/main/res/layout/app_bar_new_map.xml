@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.controlderuta.guardianroute.NewMapActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -11,28 +12,80 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimaryDark"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <Button
+                android:id="@+id/btnphone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/phone"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                />
+
+            <Button
+                android:id="@+id/btnstop"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/stop"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                />
+
+            <Button
+                android:id="@+id/btnplay"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/play"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                />
+
+       </android.support.v7.widget.Toolbar>
+
 
     </android.support.design.widget.AppBarLayout>
 
+
+
     <include layout="@layout/content_new_map" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fabMapStop"
+
+    <TextView
+        android:id="@+id/distanceText"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/margin70dp"
-        android:background="@color/colorPrimaryDark"
-        android:layout_gravity="bottom|end"
-        android:elevation="10dp"
-        android:src="@drawable/stop"
-        android:layout_marginRight="@dimen/margin16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="@dimen/margin30dp"
         android:layout_marginBottom="@dimen/margin16dp"
-        app:backgroundTint="@color/colorBottonFloat" />
+        />
+
+    <SeekBar
+        android:id="@+id/seekBarNewMap"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="@dimen/margin30dp"
+        android:layout_marginRight="@dimen/margin30dp"
+        android:layout_marginLeft="@dimen/margin5dp"
+        android:max="24"
+        android:progress="18" />
+
+    <TextView
+        android:id="@+id/textseekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/margin16dp"
+        android:text="Zoom:76%"
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabMapPlay"
@@ -41,7 +94,7 @@
         android:background="@color/colorPrimaryDark"
         android:layout_gravity="bottom|end"
         android:elevation="10dp"
-        android:src="@drawable/play"
+        android:src="@drawable/boy"
         android:layout_marginRight="@dimen/margin16dp"
         android:layout_marginBottom="@dimen/margin16dp"
         app:backgroundTint="@color/colorPrimaryDark" />

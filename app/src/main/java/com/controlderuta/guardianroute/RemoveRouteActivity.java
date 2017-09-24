@@ -1,6 +1,10 @@
 package com.controlderuta.guardianroute;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.provider.MediaStore;
+import android.provider.Settings;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.Artist;
 import com.controlderuta.guardianroute.Model.DataListRoute;
@@ -24,6 +29,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
+
 public class RemoveRouteActivity extends AppCompatActivity {
 
     private static final String TAG = "RemoveRouteActivity";
@@ -35,10 +42,13 @@ public class RemoveRouteActivity extends AppCompatActivity {
     private List<DataListRoute> prueba;
     Button btnRemove;
 
-
-
+    String idPrueba;
     String PruUid;
     String Code;
+
+    //Alert
+
+    AlertDialog alert = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +58,8 @@ public class RemoveRouteActivity extends AppCompatActivity {
         showToolbar("", false);//llamamos la toolbar
 
         Code=getIntent().getExtras().getString("parametro");
+
+        AlertRemove();
 
         btnRemove=(Button)findViewById(R.id.backremove);
 
@@ -104,19 +116,70 @@ public class RemoveRouteActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String idPrueba = prueba.get(position).getId();
+                idPrueba = prueba.get(position).getId();
                 prueba.remove(position);
                 artistNames.remove(position);
-                databaseReference.child("drivervstravel").child(PruUid).child(idPrueba).removeValue();
-                databaseReference.child("alert").child(idPrueba).removeValue();
-                databaseReference.child("chat").child(idPrueba).removeValue();
-                databaseReference.child("travel").child(idPrueba).removeValue();
-                databaseReference.child("datauser").child(idPrueba).removeValue();
+                AlertConfirm();
 
                 return true;
             }
         });
 
+    }
+
+    private void AlertRemove(){
+        final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.removeinfo))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.helpConfirm), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused")final DialogInterface dialog, @SuppressWarnings("unused") final int which) {
+                    }
+                });
+        alert = builder.create();
+        alert.show();
+    }
+
+    private void AlertConfirm(){
+        final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.removeconfirm))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.yesGps), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused")final DialogInterface dialog, @SuppressWarnings("unused") final int which) {
+
+                        databaseReference.child("drivervstravel").child(PruUid).child(idPrueba).removeValue();
+                        databaseReference.child("starandfinish").child(idPrueba).child("estado").setValue(4);
+
+                        Intent intent = new Intent(RemoveRouteActivity.this, RouteListActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+
+                .setNegativeButton(getResources().getString(R.string.noGps), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") int which) {
+
+                        Intent intent = new Intent(RemoveRouteActivity.this, RemoveRouteActivity.class);
+                        intent.putExtra("parametro", Code);
+                        startActivity(intent);
+                        finish();
+
+                    }
+                });
+        alert = builder.create();
+        alert.show();
+    }
+
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if(alert!=null)
+        {
+            alert.dismiss();
+        }
     }
 
     public void showToolbar (String tittle, boolean upButton){//Metoodo de la toolbar

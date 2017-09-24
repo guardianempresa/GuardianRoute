@@ -72,7 +72,7 @@ public class SendCodeActivity extends AppCompatActivity {
 
     private String buildDeepLink(String key){
 
-        link="¡Unete a mi Ruta Guardian! Usa el codigo de invitación "+Code+".  Descarga la aquí la app:https://drive.google.com/open?id=0B3lY_7IS7EICeExHZUJfVFQyRFU";
+        link="¡Unete a mi Ruta Guardian!. Descarga la aquí la app:https://drive.google.com/open?id=0B3lY_7IS7EICaFd4WGVaU1c0UWc"+" Usa el codigo de invitación "+Code;
         return link;
     }
 

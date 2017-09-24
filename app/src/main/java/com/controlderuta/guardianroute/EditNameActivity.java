@@ -56,10 +56,10 @@ public class EditNameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(EditNameActivity.this, PerfilEditActivity.class);
-                intent.putExtra("parametro", Code);
-                intent.putExtra("phone", Name);
-                startActivity(intent);
+                //Intent intent = new Intent(EditNameActivity.this, PerfilEditActivity.class);
+                //intent.putExtra("parametro", Code);
+                //intent.putExtra("phone", Name);
+                //startActivity(intent);
                 finish();
 
             }
@@ -91,9 +91,9 @@ public class EditNameActivity extends AppCompatActivity {
                     //sube la longitud y tatitud a la raiz de la id
                     databaseReference.child("datadriver").child(PruUid).child("nameconductor").setValue(txtName);
 
-                    Intent intent = new Intent(EditNameActivity.this, PerfilEditActivity.class);
-                    intent.putExtra("parametro", Code);
-                    startActivity(intent);
+                    //Intent intent = new Intent(EditNameActivity.this, PerfilEditActivity.class);
+                    //intent.putExtra("parametro", Code);
+                    //startActivity(intent);
                     finish();
 
                 }

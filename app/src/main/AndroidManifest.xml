@@ -18,9 +18,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/iconapp"
+        android:icon="@drawable/logoapprutas"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/iconapp"
+        android:roundIcon="@drawable/logoapprutas"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
@@ -36,7 +36,9 @@
                 android:resource="@xml/file_path" />
         </provider>
 
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,28 +47,46 @@
         </activity>
         <activity
             android:name=".NewMapActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_new_map"
             android:theme="@style/AppTheme" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".TransitionActivity" />
-        <activity android:name=".CallActivity" />
-        <activity android:name=".AlertasActivity" />
-        <activity android:name=".AbordajeActivity" />
-        <activity android:name=".PhoneActivity" />
-        <activity android:name=".PersonalDataActivity" />
-        <activity android:name=".RouteNameActivity" />
-        <activity android:name=".CodeActivity" />
-        <activity android:name=".NewCreateRouteActivity" />
-        <activity android:name=".NewAlertActivity" />
-        <activity android:name=".ConfirmationActivity" />
-        <activity android:name=".RouteListActivity" />
-        <activity android:name=".RemoveRouteActivity" />
-        <activity android:name=".SelectListActivity" />
-        <activity android:name=".CreateRouteMenuActivity" />
-        <activity android:name=".UsersListActivity" />
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".UserListCallActivity" />
-        <activity android:name=".PointEndActivity" />
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".TransitionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AbordajeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PersonalDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RouteNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NewCreateRouteActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NewAlertActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ConfirmationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RouteListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RemoveRouteActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SelectListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CreateRouteMenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UsersListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ChatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UserListCallActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PointEndActivity"
+            android:screenOrientation="portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -82,13 +102,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <receiver android:name=".AlarmNotificationReceiver" />
-
-        <activity android:name=".SendCodeActivity" />
-        <activity android:name=".PerfilEditActivity" />
-        <activity android:name=".EditNameActivity" />
-        <activity android:name=".EditLastNameActivity" />
-        <activity android:name=".EditPhoneActivity"></activity>
+        <activity android:name=".SendCodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PerfilEditActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditLastNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditPhoneActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

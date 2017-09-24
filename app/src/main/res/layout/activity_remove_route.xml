@@ -20,14 +20,16 @@
             android:id="@+id/toolbarremove"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorWhite"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            android:background="@color/colorPrimaryDark"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <Button
                 android:id="@+id/backremove"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@drawable/back"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/backarrowwhite"
 
                 />
 
@@ -35,10 +37,10 @@
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/toolbartitleremoveroute"
-                android:textColor="@color/colorSecondarytext"
-                android:textSize="@dimen/letter22dp"
-                android:layout_gravity="center" />
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/letter20dp" />
 
         </android.support.v7.widget.Toolbar>
 
@@ -46,21 +48,19 @@
 
             android:layout_width="match_parent"
             android:layout_height="@dimen/windtline2dp"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorPrimaryDark"
+            android:elevation="4dp">
 
         </LinearLayout>
-
-
-
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2.5"
+            android:layout_weight="1.5"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="@color/colorWhite"
+
             >
 
             <TextView
@@ -70,8 +70,8 @@
                 android:layout_marginRight="@dimen/margin30dp"
                 android:gravity="center"
                 android:text="@string/textremovelist"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/principalletter18dp" />
+                android:textColor="@color/colorAccentTwo"
+                android:textSize="@dimen/principalletter16dp" />
 
         </LinearLayout>
 
@@ -79,33 +79,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/colorWhite"
-            android:layout_weight="7"
-            >
+            android:layout_weight="8.5">
+
             <ListView
                 android:id="@+id/lstRemove"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_marginBottom="@dimen/margin10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="@dimen/margin30dp"
-                >
+                android:elevation="2dp"
+                android:layout_marginRight="@dimen/margin10dp">
+
             </ListView>
 
         </LinearLayout>
 
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            >
-
-        </LinearLayout>
-
-
     </LinearLayout>
-
 
 
 </android.support.design.widget.CoordinatorLayout>

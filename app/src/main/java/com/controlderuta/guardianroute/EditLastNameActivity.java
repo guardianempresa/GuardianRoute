@@ -55,10 +55,10 @@ public class EditLastNameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(EditLastNameActivity.this, PerfilEditActivity.class);
-                intent.putExtra("parametro", Code);
-                intent.putExtra("phone", Lastname);
-                startActivity(intent);
+                //Intent intent = new Intent(EditLastNameActivity.this, PerfilEditActivity.class);
+                //intent.putExtra("parametro", Code);
+                //intent.putExtra("phone", Lastname);
+                //startActivity(intent);
                 finish();
 
             }
@@ -86,9 +86,9 @@ public class EditLastNameActivity extends AppCompatActivity {
                     //sube la longitud y tatitud a la raiz de la id
                     databaseReference.child("datadriver").child(PruUid).child("lastnameconductor").setValue(txtLastname);
 
-                    Intent intent = new Intent(EditLastNameActivity.this, PerfilEditActivity.class);
-                    intent.putExtra("parametro", Code);
-                    startActivity(intent);
+                    //Intent intent = new Intent(EditLastNameActivity.this, PerfilEditActivity.class);
+                    //intent.putExtra("parametro", Code);
+                    //startActivity(intent);
                     finish();
                 }
             }

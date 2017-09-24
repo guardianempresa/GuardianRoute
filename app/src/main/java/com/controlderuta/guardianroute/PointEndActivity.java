@@ -84,12 +84,7 @@ public class PointEndActivity extends AppCompatActivity implements OnMapReadyCal
 
     //Button btnSigPoint;
 
-
-
     String Code;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,11 +94,11 @@ public class PointEndActivity extends AppCompatActivity implements OnMapReadyCal
         Code=getIntent().getExtras().getString("parametro");
 
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.mapstar);
-        mapFragment.getMapAsync(this);
+            SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                    .findFragmentById(R.id.mapstar);
+            mapFragment.getMapAsync(this);
 
-        AlertHelp();
+            AlertHelp();
 
 
     }

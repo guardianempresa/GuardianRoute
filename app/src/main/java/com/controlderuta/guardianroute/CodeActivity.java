@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class CodeActivity extends AppCompatActivity {
 
-    Button btnSigCode;
+    FloatingActionButton btnSigCode;
     FloatingActionButton btnContact;
     TextView txttextView;
     String Code;
@@ -42,7 +42,7 @@ public class CodeActivity extends AppCompatActivity {
 
         txttextView =(TextView)findViewById(R.id.textView);
         btnContact =(FloatingActionButton)findViewById(R.id.fabcontacRoute);
-        btnSigCode =(Button)findViewById(R.id.btnSigCode);
+        btnSigCode =(FloatingActionButton) findViewById(R.id.btnSigCode);
 
 
         Code=getIntent().getExtras().getString("parametro");
@@ -59,7 +59,7 @@ public class CodeActivity extends AppCompatActivity {
                 databaseReference.child("alert").child(Code).child("hour").setValue("0");
 
 
-                Intent intent = new Intent(CodeActivity.this, RouteNameActivity.class);
+                Intent intent = new Intent(CodeActivity.this, NewMapActivity.class);
                 intent.putExtra("parametro", Code);
                 startActivity(intent);
                 finish();
@@ -83,7 +83,7 @@ public class CodeActivity extends AppCompatActivity {
 
     private String buildDeepLink(String key){
 
-        link="¡Unete a mi Ruta Guardian! Usa el codigo de invitación "+Code+".Descarga la aquí la app:https://drive.google.com/open?id=0B3lY_7IS7EICeExHZUJfVFQyRFU";
+        link="¡Unete a mi Ruta Guardian!. Descarga la aquí la app:https://drive.google.com/open?id=0B3lY_7IS7EICaFd4WGVaU1c0UWc"+" Usa el codigo de invitación "+Code;
         return link;
     }
 

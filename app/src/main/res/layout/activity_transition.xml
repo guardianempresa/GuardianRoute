@@ -18,11 +18,9 @@
         android:weightSum="1">
 
         <ImageView
-            android:layout_width="@dimen/windtlogotransition"
-            android:layout_height="wrap_content"
-            android:background="@drawable/logowhiteroute"
-            android:layout_gravity="center"
-            android:layout_weight="0.11"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:background="@drawable/logoguardian"
             android:layout_marginBottom="@dimen/margin40dp"
             />
 

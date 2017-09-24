@@ -11,7 +11,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
         android:orientation="vertical"
         android:weightSum="10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -22,6 +21,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimaryDark"
             app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:elevation="4dp"
 
             >
 
@@ -29,7 +29,8 @@
                 android:id="@+id/backEditPerfil"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@drawable/backwhite"
+                android:background="@drawable/backarrowwhite"
+                android:layout_marginLeft="@dimen/letter20dp"
 
                 />
 
@@ -38,9 +39,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/toolbartitleedit"
+                android:text="@string/toolbartitleeditdriver"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/letter22dp" />
+                android:textSize="@dimen/letter20dp" />
 
         </android.support.v7.widget.Toolbar>
 
@@ -48,7 +49,8 @@
 
             android:layout_width="match_parent"
             android:layout_height="@dimen/windtline2dp"
-            android:background="@color/colorWhite">
+            android:elevation="4dp"
+            android:background="@color/colorPrimaryDark">
 
         </LinearLayout>
 
@@ -57,37 +59,21 @@
 
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4.5"
-            android:background="@color/colorPrimaryDark"
+            android:layout_weight="3"
             android:gravity="center"
+           >
 
-            >
-
-            <ImageView
-                android:id="@+id/imagenperfiledit"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                android:elevation="10dp"
-                android:background="@drawable/busbig"
-
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:background="@color/colorWhite">
-
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/windtline1dp"
-            android:background="@color/colordividerborder">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin30dp"
+                android:layout_marginRight="@dimen/margin30dp"
+                android:layout_marginBottom="@dimen/margin30dp"
+                android:layout_marginTop="@dimen/margin16dp"
+                android:gravity="center"
+                android:text="@string/texteditperfil"
+                android:textColor="@color/colorAccentTwo"
+                android:textSize="@dimen/principalletter16dp" />
 
         </LinearLayout>
 
@@ -95,152 +81,130 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5"
+            android:layout_weight="6"
             android:gravity="center"
             android:orientation="vertical"
             android:weightSum="10">
 
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin10dp"
+                android:layout_marginLeft="@dimen/margin10dp"
+                android:layout_marginRight="@dimen/margin10dp"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:elevation="@dimen/windtline2dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="6"
+
                 >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_weight="3"
-                    android:weightSum="6"
-                    >
+                <TextView
+                    android:id="@+id/nameDriver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin30dp"
+                    android:layout_weight="5.9"
+                    android:textColor="@color/colorPrimarytext"
+                    android:textSize="@dimen/principalletter16dp" />
 
-                    <TextView
-                        android:id="@+id/nameDriver"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/margin30dp"
-                        android:background="@color/colorWhite"
-                        android:elevation="@dimen/margin5dp"
-                        android:textColor="@color/colorSecondarytext"
-                        android:textSize="@dimen/principalletter18dp"
-                        android:layout_weight="5.9"
-                        />
+                <Button
+                    android:id="@+id/fabEditName"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="@dimen/letter20dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/edit" />
 
-                    <Button
-                        android:id="@+id/fabEditName"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_weight="0.1"
-                        android:layout_marginRight="@dimen/margin16dp"
-                        android:background="@drawable/edit"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/windtline1dp"
-                    android:background="@color/colordividerborder">
-
-                </LinearLayout>
+            </LinearLayout>
 
 
-                <LinearLayout
 
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_weight="3"
-                    android:weightSum="6"
-                    >
+            <LinearLayout
 
-
-                    <TextView
-                        android:id="@+id/lastnameDriver"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/margin30dp"
-                        android:background="@color/colorWhite"
-                        android:elevation="@dimen/margin5dp"
-                        android:textColor="@color/colorSecondarytext"
-                        android:textSize="@dimen/principalletter18dp"
-                        android:layout_weight="5.9"
-                        />
-
-                    <Button
-                        android:id="@+id/fabEditLastName"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_weight="0.1"
-                        android:layout_marginRight="@dimen/margin16dp"
-                        android:background="@drawable/edit"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/windtline1dp"
-                    android:background="@color/colordividerborder">
-
-                </LinearLayout>
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin10dp"
+                android:layout_marginLeft="@dimen/margin10dp"
+                android:layout_marginRight="@dimen/margin10dp"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:elevation="@dimen/windtline2dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="6">
 
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/lastnameDriver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin30dp"
+                    android:layout_weight="5.9"
+                    android:textColor="@color/colorPrimarytext"
+                    android:textSize="@dimen/principalletter16dp" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_weight="3"
-                    android:weightSum="6"
-                    >
+                <Button
+                    android:id="@+id/fabEditLastName"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="@dimen/letter20dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/edit" />
 
-                    <TextView
-                        android:id="@+id/editPhone"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/margin30dp"
-                        android:background="@color/colorWhite"
-                        android:elevation="@dimen/margin5dp"
-                        android:textColor="@color/colorSecondarytext"
-                        android:textSize="@dimen/principalletter18dp"
-                        android:layout_weight="5.9"
-                        />
+            </LinearLayout>
 
-                    <Button
-                        android:id="@+id/fabEditPhone"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_weight="0.1"
-                        android:layout_marginRight="@dimen/margin16dp"
-                        android:background="@drawable/edit"
-                        />
 
-                </LinearLayout>
+            <LinearLayout
 
-                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin10dp"
+                android:layout_marginLeft="@dimen/margin10dp"
+                android:layout_marginRight="@dimen/margin10dp"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:elevation="@dimen/windtline2dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="6">
 
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/windtline1dp"
-                    android:background="@color/colordividerborder">
+                <TextView
+                    android:id="@+id/editPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin30dp"
+                    android:layout_weight="5.9"
+                    android:textColor="@color/colorPrimarytext"
+                    android:textSize="@dimen/principalletter18dp" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    >
-
-                </LinearLayout>
+                <Button
+                    android:id="@+id/fabEditPhone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="@dimen/letter20dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/edit" />
 
             </LinearLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

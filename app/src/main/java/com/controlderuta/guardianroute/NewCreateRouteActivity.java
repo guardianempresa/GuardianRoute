@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.controlderuta.guardianroute.Model.DriverVsTravel;
 import com.controlderuta.guardianroute.Model.Recorridos;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,6 +40,7 @@ public class NewCreateRouteActivity extends AppCompatActivity {
 
     private String link;
     String PruUid;
+    String name="";
 
     //variables firebase
 
@@ -92,7 +94,6 @@ public class NewCreateRouteActivity extends AppCompatActivity {
 
 
 
-
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,17 +103,20 @@ public class NewCreateRouteActivity extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
                 PruUid=user.getUid(); //Guardamos Uid en variable|
 
-                databaseReference.child("drivervstravel").child(PruUid).child(letra).child("name").setValue("");
-                databaseReference.child("drivervstravel").child(PruUid).child(letra).child("id").setValue(letra);
 
+                DriverVsTravel driverVsTravel = new DriverVsTravel(letra,name);
+                databaseReference.child("drivervstravel").child(PruUid).child(letra).setValue(driverVsTravel);
 
 
                 Recorridos recorridos = new Recorridos(latitud,longitud,latitudllegada,longitudllegada,estado,alerta,nameRoute,alertDist,acumDist,time,tipRoute);
                 databaseReference.child("travel").child(letra).setValue(recorridos);
 
+                databaseReference.child("starandfinish").child(letra).child("estado").setValue(0);
+                databaseReference.child("starandfinish").child(letra).child("tipo").setValue(0);
 
 
-                Intent intent = new Intent(NewCreateRouteActivity.this, CodeActivity.class);
+
+                Intent intent = new Intent(NewCreateRouteActivity.this, RouteNameActivity.class);
                 intent.putExtra("parametro", letra);
                 startActivity(intent);
                 finish();

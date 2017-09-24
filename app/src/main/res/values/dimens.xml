@@ -30,5 +30,11 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="windtline1dp">1dp</dimen>
+    <dimen name="letter20dp">20dp</dimen>
+    <dimen name="principalletter16dp">16dp</dimen>
+    <dimen name="margin50dp">50dp</dimen>
+    <dimen name="letter18dp">18dp</dimen>
+    <dimen name="margin10dp">10dp</dimen>
+    <dimen name="margin80dp">80dp</dimen>
 
 </resources>

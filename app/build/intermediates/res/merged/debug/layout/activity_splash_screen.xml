@@ -14,16 +14,15 @@
             android:background="@color/colorPrimaryDark"
             android:orientation="vertical"
             android:gravity="center"
-            android:weightSum="1">
+            >
 
             <ImageView
                 android:id="@+id/logotipo"
-                android:layout_width="174dp"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="188dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/logowhiteroute"
-
-                android:layout_weight="0.25" />
+                android:background="@drawable/logoguardian"
+                />
 
         </LinearLayout>
 

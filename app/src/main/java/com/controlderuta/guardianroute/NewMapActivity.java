@@ -34,13 +34,17 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.controlderuta.guardianroute.Model.ArrayMarkets;
 import com.controlderuta.guardianroute.Model.CheckList;
 import com.controlderuta.guardianroute.Model.DataListRoute;
+import com.controlderuta.guardianroute.Model.DataMonitorConductor;
 import com.controlderuta.guardianroute.Model.DataUsuarios;
+import com.controlderuta.guardianroute.Model.DriverVsTravel;
 import com.controlderuta.guardianroute.Model.Markets;
 import com.controlderuta.guardianroute.Model.Recorridos;
 import com.controlderuta.guardianroute.Model.UserList;
@@ -77,7 +81,7 @@ import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
-public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
+public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener{
 
 
     //Variables diego viejas
@@ -116,6 +120,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     String Completename;
     String Code;
     String VarButtom;
+    int alertStart;
 
 
     // Variables Markets
@@ -126,6 +131,11 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     String Id;
     String Name;
     String LastName;
+    String ChildrenName;
+    String ChildrenLastName;
+
+    int alertUp=0;
+    int zoomCamera = 16;
 
     //variables de calculo de distancias
     float distance;
@@ -134,11 +144,25 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     //Botones
 
     FloatingActionButton btnPlay;
-    FloatingActionButton btnStop;
+
+    Button btnReplay;
+    Button btnStop;
+    Button btnCall;
+
+
     String IdCheck;
     String IdCheckYes;
     String CheckPlay;
     String CheckStop;
+    String IdPro;
+
+    String phone;
+    String go;
+
+    SeekBar NewSeekBar;
+    TextView txtSeekBar;
+    TextView distanceText;
+
 
 
 
@@ -148,6 +172,23 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
         setContentView(R.layout.activity_new_map);
 
         Code=getIntent().getExtras().getString("parametro");
+
+        //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
+        PruUid=user.getUid(); //Guardamos Uid en variable
+
+
+        NewSeekBar  = (SeekBar)findViewById(R.id.seekBarNewMap);
+        txtSeekBar  = (TextView)findViewById(R.id.textseekBar);
+        distanceText= (TextView)findViewById(R.id.distanceText);
+        btnReplay   = (Button)findViewById(R.id.btnplay);
+        btnStop     = (Button)findViewById(R.id.btnstop);
+        btnCall     = (Button)findViewById(R.id.btnphone);
+
+        //phoneActual();
+
+
 
         ///Firebase ultimo para logOut
 
@@ -176,105 +217,97 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
 
 
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(NewMapActivity.this, UserListCallActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        btnStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                databaseReference = FirebaseDatabase.getInstance().getReference();
+                databaseReference.child("starandfinish").child(Code).child("estado").setValue(2);
+
+                btnReplay.setVisibility(View.VISIBLE);
+                btnStop.setVisibility(View.INVISIBLE);
+                distanceText.setText("Recorrido terminado");
+
+                Toasty.Config.getInstance() //Configuracion del toasty
+
+                        .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorEmergency)) //Color de relleno
+                        .setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite))  //Color de letra
+                        .apply();
+
+                Toasty.info(NewMapActivity.this,"Recorrido terminado", Toast.LENGTH_LONG, true).show();//info del toast
+
+            }
+        });
+
+        btnReplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeStarandfinish();
+                changeCheck();
+                starconsult();
+
+
+            }
+        });
+
 
         btnPlay = (FloatingActionButton) findViewById(R.id.fabMapPlay);
-        btnStop = (FloatingActionButton) findViewById(R.id.fabMapStop);
-
-
-        btnPlay.setVisibility(View.VISIBLE );
-        btnStop.setVisibility(View.INVISIBLE );
-
-
-        btnPlay.setOnLongClickListener(new View.OnLongClickListener() {
+        btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v) {
-                return false;
+            public void onClick(View v) {
+
+                Intent intent = new Intent(NewMapActivity.this, AbordajeActivity.class);
+                intent.putExtra("parametro", Code);
+                startActivity(intent);
+                finish();
+
             }
         });
 
-        //inicia eventos de botones
+        starconsult();
 
-        btnPlay.setOnLongClickListener(new View.OnLongClickListener() {
+        //--------------Barraa zoom----------
+
+        NewSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                zoomCamera = progress;
+                int porc= (100/24)*(progress+1);
+                txtSeekBar.setText("Zoom: "+porc+"%");
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual,zoomCamera));
 
 
-                btnPlay.setVisibility(View.INVISIBLE );
-                btnStop.setVisibility(View.VISIBLE );
+            }
 
-                databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
-                databaseReference.child("usersvstravel").child(Code).addListenerForSingleValueEvent(new ValueEventListener() {
-
-
-                    @Override
-
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        //For que busca en firebase segun nodo y barre la base de datos
-                        if (dataSnapshot.exists()){
-                            for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                                Markets datacheck = snapshot.getValue(Markets.class);
-                                IdCheck=datacheck.getId();
-                                CheckPlay=datacheck.getCheck();
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
 
 
-                                databaseReference.child("usersvstravel").child(Code).child(IdCheck).child("check").setValue("n");
-                            }
-                        }
-                    }
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
+            }
 
-                    }
-                });
-                return false;
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
             }
         });
 
-        btnStop.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
 
-
-                btnPlay.setVisibility(View.VISIBLE );
-                btnStop.setVisibility(View.INVISIBLE );
-
-                //------
-
-                databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
-                databaseReference.child("usersvstravel").child(Code).addListenerForSingleValueEvent(new ValueEventListener() {//callback Unico evento
-
-                    @Override
-
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        //For que busca en firebase segun nodo y barre la base de datos
-                        if (dataSnapshot.exists()){
-                            for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                                Markets datacheck = snapshot.getValue(Markets.class);
-
-                                //Extraigo la variables
-
-                                IdCheckYes=datacheck.getId();
-                                CheckStop=datacheck.getCheck();
-
-                                //subo datos
-
-                                    databaseReference.child("usersvstravel").child(Code).child(IdCheckYes).child("check").setValue("s");
-
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-                return false;
-            }}
-        );
 
         //----- terminan los eventos de botinoes
 
@@ -288,10 +321,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
 
 
-        //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-        databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();//Para extraeerr el Uid del cliente
-        PruUid=user.getUid(); //Guardamos Uid en variable
+
 
 
 
@@ -303,6 +333,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -335,6 +366,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             //Intent intent = new Intent(NewMapActivity.this, EditNameActivity.class);
             Intent intent = new Intent(NewMapActivity.this, PerfilEditActivity.class);
             intent.putExtra("parametro", Code);
+            //finish();
             startActivity(intent);
 
 
@@ -365,6 +397,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             Intent intent = new Intent(NewMapActivity.this, SelectListActivity.class);
             intent.putExtra("parametro", Code);
             startActivity(intent);
+            //finish();
 
 
         } else if (id == R.id.nav_plus) {
@@ -372,42 +405,38 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             Intent intent = new Intent(NewMapActivity.this, CreateRouteMenuActivity.class);
             intent.putExtra("parametro", Code);
             startActivity(intent);
+            //finish();
 
         }else if (id == R.id.nav_minus) {
 
             Intent intent = new Intent(NewMapActivity.this, RemoveRouteActivity.class);
             intent.putExtra("parametro", Code);
             startActivity(intent);
+            //finish();
 
         } else if (id == R.id.nav_alert) {
 
             Intent intent = new Intent(NewMapActivity.this, NewAlertActivity.class);
             intent.putExtra("parametro", Code);
             startActivity(intent);
+            //finish();
 
 
-        } /*else if (id == R.id.nav_chat) {
-
-            Intent intent = new Intent(NewMapActivity.this, UsersListActivity.class);
-            intent.putExtra("parametro", Code);
-            startActivity(intent);
-
-
-        } */else if (id == R.id.nav_call) {
+        } else if (id == R.id.nav_call) {
 
             Intent intent = new Intent(NewMapActivity.this, UserListCallActivity.class);
             intent.putExtra("parametro", Code);
             startActivity(intent);
+            //finish();
 
         } else if (id == R.id.nav_users) {
 
             Intent intent = new Intent(NewMapActivity.this, SendCodeActivity.class);
             intent.putExtra("parametro", Code);
             startActivity(intent);
+            //finish();
 
-        }/*else if (id == R.id.nav_drivers) {
-
-        }*/
+        }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -436,8 +465,6 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             public void onLocationChanged(Location location) {
 
                 escribirposicion(location);
-
-
             }
 
             @Override
@@ -489,7 +516,151 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                 .setNegativeButton(getResources().getString(R.string.noGps), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") int which) {
-                        dialog.cancel();
+
+                        Toasty.Config.getInstance() //Configuracion del toasty
+
+                                .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorEmergency)) //Color de relleno
+                                .setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite))  //Color de letra
+                                .apply();
+
+                        Toasty.info(NewMapActivity.this,"Guardián necesita tener su GPS activo para funcionar, al seleccionar NO, la aplicación por seguridad cerro sesión y así proteger sus datos. Inicie sesión y active el GPS para disfrutar del servicio.", Toast.LENGTH_LONG, true).show();//info del toast
+
+                        logOut();
+                    }
+                });
+        alert = builder.create();
+        alert.show();
+    }
+
+    private void starconsult(){
+
+
+        databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
+        databaseReference.child("starandfinish").child(Code).child("estado").addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot)
+            {
+                alertStart   = dataSnapshot.getValue(int.class);
+
+
+                switch (alertStart){
+                    case 0:
+                        alertStarRoute();
+                        btnReplay.setVisibility(View.VISIBLE);
+                        btnStop.setVisibility(View.INVISIBLE);
+                        distanceText.setText("Recorrido sin iniciar");
+                        changeStarandfinish();
+                        break;
+
+                    case 1:
+
+
+                        btnStop.setVisibility(View.VISIBLE);
+                        btnReplay.setVisibility(View.INVISIBLE);
+
+                        break;
+
+            }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    //Metodo alerta inicio ruta
+
+
+    private void alertStarRoute(){//Dialogo iniciar ruta
+        final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.star))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.yesGps), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused")final DialogInterface dialog, @SuppressWarnings("unused") final int which) {
+
+                        databaseReference = FirebaseDatabase.getInstance().getReference();
+                        databaseReference.child("starandfinish").child(Code).child("estado").setValue(1);
+
+                        btnReplay.setVisibility(View.INVISIBLE);
+                        btnStop.setVisibility(View.VISIBLE);
+                        distanceText.setText("Recorrido en marcha");
+                        changeCheck();
+
+                        Toasty.Config.getInstance() //Configuracion del toasty
+
+                                .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorEmergency)) //Color de relleno
+                                .setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite))  //Color de letra
+                                .apply();
+
+                        Toasty.info(NewMapActivity.this,"Recorrido en marcha", Toast.LENGTH_LONG, true).show();//info del toast
+
+                        changeCheck();
+                        dialogConfirmationIda();
+
+
+                    }
+                })
+
+                .setNegativeButton(getResources().getString(R.string.noGps), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") int which) {
+
+                        databaseReference = FirebaseDatabase.getInstance().getReference();
+                        databaseReference.child("starandfinish").child(Code).child("estado").setValue(0);
+                        databaseReference.child("starandfinish").child(Code).child("tipo").setValue(0);
+
+                        btnReplay.setVisibility(View.VISIBLE);
+                        btnStop.setVisibility(View.INVISIBLE);
+                        distanceText.setText("Recorrido terminado");
+
+                        Toasty.Config.getInstance() //Configuracion del toasty
+
+                                .setInfoColor(ContextCompat.getColor(getApplicationContext(),R.color.colorEmergency)) //Color de relleno
+                                .setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite))  //Color de letra
+                                .apply();
+
+                        Toasty.info(NewMapActivity.this,"No inicio el recorrido", Toast.LENGTH_LONG, true).show();//info del toast
+
+                    }
+                });
+        alert = builder.create();
+        alert.show();
+    }
+
+    //Metodo alerta inicio ruta
+
+
+    private void dialogConfirmationIda(){//Dialogo iniciar ruta
+        final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.routetext))
+                .setCancelable(false)
+                .setPositiveButton(getResources().getString(R.string.regreso), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(@SuppressWarnings("unused")final DialogInterface dialog, @SuppressWarnings("unused") final int which) {
+
+                        databaseReference = FirebaseDatabase.getInstance().getReference();
+                        databaseReference.child("starandfinish").child(Code).child("tipo").setValue(2);
+
+
+
+                    }
+                })
+
+                .setNegativeButton(getResources().getString(R.string.ida), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") int which) {
+
+                        databaseReference = FirebaseDatabase.getInstance().getReference();
+                        databaseReference.child("starandfinish").child(Code).child("tipo").setValue(1);
+
+
+
+
                     }
                 });
         alert = builder.create();
@@ -522,6 +693,8 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M)
             {
                 requestPermissions(new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION, android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.INTERNET},10);
+                location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                return;
 
             }else{
                 location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -529,7 +702,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
         }
         else{
             location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 0, locationListener);//actualizacion de ubicacion cada 15seg
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 8000, 0, locationListener);//actualizacion de ubicacion cada 15seg
         }
     }
 
@@ -547,16 +720,12 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
             latitud=location.getLatitude();
             actual =new LatLng(latitud,longitud);
             mMap.clear();//limpia el mapa
-            mMap.addMarker(new MarkerOptions().position(actual).icon(BitmapDescriptorFactory.fromResource(R.drawable.bus)).title("mi pocicion").snippet(latitud+","+longitud));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual,16));
-
-
+            mMap.addMarker(new MarkerOptions().position(actual).icon(BitmapDescriptorFactory.fromResource(R.drawable.marcaruta)).zIndex(1.0f));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(actual,zoomCamera));
 
 
 
             //se va actualizando la lat y long en la vase de datos
-
-
 
             databaseReference = FirebaseDatabase.getInstance().getReference();
             mensajeRef = databaseReference.child("travel").child(Code).child("latitud");//Nodo
@@ -574,7 +743,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
                 public void onDataChange(DataSnapshot dataSnapshot) {
 
-            //For que busca en firebase segun nodo y barre la base de datos
+                    //For que busca en firebase segun nodo y barre la base de datos
                     if (dataSnapshot.exists()){
                         for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
                             Markets datalist = snapshot.getValue(Markets.class);
@@ -588,15 +757,17 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                             Id=datalist.getId();
                             Name=datalist.getName();
                             LastName=datalist.getLastname();
+                            ChildrenName=datalist.getChildname();
+                            ChildrenLastName=datalist.getChildlastname();
                             Check=datalist.getCheck();
+                            go=datalist.getMessageuser();
 
-                            Markets user = new Markets(Cod, Icon, LatitudUser, LongitudUser,Id,Name,LastName,Check);
+                            //Markets user = new Markets(Cod, Icon, LatitudUser, LongitudUser,Id,Name,LastName,Check,go);
                             //aMarkets.addMarkets(user);
-                            //Toast.makeText(NewMapActivity.this,"Prueba"+aMarkets.getMarkets(),Toast.LENGTH_LONG).show();
 
                             LatLng nuevo = new LatLng(LatitudUser, LongitudUser); ///Concateno para hacer marcador
 
-                            Completename = Name+" "+LastName; //Concatenar para poner nombre de la persona en el marcador
+                            Completename = ChildrenName+" "+ChildrenLastName; //Concatenar para poner nombre de la persona en el marcador
 
 
                             Location locationA = new Location("punto A");
@@ -615,34 +786,36 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
                             //Coloca el avatar segun el que tenga escogido el usuario
 
-                            if (Icon.equals("avatar1")) {
+                            if (Icon.equals("avatar1")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar1)));
 
-                            }else if (Icon.equals("avatar2")) {
+                            }else if (Icon.equals("avatar2")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar2)));
 
-                            }else if (Icon.equals("avatar3")) {
+                            }else if (Icon.equals("avatar3")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar3)));
 
-                            }else if (Icon.equals("avatar4")) {
+                            }else if (Icon.equals("avatar4")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar4)));
 
-                            }else if (Icon.equals("avatar5")) {
+                            }else if (Icon.equals("avatar5")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar5)));
 
-                            }else if (Icon.equals("avatar6")) {
+                            }else if (Icon.equals("avatar6")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar6)));
 
-                            }else if (Icon.equals("avatar7")) {
+                            }else if (Icon.equals("avatar7")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar7)));
 
-                            }else if (Icon.equals("avatar8")) {
+                            }else if (Icon.equals("avatar8")&&go.equals("go")) {
                                 mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar8)));
 
                             }else {
-                                mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar9)));
+                                mMap.addMarker(new MarkerOptions().position(nuevo).title(Completename).icon(BitmapDescriptorFactory.fromResource(R.drawable.avatar10)));
 
                             }
+
+                            alertaRiesgo();
 
                             //Si esta cerca suba datos
 
@@ -650,21 +823,16 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
                                 //Sube datos distancia
 
-
-
                                 CheckList checking = new CheckList(distance,Name,LastName,Icon,Id);
                                 databaseReference.child("check").child(Code).child(Id).setValue(checking);
 
-
-
                             }else{
+
+                                Toast.makeText(NewMapActivity.this,"Error App",Toast.LENGTH_SHORT);
 
                             }
                         }
-
-
                     }
-
                 }
 
                 @Override
@@ -673,64 +841,25 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                 }
             });
 
-/*
-            //Marcador dde llegada se coloca en mapa longitud
-
-            DatabaseReference ref =FirebaseDatabase.getInstance().getReference();
-            DatabaseReference mensajeRef = ref.child("travel").child(Code).child("longitudllegada");
-
-            mensajeRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value =dataSnapshot.getValue(double.class);
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });*/
-
-
-
-         /*   //Marcador dde llegada se coloca en mapa latitud ---Provisional
-
-            DatabaseReference ref2 =FirebaseDatabase.getInstance().getReference();
-            DatabaseReference mensajeRef2 = ref2.child("travel").child(Code).child("latitudllegada");
-
-            mensajeRef2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                value2 =dataSnapshot.getValue(double.class);
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });*/
 
             LatLng llegada =new LatLng(value2,value);
-            mMap.addMarker(new MarkerOptions().position(llegada).icon(BitmapDescriptorFactory.fromResource(R.drawable.marketend)));
+            //mMap.addMarker(new MarkerOptions().position(llegada).icon(BitmapDescriptorFactory.fromResource(R.drawable.marketend)));
 
 
-            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-                @Override
-                public boolean onMarkerClick(Marker marker) {
 
-                    Intent intent = new Intent(NewMapActivity.this, AbordajeActivity.class);
-                    intent.putExtra("parametro", Code);
-                    startActivity(intent);
-                    finish();
-                    return false;
-                }
-            });
+        }else{
+
+
 
         }
     }
 
+    private void alertaRiesgo(){
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();//obtiene el enlace de la db "ejemplos-android:"
+        databaseReference.child("alert").child(Code).child("type").setValue(0);
+
+    }
 
 
 
@@ -746,9 +875,11 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
 
 
     private void goLogInScreen(){///Firebase ultimo para logOut
-        Intent intent=new Intent(this,SplashScreenActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        //Intent intent=new Intent(this,SplashScreenActivity.class);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        //startActivity(intent);
+        finish();
+        System.exit(0);
     }
 
 
@@ -762,7 +893,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                 if (status.isSuccess()){
                     goLogInScreen();
                 }else{
-                    Toast.makeText(NewMapActivity.this,"La cague",Toast.LENGTH_SHORT);
+                    Toast.makeText(NewMapActivity.this,"Error App",Toast.LENGTH_SHORT);
                 }
             }
         });
@@ -778,7 +909,7 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
                 if (status.isSuccess()){
                     goLogInScreen();
                 }else{
-                    Toast.makeText(NewMapActivity.this,"La cague mas revocado",Toast.LENGTH_SHORT);
+                    Toast.makeText(NewMapActivity.this,"Error App",Toast.LENGTH_SHORT);
                 }
             }
         });
@@ -805,4 +936,67 @@ public class NewMapActivity extends AppCompatActivity implements OnMapReadyCallb
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+
+    private void changeCheck() {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
+        databaseReference.child("usersvstravel").child(Code).addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                //For que busca en firebase segun nodo y barre la base de datos
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        Markets datalist = snapshot.getValue(Markets.class);
+
+                        Id = datalist.getId();
+
+                        databaseReference.child("usersvstravel").child(Code).child(Id).child("check").setValue("n");
+
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+
+        });
+    }
+
+    private void changeStarandfinish() {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference(); ///Raiz
+        databaseReference.child("drivervstravel").child(PruUid).addValueEventListener(new ValueEventListener() {
+
+            @Override
+
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                //For que busca en firebase segun nodo y barre la base de datos
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        DriverVsTravel drivervsTravel = snapshot.getValue(DriverVsTravel.class);
+
+                        IdPro = drivervsTravel.getId();
+
+                        databaseReference.child("starandfinish").child(IdPro).child("estado").setValue(0);
+
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+
+        });
+
+
+    }
+
 }

@@ -8,27 +8,40 @@ import java.lang.ref.SoftReference;
 
 public class Markets {
 
+
     private String code;
     private String icon;
+    private String iconface;
     private double latitud;
     private double longitud;
     private String id;
+    private String childlastname;
+    private String childname;
+    private double distance;
     private String name;
     private String lastname;
     private String check;
+    private String messageuser;
+    private String phone;
 
     public Markets() {
     }
 
-    public Markets(String code, String icon, double latitud, double longitud, String id, String name, String lastname, String check) {
+    public Markets(String code, String icon, String iconface, double latitud, double longitud, String id, String childlastname, String childname, double distance, String name, String lastname, String check, String messageuser, String phone) {
         this.code = code;
         this.icon = icon;
+        this.iconface = iconface;
         this.latitud = latitud;
         this.longitud = longitud;
         this.id = id;
+        this.childlastname = childlastname;
+        this.childname = childname;
+        this.distance = distance;
         this.name = name;
         this.lastname = lastname;
         this.check = check;
+        this.messageuser = messageuser;
+        this.phone = phone;
     }
 
     public String getCode() {
@@ -45,6 +58,14 @@ public class Markets {
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public String getIconface() {
+        return iconface;
+    }
+
+    public void setIconface(String iconface) {
+        this.iconface = iconface;
     }
 
     public double getLatitud() {
@@ -71,6 +92,30 @@ public class Markets {
         this.id = id;
     }
 
+    public String getChildlastname() {
+        return childlastname;
+    }
+
+    public void setChildlastname(String childlastname) {
+        this.childlastname = childlastname;
+    }
+
+    public String getChildname() {
+        return childname;
+    }
+
+    public void setChildname(String childname) {
+        this.childname = childname;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
     public String getName() {
         return name;
     }
@@ -93,5 +138,21 @@ public class Markets {
 
     public void setCheck(String check) {
         this.check = check;
+    }
+
+    public String getMessageuser() {
+        return messageuser;
+    }
+
+    public void setMessageuser(String messageuser) {
+        this.messageuser = messageuser;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
